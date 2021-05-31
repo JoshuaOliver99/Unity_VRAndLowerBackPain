@@ -1,6 +1,6 @@
 Using pre-set license
 Built from '2020.3/staging' branch; Version is '2020.3.9f1 (108be757e447) revision 1084391'; Using compiler version '192528614'; Build Type 'Release'
-OS: 'Windows 10 Pro; OS build 19042.985; Version 2009; 64bit' Language: 'en' Physical Memory: 8108 MB
+OS: 'Windows 10 Home; OS build 19042.985; Version 2009; 64bit' Language: 'en' Physical Memory: 16301 MB
 BatchMode: 1, IsHumanControllingUs: 0, StartBugReporterOnCrash: 0, Is64bit: 1, IsPro: 0
 
  COMMAND LINE ARGUMENTS:
@@ -11,987 +11,122 @@ C:\Program Files\Unity\Hub\Editor\2020.3.9f1\Editor\Unity.exe
 -name
 AssetImportWorker0
 -projectPath
-C:/Users/joshu/OneDrive/Documents/GitHub/VR-and-lower-back-pain/VR and lower back pain
+C:/Users/Josh/Documents/GitHub/VR-and-lower-back-pain/VR and lower back pain
 -logFile
 Logs/AssetImportWorker0.log
 -srvPort
-52057
-Successfully changed project path to: C:/Users/joshu/OneDrive/Documents/GitHub/VR-and-lower-back-pain/VR and lower back pain
-C:/Users/joshu/OneDrive/Documents/GitHub/VR-and-lower-back-pain/VR and lower back pain
+56232
+Successfully changed project path to: C:/Users/Josh/Documents/GitHub/VR-and-lower-back-pain/VR and lower back pain
+C:/Users/Josh/Documents/GitHub/VR-and-lower-back-pain/VR and lower back pain
 Using Asset Import Pipeline V2.
-Refreshing native plugins compatible for Editor in 43.03 ms, found 0 plugins.
+Refreshing native plugins compatible for Editor in 114.54 ms, found 8 plugins.
 Preloading 0 native plugins for Editor in 0.00 ms.
 Initialize engine version: 2020.3.9f1 (108be757e447)
 [Subsystems] Discovering subsystems at path C:/Program Files/Unity/Hub/Editor/2020.3.9f1/Editor/Data/Resources/UnitySubsystems
-[Subsystems] Discovering subsystems at path C:/Users/joshu/OneDrive/Documents/GitHub/VR-and-lower-back-pain/VR and lower back pain/Assets
+[Subsystems] Discovering subsystems at path C:/Users/Josh/Documents/GitHub/VR-and-lower-back-pain/VR and lower back pain/Assets
 GfxDevice: creating device client; threaded=0
 Direct3D:
     Version:  Direct3D 11.0 [level 11.1]
-    Renderer: Intel(R) HD Graphics 620 (ID=0x5916)
+    Renderer: NVIDIA GeForce GTX 970 (ID=0x13c2)
     Vendor:   
-    VRAM:     4054 MB
-    Driver:   25.20.100.6518
+    VRAM:     4043 MB
+    Driver:   27.21.14.6647
 Initialize mono
 Mono path[0] = 'C:/Program Files/Unity/Hub/Editor/2020.3.9f1/Editor/Data/Managed'
 Mono path[1] = 'C:/Program Files/Unity/Hub/Editor/2020.3.9f1/Editor/Data/MonoBleedingEdge/lib/mono/unityjit'
 Mono config path = 'C:/Program Files/Unity/Hub/Editor/2020.3.9f1/Editor/Data/MonoBleedingEdge/etc'
-Using monoOptions --debugger-agent=transport=dt_socket,embedding=1,server=y,suspend=n,address=127.0.0.1:56452
+Using monoOptions --debugger-agent=transport=dt_socket,embedding=1,server=y,suspend=n,address=127.0.0.1:56016
 Begin MonoManager ReloadAssembly
 Registering precompiled unity dll's ...
 Register platform support module: C:/Program Files/Unity/Hub/Editor/2020.3.9f1/Editor/Data/PlaybackEngines/WindowsStandaloneSupport/UnityEditor.WindowsStandalone.Extensions.dll
-Registered in 0.001746 seconds.
+Registered in 0.006407 seconds.
 Native extension for WindowsStandalone target not found
-Refreshing native plugins compatible for Editor in 44.47 ms, found 0 plugins.
+Refreshing native plugins compatible for Editor in 89.72 ms, found 8 plugins.
 Preloading 0 native plugins for Editor in 0.00 ms.
 Mono: successfully reloaded assembly
-- Completed reload, in  1.621 seconds
+- Completed reload, in  2.344 seconds
 Platform modules already initialized, skipping
 Registering precompiled user dll's ...
-Registered in 0.001003 seconds.
+Registered in 0.015619 seconds.
 Begin MonoManager ReloadAssembly
 Native extension for WindowsStandalone target not found
-Refreshing native plugins compatible for Editor in 0.33 ms, found 0 plugins.
+Refreshing native plugins compatible for Editor in 164.33 ms, found 8 plugins.
 Preloading 0 native plugins for Editor in 0.00 ms.
 Mono: successfully reloaded assembly
-- Completed reload, in  1.147 seconds
+- Completed reload, in  2.894 seconds
 Platform modules already initialized, skipping
 ========================================================================
 Worker process is ready to serve import requests
-Launched and connected shader compiler UnityShaderCompiler.exe after 0.07 seconds
-Refreshing native plugins compatible for Editor in 0.26 ms, found 0 plugins.
+Launched and connected shader compiler UnityShaderCompiler.exe after 0.08 seconds
+Refreshing native plugins compatible for Editor in 1.06 ms, found 8 plugins.
 Preloading 0 native plugins for Editor in 0.00 ms.
-Unloading 1345 Unused Serialized files (Serialized files now loaded: 0)
-System memory in use before: 64.5 MB.
-System memory in use after: 64.5 MB.
+Unloading 2055 Unused Serialized files (Serialized files now loaded: 0)
+System memory in use before: 95.7 MB.
+System memory in use after: 95.6 MB.
+
+Unloading 30 unused Assets to reduce memory usage. Loaded Objects now: 2502.
+Total: 4.007400 ms (FindLiveObjects: 0.336400 ms CreateObjectMapping: 0.107000 ms MarkObjects: 3.457300 ms  DeleteObjects: 0.104300 ms)
+
+========================================================================
+Received Import Request.
+  path: Assets/SteamVR/InteractionSystem/Core/Prefabs/Player.prefab
+  artifactKey: Guid(dc06161b6d97feb419f45f03b62e14b9) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/SteamVR/InteractionSystem/Core/Prefabs/Player.prefab using Guid(dc06161b6d97feb419f45f03b62e14b9) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '024bf52dbb611a822ae1469fb3494573') in 0.531034 seconds
+  Import took 0.539498 seconds .
+
+========================================================================
+Received Prepare
+Registering precompiled user dll's ...
+Registered in 0.014345 seconds.
+Begin MonoManager ReloadAssembly
+Native extension for WindowsStandalone target not found
+Refreshing native plugins compatible for Editor in 1.08 ms, found 8 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Mono: successfully reloaded assembly
+- Completed reload, in  2.162 seconds
+Platform modules already initialized, skipping
+Refreshing native plugins compatible for Editor in 0.90 ms, found 8 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Unloading 2029 Unused Serialized files (Serialized files now loaded: 0)
+System memory in use before: 107.6 MB.
+System memory in use after: 107.7 MB.
+
+Unloading 23 unused Assets to reduce memory usage. Loaded Objects now: 2524.
+Total: 2.822300 ms (FindLiveObjects: 0.238400 ms CreateObjectMapping: 0.089600 ms MarkObjects: 2.447500 ms  DeleteObjects: 0.044800 ms)
+
+========================================================================
+Received Prepare
+Registering precompiled user dll's ...
+Registered in 0.011660 seconds.
+Begin MonoManager ReloadAssembly
+Native extension for WindowsStandalone target not found
+Refreshing native plugins compatible for Editor in 0.88 ms, found 8 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Mono: successfully reloaded assembly
+- Completed reload, in  3.329 seconds
+Platform modules already initialized, skipping
+Refreshing native plugins compatible for Editor in 0.91 ms, found 8 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Unloading 2029 Unused Serialized files (Serialized files now loaded: 0)
+System memory in use before: 107.7 MB.
+System memory in use after: 107.8 MB.
+
+Unloading 23 unused Assets to reduce memory usage. Loaded Objects now: 2528.
+Total: 3.193500 ms (FindLiveObjects: 0.218100 ms CreateObjectMapping: 0.119200 ms MarkObjects: 2.829200 ms  DeleteObjects: 0.025300 ms)
+
+========================================================================
+Received Import Request.
+  Time since last request: 517.092793 seconds.
+  path: Assets/SteamVR/InteractionSystem/Core/Scripts/LinearBlendshape.cs
+  artifactKey: Guid(5a3622562855c9a40a14846ffdc8bfe4) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/SteamVR/InteractionSystem/Core/Scripts/LinearBlendshape.cs using Guid(5a3622562855c9a40a14846ffdc8bfe4) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'c858c297ac8c958e40fe803e6f7491ae') in 0.064458 seconds
+  Import took 0.071547 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.002615 seconds.
+  path: Assets/SteamVR/InteractionSystem/Core/Scripts/LinearBlendshape.cs
+  artifactKey: Guid(5a3622562855c9a40a14846ffdc8bfe4) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/SteamVR/InteractionSystem/Core/Scripts/LinearBlendshape.cs using Guid(5a3622562855c9a40a14846ffdc8bfe4) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'c858c297ac8c958e40fe803e6f7491ae') in 0.010009 seconds
+  Import took 0.017276 seconds .
 
-Unloading 9 unused Assets to reduce memory usage. Loaded Objects now: 1788.
-Total: 2.539600 ms (FindLiveObjects: 0.156600 ms CreateObjectMapping: 0.038200 ms MarkObjects: 2.276100 ms  DeleteObjects: 0.067400 ms)
-
-========================================================================
-Received Import Request.
-  path: Assets/Materials/Floor.mat
-  artifactKey: Guid(6705a031078943c48b44a614e1be8299) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Materials/Floor.mat using Guid(6705a031078943c48b44a614e1be8299) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '0de5848b2f7d0a99d87b7ef9c490adce') in 0.511798 seconds
-  Import took 0.519518 seconds .
-
-========================================================================
-Received Import Request.
-  Time since last request: 0.000340 seconds.
-  path: Assets/Materials/Mirror.mat
-  artifactKey: Guid(b09ed672a745b45438a458c90df119f8) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Materials/Mirror.mat using Guid(b09ed672a745b45438a458c90df119f8) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '76859ac2e90a71c4b9215001906dd012') in 0.287765 seconds
-  Import took 0.296245 seconds .
-
-========================================================================
-Received Import Request.
-  Time since last request: 0.000227 seconds.
-  path: Assets/Materials/Yellow.mat
-  artifactKey: Guid(38f1bedb22e8a6d499363a23e24c94e8) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Materials/Yellow.mat using Guid(38f1bedb22e8a6d499363a23e24c94e8) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '8059e90400548b42935b4e448ab36192') in 0.079088 seconds
-  Import took 0.085048 seconds .
-
-========================================================================
-Received Import Request.
-  Time since last request: 2.292992 seconds.
-  path: Assets/HTC.UnityPlugin/ColliderEvent
-  artifactKey: Guid(401601f6f306d4d47b33ef519969a2d6) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/HTC.UnityPlugin/ColliderEvent using Guid(401601f6f306d4d47b33ef519969a2d6) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '94b5b19a25732982da54d7b77aa56579') in 0.019061 seconds
-  Import took 0.027484 seconds .
-
-========================================================================
-Received Import Request.
-  Time since last request: 1.909331 seconds.
-  path: Assets/HTC.UnityPlugin/LiteCoroutine
-  artifactKey: Guid(51ad81358387a60448c3c55a60e2c76a) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/HTC.UnityPlugin/LiteCoroutine using Guid(51ad81358387a60448c3c55a60e2c76a) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '0470ba61aab6836b62146fe22b52a4ae') in 0.026858 seconds
-  Import took 0.032785 seconds .
-
-========================================================================
-Received Import Request.
-  Time since last request: 0.502801 seconds.
-  path: Assets/HTC.UnityPlugin/Pointer3D
-  artifactKey: Guid(a41026e15126d7d4e949f71930de2de5) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/HTC.UnityPlugin/Pointer3D using Guid(a41026e15126d7d4e949f71930de2de5) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '9e70eb562803c36970f36e63a741086b') in 0.022033 seconds
-  Import took 0.028523 seconds .
-
-========================================================================
-Received Import Request.
-  Time since last request: 0.434433 seconds.
-  path: Assets/HTC.UnityPlugin/PoseTracker
-  artifactKey: Guid(bcc831bb3ede4e649825af2b8aa84445) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/HTC.UnityPlugin/PoseTracker using Guid(bcc831bb3ede4e649825af2b8aa84445) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '4d38430d10919cb20972e9e7a24c8bfd') in 0.026749 seconds
-  Import took 0.030721 seconds .
-
-========================================================================
-Received Import Request.
-  Time since last request: 0.581804 seconds.
-  path: Assets/HTC.UnityPlugin/UPMRegistryTool
-  artifactKey: Guid(85490c03ccd01594083090f080e888cd) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/HTC.UnityPlugin/UPMRegistryTool using Guid(85490c03ccd01594083090f080e888cd) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'a860320fcc3d216ce6711f5721436d07') in 0.028216 seconds
-  Import took 0.033252 seconds .
-
-========================================================================
-Received Import Request.
-  Time since last request: 0.878542 seconds.
-  path: Assets/HTC.UnityPlugin/Utility
-  artifactKey: Guid(9554659977a77254ba3497360bc7a4ee) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/HTC.UnityPlugin/Utility using Guid(9554659977a77254ba3497360bc7a4ee) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'bae8c3ba2d01a152f12b5982db73e412') in 0.022853 seconds
-  Import took 0.028783 seconds .
-
-========================================================================
-Received Import Request.
-  Time since last request: 1.052812 seconds.
-  path: Assets/HTC.UnityPlugin/ViveInputUtility
-  artifactKey: Guid(8b608c5a58e520544ac116bd8ec63105) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/HTC.UnityPlugin/ViveInputUtility using Guid(8b608c5a58e520544ac116bd8ec63105) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'fb4066adcd1e0c2eee98adf264b1799d') in 0.025660 seconds
-  Import took 0.029960 seconds .
-
-========================================================================
-Received Import Request.
-  Time since last request: 1.294038 seconds.
-  path: Assets/HTC.UnityPlugin/VRModule
-  artifactKey: Guid(6812a54c86e8c8b498c6bbc618396431) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/HTC.UnityPlugin/VRModule using Guid(6812a54c86e8c8b498c6bbc618396431) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '9e918d87418d252a9e871be87a7c5f00') in 0.025774 seconds
-  Import took 0.030073 seconds .
-
-========================================================================
-Received Import Request.
-  Time since last request: 1.591253 seconds.
-  path: Assets/HTC.UnityPlugin/ViveInputUtility/Examples
-  artifactKey: Guid(b91da71c58f530247bcf2e4769d59a41) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/HTC.UnityPlugin/ViveInputUtility/Examples using Guid(b91da71c58f530247bcf2e4769d59a41) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'd75b1840ab998d9fc211283448c716c1') in 0.026057 seconds
-  Import took 0.031098 seconds .
-
-========================================================================
-Received Import Request.
-  Time since last request: 0.315849 seconds.
-  path: Assets/HTC.UnityPlugin/ViveInputUtility/Materials
-  artifactKey: Guid(862b385c715c97b449065c85e8e0f4d1) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/HTC.UnityPlugin/ViveInputUtility/Materials using Guid(862b385c715c97b449065c85e8e0f4d1) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'a4a6547f9fa51ab6b3b6c4938da1a26c') in 0.027516 seconds
-  Import took 0.031803 seconds .
-
-========================================================================
-Received Import Request.
-  Time since last request: 1.936094 seconds.
-  path: Assets/HTC.UnityPlugin/ViveInputUtility/Prefabs
-  artifactKey: Guid(2117426f9d0f43742ae43b86b4493679) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/HTC.UnityPlugin/ViveInputUtility/Prefabs using Guid(2117426f9d0f43742ae43b86b4493679) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'a476a03047749007c9f2d1845d46f220') in 0.025073 seconds
-  Import took 0.029600 seconds .
-
-========================================================================
-Received Import Request.
-  Time since last request: 0.985267 seconds.
-  path: Assets/HTC.UnityPlugin/ViveInputUtility/Prefabs/[ViveInputUtility].prefab
-  artifactKey: Guid(8075b10b3fa5b5b45bc02a03074b8b95) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/HTC.UnityPlugin/ViveInputUtility/Prefabs/[ViveInputUtility].prefab using Guid(8075b10b3fa5b5b45bc02a03074b8b95) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '235ee3e603496a4e5966551a4af70cfe') in 0.069062 seconds
-  Import took 0.073881 seconds .
-
-========================================================================
-Received Import Request.
-  Time since last request: 0.000238 seconds.
-  path: Assets/HTC.UnityPlugin/ViveInputUtility/Prefabs/ViveCurvePointers.prefab
-  artifactKey: Guid(8c93af22a072961489d61255c39d9659) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/HTC.UnityPlugin/ViveInputUtility/Prefabs/ViveCurvePointers.prefab using Guid(8c93af22a072961489d61255c39d9659) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'e8d3f53b85e0b772ea046afcbd505307') in 0.083106 seconds
-  Import took 0.087320 seconds .
-
-========================================================================
-Received Import Request.
-  Time since last request: 0.000232 seconds.
-  path: Assets/HTC.UnityPlugin/ViveInputUtility/Prefabs/AxisIndicator.prefab
-  artifactKey: Guid(a68b78030f24c4848bf3d60234a29834) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/HTC.UnityPlugin/ViveInputUtility/Prefabs/AxisIndicator.prefab using Guid(a68b78030f24c4848bf3d60234a29834) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'c1d2f36f1bcd35e071d2956e059229af') in 0.049611 seconds
-  Import took 0.053359 seconds .
-
-========================================================================
-Received Import Request.
-  Time since last request: 0.000237 seconds.
-  path: Assets/HTC.UnityPlugin/ViveInputUtility/Prefabs/VivePointers.prefab
-  artifactKey: Guid(12ee41758a687f54e98120e486ccd16e) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/HTC.UnityPlugin/ViveInputUtility/Prefabs/VivePointers.prefab using Guid(12ee41758a687f54e98120e486ccd16e) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '5241db6dbb9bd8ce9bf96f14014318ff') in 0.020872 seconds
-  Import took 0.028116 seconds .
-
-========================================================================
-Received Import Request.
-  Time since last request: 0.000399 seconds.
-  path: Assets/HTC.UnityPlugin/ViveInputUtility/Prefabs/TouchPointers.prefab
-  artifactKey: Guid(e2432f64b55c5f9428c1f46dc2248d58) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/HTC.UnityPlugin/ViveInputUtility/Prefabs/TouchPointers.prefab using Guid(e2432f64b55c5f9428c1f46dc2248d58) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '75a45dedbd6827b2819b53f97dfae1ce') in 0.038320 seconds
-  Import took 0.046283 seconds .
-
-========================================================================
-Received Import Request.
-  Time since last request: 0.000324 seconds.
-  path: Assets/HTC.UnityPlugin/ViveInputUtility/Prefabs/ViveColliders.prefab
-  artifactKey: Guid(2b3a4efa04a7cf2428e0835b20f15fdc) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/HTC.UnityPlugin/ViveInputUtility/Prefabs/ViveColliders.prefab using Guid(2b3a4efa04a7cf2428e0835b20f15fdc) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '4a45e78acfa9cce8b63be25ce74ea3a4') in 0.024495 seconds
-  Import took 0.033671 seconds .
-
-========================================================================
-Received Import Request.
-  Time since last request: 0.000287 seconds.
-  path: Assets/HTC.UnityPlugin/ViveInputUtility/Prefabs/ViveCameraRig.prefab
-  artifactKey: Guid(cb3370c18187bb444b240cfb08dcc02f) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/HTC.UnityPlugin/ViveInputUtility/Prefabs/ViveCameraRig.prefab using Guid(cb3370c18187bb444b240cfb08dcc02f) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '7905fbedede30ae39ff94159d6b8f876') in 0.034913 seconds
-  Import took 0.039901 seconds .
-
-========================================================================
-Received Import Request.
-  Time since last request: 0.000210 seconds.
-  path: Assets/HTC.UnityPlugin/ViveInputUtility/Prefabs/ViveRig.prefab
-  artifactKey: Guid(cbfd31aaac017204885fcc03f0579a1a) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/HTC.UnityPlugin/ViveInputUtility/Prefabs/ViveRig.prefab using Guid(cbfd31aaac017204885fcc03f0579a1a) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'dad829c67dd9bd0ce076b380235fc2c0') in 0.034459 seconds
-  Import took 0.040693 seconds .
-
-========================================================================
-Received Import Request.
-  Time since last request: 0.000235 seconds.
-  path: Assets/HTC.UnityPlugin/ViveInputUtility/Prefabs/HandPointers.prefab
-  artifactKey: Guid(845f9b7d3c10cdc4d94362d2aa174b9f) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/HTC.UnityPlugin/ViveInputUtility/Prefabs/HandPointers.prefab using Guid(845f9b7d3c10cdc4d94362d2aa174b9f) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'eee1efc8a9016c1179130301e16a11f7') in 0.013447 seconds
-  Import took 0.019929 seconds .
-
-========================================================================
-Received Import Request.
-  Time since last request: 17.642630 seconds.
-  path: Assets/HTC.UnityPlugin/ViveInputUtility/Resources
-  artifactKey: Guid(f1d532c1e91ce734ab54807c1a4c1f3f) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/HTC.UnityPlugin/ViveInputUtility/Resources using Guid(f1d532c1e91ce734ab54807c1a4c1f3f) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '2eb4012a072e1ac6d04648b59a068fab') in 0.033708 seconds
-  Import took 0.042364 seconds .
-
-========================================================================
-Received Import Request.
-  Time since last request: 0.809763 seconds.
-  path: Assets/HTC.UnityPlugin/ViveInputUtility/Resources/VIUBindingInterface.prefab
-  artifactKey: Guid(26a034c83db7bcb4f99de4ddf57cbcfc) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/HTC.UnityPlugin/ViveInputUtility/Resources/VIUBindingInterface.prefab using Guid(26a034c83db7bcb4f99de4ddf57cbcfc) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '0f7206f07f7f16bc314b5b133afb4d65') in 0.077499 seconds
-  Import took 0.084216 seconds .
-
-========================================================================
-Received Import Request.
-  Time since last request: 0.000251 seconds.
-  path: Assets/HTC.UnityPlugin/ViveInputUtility/Resources/VIUExCamConfigInterface.prefab
-  artifactKey: Guid(189738cec75073140ab3a8f043e47f7c) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/HTC.UnityPlugin/ViveInputUtility/Resources/VIUExCamConfigInterface.prefab using Guid(189738cec75073140ab3a8f043e47f7c) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '331256b0688e3eb4e0f9cf7eb7a60015') in 0.064784 seconds
-  Import took 0.071167 seconds .
-
-========================================================================
-Received Import Request.
-  Time since last request: 0.639918 seconds.
-  path: Assets/HTC.UnityPlugin/ViveInputUtility/Resources/Animation
-  artifactKey: Guid(369af420aee33aa44b9f5bb86c797be3) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/HTC.UnityPlugin/ViveInputUtility/Resources/Animation using Guid(369af420aee33aa44b9f5bb86c797be3) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '6acac3f657d3587ff51e4fcbb6575f75') in 0.034397 seconds
-  Import took 0.044096 seconds .
-
-========================================================================
-Received Import Request.
-  Time since last request: 0.290479 seconds.
-  path: Assets/HTC.UnityPlugin/ViveInputUtility/Resources/Models
-  artifactKey: Guid(81d67f08bf2b07a43a98b9d064d22c0f) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/HTC.UnityPlugin/ViveInputUtility/Resources/Models using Guid(81d67f08bf2b07a43a98b9d064d22c0f) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'd4396af59ef8d484003e8bc205d4ce15') in 0.028015 seconds
-  Import took 0.031592 seconds .
-
-========================================================================
-Received Import Request.
-  Time since last request: 0.201347 seconds.
-  path: Assets/HTC.UnityPlugin/ViveInputUtility/Resources/Models/ObjModelDaydreamController.fbx
-  artifactKey: Guid(279eae6e1e119ec4f97c601f4658ea98) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/HTC.UnityPlugin/ViveInputUtility/Resources/Models/ObjModelDaydreamController.fbx using Guid(279eae6e1e119ec4f97c601f4658ea98) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '12c8b96d7639b77dc0ddf8b3610febe8') in 0.187556 seconds
-  Import took 0.194636 seconds .
-
-========================================================================
-Received Import Request.
-  Time since last request: 0.000219 seconds.
-  path: Assets/HTC.UnityPlugin/ViveInputUtility/Resources/Models/VIUModelOculusTrackedHandRight.prefab
-  artifactKey: Guid(635ba5f0b840cc54ba6ac023a6c9b3fe) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/HTC.UnityPlugin/ViveInputUtility/Resources/Models/VIUModelOculusTrackedHandRight.prefab using Guid(635ba5f0b840cc54ba6ac023a6c9b3fe) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '6cc25cebde7bbe00d2ef30ba563c8614') in 0.120654 seconds
-  Import took 0.125571 seconds .
-
-========================================================================
-Received Import Request.
-  Time since last request: 0.000260 seconds.
-  path: Assets/HTC.UnityPlugin/ViveInputUtility/Resources/Models/VIUModelOculusTrackedHandLeft.prefab
-  artifactKey: Guid(42b3abba4c59ab141ac0d0ec51321a4d) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/HTC.UnityPlugin/ViveInputUtility/Resources/Models/VIUModelOculusTrackedHandLeft.prefab using Guid(42b3abba4c59ab141ac0d0ec51321a4d) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '2e0b9ea161f121ae514d6272cd42ef74') in 0.058883 seconds
-  Import took 0.064559 seconds .
-
-========================================================================
-Received Import Request.
-  Time since last request: 0.000270 seconds.
-  path: Assets/HTC.UnityPlugin/ViveInputUtility/Resources/Models/VIUModelSteamVRSkeletonRight.prefab
-  artifactKey: Guid(18476760edd5f944ba3fd48145ae12cc) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/HTC.UnityPlugin/ViveInputUtility/Resources/Models/VIUModelSteamVRSkeletonRight.prefab using Guid(18476760edd5f944ba3fd48145ae12cc) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '9d4efa6db0b3d36b762c698126f32a52') in 0.049548 seconds
-  Import took 0.054802 seconds .
-
-========================================================================
-Received Import Request.
-  Time since last request: 0.000319 seconds.
-  path: Assets/HTC.UnityPlugin/ViveInputUtility/Resources/Models/VIUModelViveFocusChirp.prefab
-  artifactKey: Guid(e4923ecd69927e647a68c24ca7ebc44b) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/HTC.UnityPlugin/ViveInputUtility/Resources/Models/VIUModelViveFocusChirp.prefab using Guid(e4923ecd69927e647a68c24ca7ebc44b) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '2cdad41fe5f51701218486a0a98f70e9') in 0.054769 seconds
-  Import took 0.059415 seconds .
-
-========================================================================
-Received Import Request.
-  Time since last request: 0.000345 seconds.
-  path: Assets/HTC.UnityPlugin/ViveInputUtility/Resources/Models/VIUModelOculusQuestOrRiftSControllerRight.prefab
-  artifactKey: Guid(168fcee857b239245b839d6b4c3d2d1c) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/HTC.UnityPlugin/ViveInputUtility/Resources/Models/VIUModelOculusQuestOrRiftSControllerRight.prefab using Guid(168fcee857b239245b839d6b4c3d2d1c) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '1c96e63983130a0f16b246dc54d87ccf') in 0.065143 seconds
-  Import took 0.069037 seconds .
-
-========================================================================
-Received Import Request.
-  Time since last request: 0.000216 seconds.
-  path: Assets/HTC.UnityPlugin/ViveInputUtility/Resources/Models/VIUModelViveHandTrackingTrackedHandRight.prefab
-  artifactKey: Guid(b9a887fb50be38e4e84f6bfbbc26d57d) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/HTC.UnityPlugin/ViveInputUtility/Resources/Models/VIUModelViveHandTrackingTrackedHandRight.prefab using Guid(b9a887fb50be38e4e84f6bfbbc26d57d) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '2550089ee9f321096d9b8440acb6d8dc') in 0.059224 seconds
-  Import took 0.064675 seconds .
-
-========================================================================
-Received Import Request.
-  Time since last request: 0.000269 seconds.
-  path: Assets/HTC.UnityPlugin/ViveInputUtility/Resources/Models/VIUModelDaydreamController.prefab
-  artifactKey: Guid(ce6568255d710c04bb51f9f17d7c1d9f) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/HTC.UnityPlugin/ViveInputUtility/Resources/Models/VIUModelDaydreamController.prefab using Guid(ce6568255d710c04bb51f9f17d7c1d9f) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'f69b238434fa29e84528e65f75e13a3a') in 0.076986 seconds
-  Import took 0.082243 seconds .
-
-========================================================================
-Received Import Request.
-  Time since last request: 0.000218 seconds.
-  path: Assets/HTC.UnityPlugin/ViveInputUtility/Resources/Models/ObjModelHandLeft_26.fbx
-  artifactKey: Guid(5cb4fe9f98186d941b37d3ea64e2bd71) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/HTC.UnityPlugin/ViveInputUtility/Resources/Models/ObjModelHandLeft_26.fbx using Guid(5cb4fe9f98186d941b37d3ea64e2bd71) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'c5613886e7b2200c12d08a7013e4df38') in 0.076747 seconds
-  Import took 0.081281 seconds .
-
-========================================================================
-Received Import Request.
-  Time since last request: 0.000246 seconds.
-  path: Assets/HTC.UnityPlugin/ViveInputUtility/Resources/Models/ObjModelViveFocusFinch.fbx
-  artifactKey: Guid(aa58a01d293edc24987fbbf6ec9578ad) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/HTC.UnityPlugin/ViveInputUtility/Resources/Models/ObjModelViveFocusFinch.fbx using Guid(aa58a01d293edc24987fbbf6ec9578ad) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '64b60af6298c58174db3360d344d9597') in 0.108915 seconds
-  Import took 0.113537 seconds .
-
-========================================================================
-Received Import Request.
-  Time since last request: 0.000290 seconds.
-  path: Assets/HTC.UnityPlugin/ViveInputUtility/Resources/Models/ObjModelWMRControllerLeft.fbx
-  artifactKey: Guid(26b8ac0911f9d0c4bbee55586c74b36c) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/HTC.UnityPlugin/ViveInputUtility/Resources/Models/ObjModelWMRControllerLeft.fbx using Guid(26b8ac0911f9d0c4bbee55586c74b36c) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '5b7fa6fcafc05a2c639a36d6012a49d1') in 0.056137 seconds
-  Import took 0.060527 seconds .
-
-========================================================================
-Received Import Request.
-  Time since last request: 0.000237 seconds.
-  path: Assets/HTC.UnityPlugin/ViveInputUtility/Resources/Models/VIUModelOculusGoController.prefab
-  artifactKey: Guid(eb81d87d3b9a20e42976d9e6fdff48a4) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/HTC.UnityPlugin/ViveInputUtility/Resources/Models/VIUModelOculusGoController.prefab using Guid(eb81d87d3b9a20e42976d9e6fdff48a4) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'fee1a81c08e3f8c2911600f79d22e2b9') in 0.042821 seconds
-  Import took 0.051730 seconds .
-
-========================================================================
-Received Import Request.
-  Time since last request: 0.000337 seconds.
-  path: Assets/HTC.UnityPlugin/ViveInputUtility/Resources/Models/VIUModelViveCosmosControllerLeft.prefab
-  artifactKey: Guid(5af1e002043388548a5048c62287af4c) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/HTC.UnityPlugin/ViveInputUtility/Resources/Models/VIUModelViveCosmosControllerLeft.prefab using Guid(5af1e002043388548a5048c62287af4c) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'db82ef54ee2c75161b813a70b5cbad3a') in 0.050450 seconds
-  Import took 0.057284 seconds .
-
-========================================================================
-Received Import Request.
-  Time since last request: 0.000275 seconds.
-  path: Assets/HTC.UnityPlugin/ViveInputUtility/Resources/Models/VIUModelIndexControllerRight.prefab
-  artifactKey: Guid(eef64bbf7f95c974b8a2effcbc0a3f02) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/HTC.UnityPlugin/ViveInputUtility/Resources/Models/VIUModelIndexControllerRight.prefab using Guid(eef64bbf7f95c974b8a2effcbc0a3f02) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '4043862adf1dd07ee7a71bc2c5678fbe') in 0.058123 seconds
-  Import took 0.063791 seconds .
-
-========================================================================
-Received Import Request.
-  Time since last request: 0.000231 seconds.
-  path: Assets/HTC.UnityPlugin/ViveInputUtility/Resources/Models/VIUModelIndexControllerLeft.prefab
-  artifactKey: Guid(7218d5052cbee6d4fabb4ade961a6d45) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/HTC.UnityPlugin/ViveInputUtility/Resources/Models/VIUModelIndexControllerLeft.prefab using Guid(7218d5052cbee6d4fabb4ade961a6d45) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '6ffad640517874ffc472d6dc75700b40') in 0.051670 seconds
-  Import took 0.056526 seconds .
-
-========================================================================
-Received Import Request.
-  Time since last request: 0.000282 seconds.
-  path: Assets/HTC.UnityPlugin/ViveInputUtility/Resources/Models/ObjModelOculusSensor.fbx
-  artifactKey: Guid(c8886ded5921aea4cb5f6efddcd6b9f9) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/HTC.UnityPlugin/ViveInputUtility/Resources/Models/ObjModelOculusSensor.fbx using Guid(c8886ded5921aea4cb5f6efddcd6b9f9) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'e14ade2e131e1ea96f73f309f94da9b8') in 0.050972 seconds
-  Import took 0.056831 seconds .
-
-========================================================================
-Received Import Request.
-  Time since last request: 0.000233 seconds.
-  path: Assets/HTC.UnityPlugin/ViveInputUtility/Resources/Models/VIUModelOculusQuestControllerRight.prefab
-  artifactKey: Guid(0679ffce1bdb106408aacc4412fd0b4b) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/HTC.UnityPlugin/ViveInputUtility/Resources/Models/VIUModelOculusQuestControllerRight.prefab using Guid(0679ffce1bdb106408aacc4412fd0b4b) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '33e53c34e3314fcc9cf7b3bc5da0fc09') in 0.044059 seconds
-  Import took 0.051582 seconds .
-
-========================================================================
-Received Import Request.
-  Time since last request: 0.000235 seconds.
-  path: Assets/HTC.UnityPlugin/ViveInputUtility/Resources/Models/VIUModelWaveLegacyTrackedHandLeft.prefab
-  artifactKey: Guid(9056320bb10a21a4782b8dbfe5870461) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/HTC.UnityPlugin/ViveInputUtility/Resources/Models/VIUModelWaveLegacyTrackedHandLeft.prefab using Guid(9056320bb10a21a4782b8dbfe5870461) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '24e02ada525f4e06cd45ec220b95b70c') in 0.051473 seconds
-  Import took 0.056715 seconds .
-
-========================================================================
-Received Import Request.
-  Time since last request: 0.000276 seconds.
-  path: Assets/HTC.UnityPlugin/ViveInputUtility/Resources/Models/ObjModelOculusQuestControllerRight.fbx
-  artifactKey: Guid(9a2b49b3efbb6f449ae63a94abd5bed3) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/HTC.UnityPlugin/ViveInputUtility/Resources/Models/ObjModelOculusQuestControllerRight.fbx using Guid(9a2b49b3efbb6f449ae63a94abd5bed3) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'f2a76fd16115243b4f217f42126831bf') in 0.065225 seconds
-  Import took 0.069959 seconds .
-
-========================================================================
-Received Import Request.
-  Time since last request: 0.000254 seconds.
-  path: Assets/HTC.UnityPlugin/ViveInputUtility/Resources/Models/VIUModelViveController.prefab
-  artifactKey: Guid(cd41dc1459ac9a945ab13148fcaf6574) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/HTC.UnityPlugin/ViveInputUtility/Resources/Models/VIUModelViveController.prefab using Guid(cd41dc1459ac9a945ab13148fcaf6574) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '610e2de60330d16c2f9b28ec3282df1d') in 0.046999 seconds
-  Import took 0.055245 seconds .
-
-========================================================================
-Received Import Request.
-  Time since last request: 0.000214 seconds.
-  path: Assets/HTC.UnityPlugin/ViveInputUtility/Resources/Models/ObjModelViveTracker.fbx
-  artifactKey: Guid(41a3b4523a140e245b18852ca870c49e) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/HTC.UnityPlugin/ViveInputUtility/Resources/Models/ObjModelViveTracker.fbx using Guid(41a3b4523a140e245b18852ca870c49e) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'd6d60cf1258b7a7989b2b0d80269afca') in 0.065093 seconds
-  Import took 0.069244 seconds .
-
-========================================================================
-Received Import Request.
-  Time since last request: 0.000211 seconds.
-  path: Assets/HTC.UnityPlugin/ViveInputUtility/Resources/Models/VIUModelOculusGearVrController.prefab
-  artifactKey: Guid(d35a216c66c350a4b9271430d390df1f) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/HTC.UnityPlugin/ViveInputUtility/Resources/Models/VIUModelOculusGearVrController.prefab using Guid(d35a216c66c350a4b9271430d390df1f) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '4388011255bd3bd72f7d6f873db3cb12') in 0.050134 seconds
-  Import took 0.054576 seconds .
-
-========================================================================
-Received Import Request.
-  Time since last request: 0.000212 seconds.
-  path: Assets/HTC.UnityPlugin/ViveInputUtility/Resources/Models/ObjModelIndexControllerRight.obj
-  artifactKey: Guid(dafde740d11228749a63b949c94b5cda) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/HTC.UnityPlugin/ViveInputUtility/Resources/Models/ObjModelIndexControllerRight.obj using Guid(dafde740d11228749a63b949c94b5cda) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'c7ed75f4b95d42abe1f510bbc6347839') in 0.063513 seconds
-  Import took 0.067767 seconds .
-
-========================================================================
-Received Import Request.
-  Time since last request: 0.000265 seconds.
-  path: Assets/HTC.UnityPlugin/ViveInputUtility/Resources/Models/VIUModelOculusSensor.prefab
-  artifactKey: Guid(2c2099480c1b09b49b123ba87f48456c) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/HTC.UnityPlugin/ViveInputUtility/Resources/Models/VIUModelOculusSensor.prefab using Guid(2c2099480c1b09b49b123ba87f48456c) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '19d27d6f258847d371bf9425e9938070') in 0.049324 seconds
-  Import took 0.056588 seconds .
-
-========================================================================
-Received Import Request.
-  Time since last request: 0.000264 seconds.
-  path: Assets/HTC.UnityPlugin/ViveInputUtility/Resources/Models/ObjModelHandRight_21.fbx
-  artifactKey: Guid(7c8aa4811beb6ea4ea8869f897666bc3) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/HTC.UnityPlugin/ViveInputUtility/Resources/Models/ObjModelHandRight_21.fbx using Guid(7c8aa4811beb6ea4ea8869f897666bc3) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '83bdcbe7a196c74eb99c51c7ee62939e') in 0.059187 seconds
-  Import took 0.063939 seconds .
-
-========================================================================
-Received Import Request.
-  Time since last request: 0.000224 seconds.
-  path: Assets/HTC.UnityPlugin/ViveInputUtility/Resources/Models/VIUModelOculusTouchLeft.prefab
-  artifactKey: Guid(19e1aa1ea4e8cb74dae7634c5bb26c06) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/HTC.UnityPlugin/ViveInputUtility/Resources/Models/VIUModelOculusTouchLeft.prefab using Guid(19e1aa1ea4e8cb74dae7634c5bb26c06) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '932cec6a353993071fe025e18d8dc8ea') in 0.048797 seconds
-  Import took 0.053298 seconds .
-
-========================================================================
-Received Import Request.
-  Time since last request: 0.000217 seconds.
-  path: Assets/HTC.UnityPlugin/ViveInputUtility/Resources/Models/VIUModelViveHandTrackingTrackedHandLeft.prefab
-  artifactKey: Guid(330676ddf7f046e4c91d6732d14d216b) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/HTC.UnityPlugin/ViveInputUtility/Resources/Models/VIUModelViveHandTrackingTrackedHandLeft.prefab using Guid(330676ddf7f046e4c91d6732d14d216b) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '67c16dbae8416f6b9d2d9f3643227de8') in 0.051884 seconds
-  Import took 0.056324 seconds .
-
-========================================================================
-Received Import Request.
-  Time since last request: 0.000208 seconds.
-  path: Assets/HTC.UnityPlugin/ViveInputUtility/Resources/Models/ObjModelOculusGearVrController.fbx
-  artifactKey: Guid(6edfa91e984e125488b968a80e340754) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/HTC.UnityPlugin/ViveInputUtility/Resources/Models/ObjModelOculusGearVrController.fbx using Guid(6edfa91e984e125488b968a80e340754) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'eff825b0b7d662edf23ffe299e12a7a3') in 0.130794 seconds
-  Import took 0.135691 seconds .
-
-========================================================================
-Received Import Request.
-  Time since last request: 0.000280 seconds.
-  path: Assets/HTC.UnityPlugin/ViveInputUtility/Resources/Models/VIUModelViveBaseStation.prefab
-  artifactKey: Guid(b9a9a167dab56c2458daea76c851f6e5) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/HTC.UnityPlugin/ViveInputUtility/Resources/Models/VIUModelViveBaseStation.prefab using Guid(b9a9a167dab56c2458daea76c851f6e5) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '13b5b947c496390ef7e63195148c113d') in 0.056062 seconds
-  Import took 0.060462 seconds .
-
-========================================================================
-Received Import Request.
-  Time since last request: 0.000215 seconds.
-  path: Assets/HTC.UnityPlugin/ViveInputUtility/Resources/Models/VIUModelKnucklesLeft.prefab
-  artifactKey: Guid(e568c2d9060754a409b5cc294cd3a79f) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/HTC.UnityPlugin/ViveInputUtility/Resources/Models/VIUModelKnucklesLeft.prefab using Guid(e568c2d9060754a409b5cc294cd3a79f) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '768bd1f0723e0d0c98061440b4f7f57a') in 0.064770 seconds
-  Import took 0.068980 seconds .
-
-========================================================================
-Received Import Request.
-  Time since last request: 0.000251 seconds.
-  path: Assets/HTC.UnityPlugin/ViveInputUtility/Resources/Models/ObjModelViveFocusChirp.fbx
-  artifactKey: Guid(862629c097036324e8afeb4ce76e7a36) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/HTC.UnityPlugin/ViveInputUtility/Resources/Models/ObjModelViveFocusChirp.fbx using Guid(862629c097036324e8afeb4ce76e7a36) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '7ba29f8dce8bddd67d4342690e156a42') in 0.137153 seconds
-  Import took 0.142237 seconds .
-
-========================================================================
-Received Import Request.
-  Time since last request: 0.000251 seconds.
-  path: Assets/HTC.UnityPlugin/ViveInputUtility/Resources/Models/VIUModelOculusQuestOrRiftSControllerLeft.prefab
-  artifactKey: Guid(1587ed6f309906347a153766688233e3) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/HTC.UnityPlugin/ViveInputUtility/Resources/Models/VIUModelOculusQuestOrRiftSControllerLeft.prefab using Guid(1587ed6f309906347a153766688233e3) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '151c9fe9a4d796dd988b57042bb2cffa') in 0.052311 seconds
-  Import took 0.056716 seconds .
-
-========================================================================
-Received Import Request.
-  Time since last request: 0.000281 seconds.
-  path: Assets/HTC.UnityPlugin/ViveInputUtility/Resources/Models/VIUModelKnucklesRight.prefab
-  artifactKey: Guid(c2bb7668e99e3b44cb17473208d3a790) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/HTC.UnityPlugin/ViveInputUtility/Resources/Models/VIUModelKnucklesRight.prefab using Guid(c2bb7668e99e3b44cb17473208d3a790) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '8ae0d720c63c769dda2fe04249f8e10c') in 0.051587 seconds
-  Import took 0.057735 seconds .
-
-========================================================================
-Received Import Request.
-  Time since last request: 0.000210 seconds.
-  path: Assets/HTC.UnityPlugin/ViveInputUtility/Resources/Models/VIUModelSteamVRSkeletonLeft.prefab
-  artifactKey: Guid(d43326885e62c5d43a7753e075cadf56) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/HTC.UnityPlugin/ViveInputUtility/Resources/Models/VIUModelSteamVRSkeletonLeft.prefab using Guid(d43326885e62c5d43a7753e075cadf56) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'd4c3cd69adbbb0a48e0046705b4e622f') in 0.050013 seconds
-  Import took 0.055093 seconds .
-
-========================================================================
-Received Import Request.
-  Time since last request: 0.000245 seconds.
-  path: Assets/HTC.UnityPlugin/ViveInputUtility/Resources/Models/ObjModelHandRight_26.fbx
-  artifactKey: Guid(93c83368e9a093c4f9a4341cf8465f85) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/HTC.UnityPlugin/ViveInputUtility/Resources/Models/ObjModelHandRight_26.fbx using Guid(93c83368e9a093c4f9a4341cf8465f85) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '4530e23a99cd9b0550226d41896966d0') in 0.063602 seconds
-  Import took 0.067379 seconds .
-
-========================================================================
-Received Import Request.
-  Time since last request: 0.000215 seconds.
-  path: Assets/HTC.UnityPlugin/ViveInputUtility/Resources/Models/VIUModelViveCosmosControllerRight.prefab
-  artifactKey: Guid(1e0753deab720f945b4f2dc9ae9eac64) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/HTC.UnityPlugin/ViveInputUtility/Resources/Models/VIUModelViveCosmosControllerRight.prefab using Guid(1e0753deab720f945b4f2dc9ae9eac64) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '8b79a647521e88864f05304b2b448411') in 0.051046 seconds
-  Import took 0.054772 seconds .
-
-========================================================================
-Received Import Request.
-  Time since last request: 0.000323 seconds.
-  path: Assets/HTC.UnityPlugin/ViveInputUtility/Resources/Models/ObjModelHandLeft_21.fbx
-  artifactKey: Guid(dbdfc2533dc0b6843a4c231908400ad0) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/HTC.UnityPlugin/ViveInputUtility/Resources/Models/ObjModelHandLeft_21.fbx using Guid(dbdfc2533dc0b6843a4c231908400ad0) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '02a370184769161068086ea3e90d639c') in 0.067682 seconds
-  Import took 0.074276 seconds .
-
-========================================================================
-Received Import Request.
-  Time since last request: 0.000268 seconds.
-  path: Assets/HTC.UnityPlugin/ViveInputUtility/Resources/Models/VIUModelViveTracker.prefab
-  artifactKey: Guid(a8b466cf32c6b7a49832b2d706b33923) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/HTC.UnityPlugin/ViveInputUtility/Resources/Models/VIUModelViveTracker.prefab using Guid(a8b466cf32c6b7a49832b2d706b33923) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'f03bbfdfb372dd1647f94f976c8485df') in 0.051427 seconds
-  Import took 0.056103 seconds .
-
-========================================================================
-Received Import Request.
-  Time since last request: 0.000202 seconds.
-  path: Assets/HTC.UnityPlugin/ViveInputUtility/Resources/Models/ObjModelViveCosmosControllerRight.obj
-  artifactKey: Guid(9af60db94080f0b409bb776a936cdc39) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/HTC.UnityPlugin/ViveInputUtility/Resources/Models/ObjModelViveCosmosControllerRight.obj using Guid(9af60db94080f0b409bb776a936cdc39) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '82e34b8b58ddc74d2d9e62ba1f676540') in 0.063720 seconds
-  Import took 0.067175 seconds .
-
-========================================================================
-Received Import Request.
-  Time since last request: 0.000258 seconds.
-  path: Assets/HTC.UnityPlugin/ViveInputUtility/Resources/Models/VIUModelOculusTouchRight.prefab
-  artifactKey: Guid(fb9aa177fa87fc44d831255bf057c139) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/HTC.UnityPlugin/ViveInputUtility/Resources/Models/VIUModelOculusTouchRight.prefab using Guid(fb9aa177fa87fc44d831255bf057c139) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'ac40fcfb224b1aa192e4c1c0dc0ab7ac') in 0.053525 seconds
-  Import took 0.058003 seconds .
-
-========================================================================
-Received Import Request.
-  Time since last request: 0.000081 seconds.
-  path: Assets/HTC.UnityPlugin/ViveInputUtility/Resources/Models/ObjModelViveBaseStation.fbx
-  artifactKey: Guid(049146e7ae633314bac999005e1fefb9) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/HTC.UnityPlugin/ViveInputUtility/Resources/Models/ObjModelViveBaseStation.fbx using Guid(049146e7ae633314bac999005e1fefb9) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '991b9d057462da95538fb5fafacba851') in 0.054209 seconds
-  Import took 0.058160 seconds .
-
-========================================================================
-Received Import Request.
-  Time since last request: 0.000330 seconds.
-  path: Assets/HTC.UnityPlugin/ViveInputUtility/Resources/Models/VIUModelViveFocusFinch.prefab
-  artifactKey: Guid(1c997af07165b6348bd95769a755cac9) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/HTC.UnityPlugin/ViveInputUtility/Resources/Models/VIUModelViveFocusFinch.prefab using Guid(1c997af07165b6348bd95769a755cac9) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '4edfae4dabf32274403680906109b0bf') in 0.047626 seconds
-  Import took 0.055089 seconds .
-
-========================================================================
-Received Import Request.
-  Time since last request: 0.000960 seconds.
-  path: Assets/HTC.UnityPlugin/ViveInputUtility/Resources/Models/ObjModelKnucklesRight.fbx
-  artifactKey: Guid(759bd215186979048815e5fcec79c48d) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/HTC.UnityPlugin/ViveInputUtility/Resources/Models/ObjModelKnucklesRight.fbx using Guid(759bd215186979048815e5fcec79c48d) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '82d351ab7a2a7c93bc02e83652f50e9a') in 0.056822 seconds
-  Import took 0.061219 seconds .
-
-========================================================================
-Received Import Request.
-  Time since last request: 0.000265 seconds.
-  path: Assets/HTC.UnityPlugin/ViveInputUtility/Resources/Models/pyramid.obj
-  artifactKey: Guid(34f5197a8108c0744a2f1b72b7bfa340) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/HTC.UnityPlugin/ViveInputUtility/Resources/Models/pyramid.obj using Guid(34f5197a8108c0744a2f1b72b7bfa340) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'd29f681857651027180f4d858fc947f1') in 0.054958 seconds
-  Import took 0.061313 seconds .
-
-========================================================================
-Received Import Request.
-  Time since last request: 0.000250 seconds.
-  path: Assets/HTC.UnityPlugin/ViveInputUtility/Resources/Models/VIUModelUnknown.prefab
-  artifactKey: Guid(d4e1e979cda7b354b8d19911537d9e9e) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/HTC.UnityPlugin/ViveInputUtility/Resources/Models/VIUModelUnknown.prefab using Guid(d4e1e979cda7b354b8d19911537d9e9e) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'a23ee69cd3f7c22d8b3da20a07c71cf8') in 0.045168 seconds
-  Import took 0.050120 seconds .
-
-========================================================================
-Received Import Request.
-  Time since last request: 0.000064 seconds.
-  path: Assets/HTC.UnityPlugin/ViveInputUtility/Resources/Models/ObjModelOculusTouchRight.fbx
-  artifactKey: Guid(5ddc673c3add8d44ca7de2b080765736) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/HTC.UnityPlugin/ViveInputUtility/Resources/Models/ObjModelOculusTouchRight.fbx using Guid(5ddc673c3add8d44ca7de2b080765736) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '626ac9af30f6eb2308f1e02c279fb49a') in 0.057814 seconds
-  Import took 0.070314 seconds .
-
-========================================================================
-Received Import Request.
-  Time since last request: 0.000287 seconds.
-  path: Assets/HTC.UnityPlugin/ViveInputUtility/Resources/Models/VIUModelOculusQuestControllerLeft.prefab
-  artifactKey: Guid(70626e17c3abc8b4cb65e74a3ce19f64) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/HTC.UnityPlugin/ViveInputUtility/Resources/Models/VIUModelOculusQuestControllerLeft.prefab using Guid(70626e17c3abc8b4cb65e74a3ce19f64) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '24155072cd463ed615c9e4498da7d2ff') in 0.043151 seconds
-  Import took 0.049513 seconds .
-
-========================================================================
-Received Import Request.
-  Time since last request: 0.000220 seconds.
-  path: Assets/HTC.UnityPlugin/ViveInputUtility/Resources/Models/ObjModelOculusGoController.fbx
-  artifactKey: Guid(0d378a433f08ef84e84e051977b1131a) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/HTC.UnityPlugin/ViveInputUtility/Resources/Models/ObjModelOculusGoController.fbx using Guid(0d378a433f08ef84e84e051977b1131a) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'd17cc35039e8d7d131db6f60c8294f01') in 0.051715 seconds
-  Import took 0.056687 seconds .
-
-========================================================================
-Received Import Request.
-  Time since last request: 0.000214 seconds.
-  path: Assets/HTC.UnityPlugin/ViveInputUtility/Resources/Models/ObjModelViveController.fbx
-  artifactKey: Guid(a84c25639fd3f5b47826a4a5e99e0428) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/HTC.UnityPlugin/ViveInputUtility/Resources/Models/ObjModelViveController.fbx using Guid(a84c25639fd3f5b47826a4a5e99e0428) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '43021a4e01006b94a3cce85af449d231') in 0.055884 seconds
-  Import took 0.063384 seconds .
-
-========================================================================
-Received Import Request.
-  Time since last request: 4.963839 seconds.
-  path: Assets/HTC.UnityPlugin/ViveInputUtility/Resources/Models/VIUModelWaveLegacyTrackedHandRight.prefab
-  artifactKey: Guid(4d5a2d8c358f9ac4db78338a3e18c7a2) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/HTC.UnityPlugin/ViveInputUtility/Resources/Models/VIUModelWaveLegacyTrackedHandRight.prefab using Guid(4d5a2d8c358f9ac4db78338a3e18c7a2) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '97199137fe48eadf47c89eb832d08d5f') in 0.085169 seconds
-  Import took 0.094922 seconds .
-
-========================================================================
-Received Import Request.
-  Time since last request: 0.000326 seconds.
-  path: Assets/HTC.UnityPlugin/ViveInputUtility/Resources/Models/VIUModelWMRControllerLeft.prefab
-  artifactKey: Guid(660ddf181ae0cf34e83efbe29b90acc9) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/HTC.UnityPlugin/ViveInputUtility/Resources/Models/VIUModelWMRControllerLeft.prefab using Guid(660ddf181ae0cf34e83efbe29b90acc9) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '3cece9735a224b6984570af7cea15861') in 0.313101 seconds
-  Import took 0.324539 seconds .
-
-========================================================================
-Received Import Request.
-  Time since last request: 0.000377 seconds.
-  path: Assets/HTC.UnityPlugin/ViveInputUtility/Resources/Models/VIUModelWaveTrackedHandRight.prefab
-  artifactKey: Guid(515b4a9be18b50043bcecf19554b797d) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/HTC.UnityPlugin/ViveInputUtility/Resources/Models/VIUModelWaveTrackedHandRight.prefab using Guid(515b4a9be18b50043bcecf19554b797d) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'e904c0088fc94bc17048254aff29ea90') in 0.077873 seconds
-  Import took 0.089256 seconds .
-
-========================================================================
-Received Import Request.
-  Time since last request: 0.000303 seconds.
-  path: Assets/HTC.UnityPlugin/ViveInputUtility/Resources/Models/VIUModelWaveTrackedHandLeft.prefab
-  artifactKey: Guid(bfc4db56e2066d74d9d1ad7050821556) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/HTC.UnityPlugin/ViveInputUtility/Resources/Models/VIUModelWaveTrackedHandLeft.prefab using Guid(bfc4db56e2066d74d9d1ad7050821556) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '77e4b620d33aa439e0c7828fd43ef71a') in 0.057999 seconds
-  Import took 0.064357 seconds .
-
-========================================================================
-Received Import Request.
-  Time since last request: 0.000250 seconds.
-  path: Assets/HTC.UnityPlugin/ViveInputUtility/Resources/Models/VIUModelWMRControllerRight.prefab
-  artifactKey: Guid(b7d62230002201a4bb07a94deec56e48) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/HTC.UnityPlugin/ViveInputUtility/Resources/Models/VIUModelWMRControllerRight.prefab using Guid(b7d62230002201a4bb07a94deec56e48) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '3e04d9e50b7916d13b59d625fba6e57c') in 0.053171 seconds
-  Import took 0.063993 seconds .
-
-========================================================================
-Received Import Request.
-  Time since last request: 3.995506 seconds.
-  path: Assets/HTC.UnityPlugin/ViveInputUtility/Resources/Sprites
-  artifactKey: Guid(068400893fd58584d87feac773bfc07f) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/HTC.UnityPlugin/ViveInputUtility/Resources/Sprites using Guid(068400893fd58584d87feac773bfc07f) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'fd0c821aae5346445bbbd2b7a6fe777b') in 0.030810 seconds
-  Import took 0.039099 seconds .
-
-========================================================================
-Received Import Request.
-  Time since last request: 0.600182 seconds.
-  path: Assets/HTC.UnityPlugin/ViveInputUtility/Resources/Sprites/binding_ui_icons.png
-  artifactKey: Guid(3a23c65532a98fa409e94bf90a84543e) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/HTC.UnityPlugin/ViveInputUtility/Resources/Sprites/binding_ui_icons.png using Guid(3a23c65532a98fa409e94bf90a84543e) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '92ea871654ae778750b242e29b30f55b') in 0.121039 seconds
-  Import took 0.130930 seconds .
-
-========================================================================
-Received Import Request.
-  Time since last request: 2.168920 seconds.
-  path: Assets/HTC.UnityPlugin/ViveInputUtility/Resources/TooltipRig
-  artifactKey: Guid(3c225289ed102f744b4de4a248752093) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/HTC.UnityPlugin/ViveInputUtility/Resources/TooltipRig using Guid(3c225289ed102f744b4de4a248752093) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '2022f0d526560960235f6ecf89689adb') in 0.029085 seconds
-  Import took 0.033691 seconds .
-
-========================================================================
-Received Import Request.
-  Time since last request: 0.283423 seconds.
-  path: Assets/HTC.UnityPlugin/ViveInputUtility/Resources/TooltipRig/VIUTooltipRigIndexControllerLeft.asset
-  artifactKey: Guid(0f65a9611783f2146aed73d389665508) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/HTC.UnityPlugin/ViveInputUtility/Resources/TooltipRig/VIUTooltipRigIndexControllerLeft.asset using Guid(0f65a9611783f2146aed73d389665508) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '227b667f61233c3a6a5f29ee40b8cd5e') in 0.017169 seconds
-  Import took 0.021338 seconds .
-
-========================================================================
-Received Import Request.
-  Time since last request: 0.000069 seconds.
-  path: Assets/HTC.UnityPlugin/ViveInputUtility/Resources/TooltipRig/VIUTooltipRigIndexControllerRight.asset
-  artifactKey: Guid(97c41ff9526971d4c8b447d3147dfb4e) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/HTC.UnityPlugin/ViveInputUtility/Resources/TooltipRig/VIUTooltipRigIndexControllerRight.asset using Guid(97c41ff9526971d4c8b447d3147dfb4e) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '727cca6fb98195131cdf5234d6c6e23d') in 0.015476 seconds
-  Import took 0.022253 seconds .
-
-========================================================================
-Received Import Request.
-  Time since last request: 0.000068 seconds.
-  path: Assets/HTC.UnityPlugin/ViveInputUtility/Resources/TooltipRig/VIUTooltipRigViveController.asset
-  artifactKey: Guid(bd1ce5d92ef554444b4fd005d6392e90) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/HTC.UnityPlugin/ViveInputUtility/Resources/TooltipRig/VIUTooltipRigViveController.asset using Guid(bd1ce5d92ef554444b4fd005d6392e90) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '9611da85deca39e118b08914ce65c2ae') in 0.024158 seconds
-  Import took 0.032221 seconds .
-
-========================================================================
-Received Import Request.
-  Time since last request: 0.000282 seconds.
-  path: Assets/HTC.UnityPlugin/ViveInputUtility/Resources/TooltipRig/VIUTooltipRigViveTracker.asset
-  artifactKey: Guid(752da3c73ed16464ebc1396c0e129682) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/HTC.UnityPlugin/ViveInputUtility/Resources/TooltipRig/VIUTooltipRigViveTracker.asset using Guid(752da3c73ed16464ebc1396c0e129682) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '63e3aefbae4f372831906ce46598bc39') in 0.022979 seconds
-  Import took 0.031133 seconds .
-
-========================================================================
-Received Import Request.
-  Time since last request: 0.000264 seconds.
-  path: Assets/HTC.UnityPlugin/ViveInputUtility/Resources/TooltipRig/VIUTooltipRigViveTracker3.asset
-  artifactKey: Guid(27728cebb5a005d4b85cd4e6e39d2109) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/HTC.UnityPlugin/ViveInputUtility/Resources/TooltipRig/VIUTooltipRigViveTracker3.asset using Guid(27728cebb5a005d4b85cd4e6e39d2109) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'eb784fc15839966158a8755fe0245e6e') in 0.020944 seconds
-  Import took 0.026116 seconds .
-
-========================================================================
-Received Import Request.
-  Time since last request: 0.000258 seconds.
-  path: Assets/HTC.UnityPlugin/ViveInputUtility/Resources/TooltipRig/VIUTooltipRigViveCosmosControllerRight.asset
-  artifactKey: Guid(8bb02cba98ff0234c88ed7e09f140a3f) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/HTC.UnityPlugin/ViveInputUtility/Resources/TooltipRig/VIUTooltipRigViveCosmosControllerRight.asset using Guid(8bb02cba98ff0234c88ed7e09f140a3f) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '21118f1b09ad9f19ee406e5af0749e9c') in 0.025168 seconds
-  Import took 0.034685 seconds .
-
-========================================================================
-Received Import Request.
-  Time since last request: 0.000229 seconds.
-  path: Assets/HTC.UnityPlugin/ViveInputUtility/Resources/TooltipRig/VIUTooltipRigWMRControllerLeft.asset
-  artifactKey: Guid(28e8a30a90ab2d14cb1f32f0f9ccb2e0) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/HTC.UnityPlugin/ViveInputUtility/Resources/TooltipRig/VIUTooltipRigWMRControllerLeft.asset using Guid(28e8a30a90ab2d14cb1f32f0f9ccb2e0) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '8cfc4c9f8b575dee539f2d05009d124c') in 0.024285 seconds
-  Import took 0.028694 seconds .
-
-========================================================================
-Received Import Request.
-  Time since last request: 0.000067 seconds.
-  path: Assets/HTC.UnityPlugin/ViveInputUtility/Resources/TooltipRig/VIUTooltipRigOculusQuestOrRiftSControllerLeft.asset
-  artifactKey: Guid(bb07e32376ffffe4baec02f38dcfea9a) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/HTC.UnityPlugin/ViveInputUtility/Resources/TooltipRig/VIUTooltipRigOculusQuestOrRiftSControllerLeft.asset using Guid(bb07e32376ffffe4baec02f38dcfea9a) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '890be87fae93817f08b401e5f9e82567') in 0.020830 seconds
-  Import took 0.025350 seconds .
-
-========================================================================
-Received Import Request.
-  Time since last request: 0.000229 seconds.
-  path: Assets/HTC.UnityPlugin/ViveInputUtility/Resources/TooltipRig/VIUTooltipRigViveFocusFinch.asset
-  artifactKey: Guid(8b2d82a28ecd0db4aab5a52661ed41bb) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/HTC.UnityPlugin/ViveInputUtility/Resources/TooltipRig/VIUTooltipRigViveFocusFinch.asset using Guid(8b2d82a28ecd0db4aab5a52661ed41bb) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '99d83ce4e2b46651aca00336047d2bfe') in 0.027876 seconds
-  Import took 0.035221 seconds .
-
-========================================================================
-Received Import Request.
-  Time since last request: 0.000096 seconds.
-  path: Assets/HTC.UnityPlugin/ViveInputUtility/Resources/TooltipRig/VIUTooltipRigWMRControllerRight.asset
-  artifactKey: Guid(89a1baa4ec7ab8548a813b079084bc7f) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/HTC.UnityPlugin/ViveInputUtility/Resources/TooltipRig/VIUTooltipRigWMRControllerRight.asset using Guid(89a1baa4ec7ab8548a813b079084bc7f) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'ad78fd459751ceb70cc0455269224146') in 0.026401 seconds
-  Import took 0.032681 seconds .
-
-========================================================================
-Received Import Request.
-  Time since last request: 0.000277 seconds.
-  path: Assets/HTC.UnityPlugin/ViveInputUtility/Resources/TooltipRig/VIUTooltipRigViveFocusChirp.asset
-  artifactKey: Guid(fccd89242cf8ad949b2d19ad201354db) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/HTC.UnityPlugin/ViveInputUtility/Resources/TooltipRig/VIUTooltipRigViveFocusChirp.asset using Guid(fccd89242cf8ad949b2d19ad201354db) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '45c3a57b86083f5e2b972e5495748184') in 0.030042 seconds
-  Import took 0.035695 seconds .
-
-========================================================================
-Received Import Request.
-  Time since last request: 0.000263 seconds.
-  path: Assets/HTC.UnityPlugin/ViveInputUtility/Resources/TooltipRig/VIUTooltipRigOculusTouchLeft.asset
-  artifactKey: Guid(3b5faf5684d1b7b4e953f52dfd5badfa) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/HTC.UnityPlugin/ViveInputUtility/Resources/TooltipRig/VIUTooltipRigOculusTouchLeft.asset using Guid(3b5faf5684d1b7b4e953f52dfd5badfa) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'b218ae275951ce87c0f5ca2c624b2ea8') in 0.019708 seconds
-  Import took 0.026417 seconds .
-
-========================================================================
-Received Import Request.
-  Time since last request: 0.000674 seconds.
-  path: Assets/HTC.UnityPlugin/ViveInputUtility/Resources/TooltipRig/VIUTooltipRigOculusGoController.asset
-  artifactKey: Guid(d98d8610f682b4243a987de2067cb953) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/HTC.UnityPlugin/ViveInputUtility/Resources/TooltipRig/VIUTooltipRigOculusGoController.asset using Guid(d98d8610f682b4243a987de2067cb953) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'c96944bbdd96fc439d95c08aa170dc6f') in 0.022181 seconds
-  Import took 0.031979 seconds .
-
-========================================================================
-Received Import Request.
-  Time since last request: 0.000267 seconds.
-  path: Assets/HTC.UnityPlugin/ViveInputUtility/Resources/TooltipRig/VIUTooltipRigWaveCRControllerRight.asset
-  artifactKey: Guid(0b55cee3ffbbcf347975f04107a3ff27) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/HTC.UnityPlugin/ViveInputUtility/Resources/TooltipRig/VIUTooltipRigWaveCRControllerRight.asset using Guid(0b55cee3ffbbcf347975f04107a3ff27) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '9a54311d4230670825ecb636f681f61f') in 0.026694 seconds
-  Import took 0.033719 seconds .
-
-========================================================================
-Received Import Request.
-  Time since last request: 0.000253 seconds.
-  path: Assets/HTC.UnityPlugin/ViveInputUtility/Resources/TooltipRig/VIUTooltipRigKnucklesLeft.asset
-  artifactKey: Guid(21bf257714e0af3479999f6dae0e5ecf) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/HTC.UnityPlugin/ViveInputUtility/Resources/TooltipRig/VIUTooltipRigKnucklesLeft.asset using Guid(21bf257714e0af3479999f6dae0e5ecf) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '9c8a7885cb27b11763de777b4a5a5152') in 0.017640 seconds
-  Import took 0.022053 seconds .
-
-========================================================================
-Received Import Request.
-  Time since last request: 0.000310 seconds.
-  path: Assets/HTC.UnityPlugin/ViveInputUtility/Resources/TooltipRig/VIUTooltipRigWaveCRControllerLeft.asset
-  artifactKey: Guid(0d55db0c318d4e24caa5cf3e5548bfe2) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/HTC.UnityPlugin/ViveInputUtility/Resources/TooltipRig/VIUTooltipRigWaveCRControllerLeft.asset using Guid(0d55db0c318d4e24caa5cf3e5548bfe2) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '4aa53fc27f3eaf6d3f062fc98a964813') in 0.026731 seconds
-  Import took 0.036195 seconds .
-
-========================================================================
-Received Import Request.
-  Time since last request: 0.000936 seconds.
-  path: Assets/HTC.UnityPlugin/ViveInputUtility/Resources/TooltipRig/VIUTooltipRigMagicLeapController.asset
-  artifactKey: Guid(f18a08da6947a1f45a634d3c0f88c719) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/HTC.UnityPlugin/ViveInputUtility/Resources/TooltipRig/VIUTooltipRigMagicLeapController.asset using Guid(f18a08da6947a1f45a634d3c0f88c719) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '843ab2cbe447841c31262749ea6a92aa') in 0.027290 seconds
-  Import took 0.034531 seconds .
-
-========================================================================
-Received Import Request.
-  Time since last request: 0.000437 seconds.
-  path: Assets/HTC.UnityPlugin/ViveInputUtility/Resources/TooltipRig/VIUTooltipRigOculusTouchRight.asset
-  artifactKey: Guid(4a8b6a1b6d3e134499088cd533410758) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/HTC.UnityPlugin/ViveInputUtility/Resources/TooltipRig/VIUTooltipRigOculusTouchRight.asset using Guid(4a8b6a1b6d3e134499088cd533410758) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '2b9232a49ace39d88ac7d00cf28191b3') in 0.022889 seconds
-  Import took 0.032322 seconds .
-
-========================================================================
-Received Import Request.
-  Time since last request: 0.000270 seconds.
-  path: Assets/HTC.UnityPlugin/ViveInputUtility/Resources/TooltipRig/VIUTooltipRigOculusQuestOrRiftSControllerRight.asset
-  artifactKey: Guid(d04bfb194154ee0429d99c72421537a4) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/HTC.UnityPlugin/ViveInputUtility/Resources/TooltipRig/VIUTooltipRigOculusQuestOrRiftSControllerRight.asset using Guid(d04bfb194154ee0429d99c72421537a4) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '8cf012ac199955e940ec85760d7eef43') in 0.018339 seconds
-  Import took 0.027565 seconds .
-
-========================================================================
-Received Import Request.
-  Time since last request: 0.000289 seconds.
-  path: Assets/HTC.UnityPlugin/ViveInputUtility/Resources/TooltipRig/VIUTooltipRigOculusGearVrController.asset
-  artifactKey: Guid(b9ab0e783dfd27c4389e80e1c6cdad5e) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/HTC.UnityPlugin/ViveInputUtility/Resources/TooltipRig/VIUTooltipRigOculusGearVrController.asset using Guid(b9ab0e783dfd27c4389e80e1c6cdad5e) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'df552cb492702663deb8c6e8c88d6146') in 0.024810 seconds
-  Import took 0.031121 seconds .
-
-========================================================================
-Received Import Request.
-  Time since last request: 0.000252 seconds.
-  path: Assets/HTC.UnityPlugin/ViveInputUtility/Resources/TooltipRig/VIUTooltipRigViveCosmosControllerLeft.asset
-  artifactKey: Guid(1f692b9986d519a4681b17ded6ad03b4) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/HTC.UnityPlugin/ViveInputUtility/Resources/TooltipRig/VIUTooltipRigViveCosmosControllerLeft.asset using Guid(1f692b9986d519a4681b17ded6ad03b4) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '8d252faca4084fc12737338e9dd24e0f') in 0.034313 seconds
-  Import took 0.039984 seconds .
-
-========================================================================
-Received Import Request.
-  Time since last request: 0.000112 seconds.
-  path: Assets/HTC.UnityPlugin/ViveInputUtility/Resources/TooltipRig/VIUTooltipRigKnucklesRight.asset
-  artifactKey: Guid(1327977225b95a74d9967f8d31ca7a31) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/HTC.UnityPlugin/ViveInputUtility/Resources/TooltipRig/VIUTooltipRigKnucklesRight.asset using Guid(1327977225b95a74d9967f8d31ca7a31) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'bcafd22a04713147283a1264577c3d1a') in 0.026389 seconds
-  Import took 0.033434 seconds .
-
-========================================================================
-Received Import Request.
-  Time since last request: 5.059843 seconds.
-  path: Assets/HTC.UnityPlugin/ViveInputUtility/Scripts
-  artifactKey: Guid(9643ffea5b77cca419aa9c3f9625209f) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/HTC.UnityPlugin/ViveInputUtility/Scripts using Guid(9643ffea5b77cca419aa9c3f9625209f) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '15fb80b81bda279549d440d658397625') in 0.026885 seconds
-  Import took 0.030365 seconds .
-
-========================================================================
-Received Import Request.
-  Time since last request: 3.405165 seconds.
-  path: Assets/HTC.UnityPlugin/VRModule/Editor
-  artifactKey: Guid(2436db39a07811446971801fa8cdd527) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/HTC.UnityPlugin/VRModule/Editor using Guid(2436db39a07811446971801fa8cdd527) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'f7b389cafe037e875c73953d55d15e19') in 0.044344 seconds
-  Import took 0.059593 seconds .
-
-========================================================================
-Received Import Request.
-  Time since last request: 0.192741 seconds.
-  path: Assets/HTC.UnityPlugin/VRModule/Modules
-  artifactKey: Guid(aefc8dff2aaff6244be201d7c53d4fec) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/HTC.UnityPlugin/VRModule/Modules using Guid(aefc8dff2aaff6244be201d7c53d4fec) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'c9fd0ba784bf06c207036eb25d76f414') in 0.029564 seconds
-  Import took 0.034221 seconds .
-
-========================================================================
-Received Import Request.
-  Time since last request: 8.029314 seconds.
-  path: Assets/HTC.UnityPlugin/Utility/Attribute
-  artifactKey: Guid(8a034b4286e0fec45825ea4a06c0639b) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/HTC.UnityPlugin/Utility/Attribute using Guid(8a034b4286e0fec45825ea4a06c0639b) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'bb07f9ab7c7f48a0da97e6001687c957') in 0.030871 seconds
-  Import took 0.034652 seconds .
-
-========================================================================
-Received Import Request.
-  Time since last request: 0.380821 seconds.
-  path: Assets/HTC.UnityPlugin/Utility/Container
-  artifactKey: Guid(9ed5d76474dad2845bd42ba1ca99891b) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/HTC.UnityPlugin/Utility/Container using Guid(9ed5d76474dad2845bd42ba1ca99891b) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'a6d977ef88a911f9cd3769d007322fec') in 0.024931 seconds
-  Import took 0.029443 seconds .
-
-========================================================================
-Received Import Request.
-  Time since last request: 0.214272 seconds.
-  path: Assets/HTC.UnityPlugin/Utility/ContainerPool
-  artifactKey: Guid(651761b4969c4514c8993116e21a7582) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/HTC.UnityPlugin/Utility/ContainerPool using Guid(651761b4969c4514c8993116e21a7582) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'a9552207e397297e95f710f2576a0649') in 0.024729 seconds
-  Import took 0.030140 seconds .
-
-========================================================================
-Received Import Request.
-  Time since last request: 0.198134 seconds.
-  path: Assets/HTC.UnityPlugin/Utility/Editor
-  artifactKey: Guid(945b7d63914b8db4a8756142cf81f783) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/HTC.UnityPlugin/Utility/Editor using Guid(945b7d63914b8db4a8756142cf81f783) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'b51c0ade2b8595c369809835a651908f') in 0.022489 seconds
-  Import took 0.028793 seconds .
-
-========================================================================
-Received Import Request.
-  Time since last request: 0.967254 seconds.
-  path: Assets/HTC.UnityPlugin/Utility/HandJoint
-  artifactKey: Guid(5449a8ea51950e64094e8aedf1b08180) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/HTC.UnityPlugin/Utility/HandJoint using Guid(5449a8ea51950e64094e8aedf1b08180) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '8a0008277268dc0b3461d9ec9ea64667') in 0.025910 seconds
-  Import took 0.029455 seconds .
-
-========================================================================
-Received Import Request.
-  Time since last request: 7.933477 seconds.
-  path: Assets/HTC.UnityPlugin
-  artifactKey: Guid(6b584500057cf954f9c819bbb7b20a19) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/HTC.UnityPlugin using Guid(6b584500057cf954f9c819bbb7b20a19) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '1b117a7ee369c009ad44066d73f8b7e1') in 0.056285 seconds
-  Import took 0.066404 seconds .
-
-AssetImportWorkerClient::OnTransportError - code=2 error=End of file
