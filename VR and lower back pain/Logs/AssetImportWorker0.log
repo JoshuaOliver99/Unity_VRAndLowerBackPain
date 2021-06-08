@@ -1,0 +1,116 @@
+Using pre-set license
+Built from '2020.3/staging' branch; Version is '2020.3.10f1 (297d780c91bc) revision 2719096'; Using compiler version '192528614'; Build Type 'Release'
+OS: 'Windows 10 Pro; OS build 19042.985; Version 2009; 64bit' Language: 'en' Physical Memory: 8108 MB
+BatchMode: 1, IsHumanControllingUs: 0, StartBugReporterOnCrash: 0, Is64bit: 1, IsPro: 0
+
+ COMMAND LINE ARGUMENTS:
+C:\Program Files\Unity\Hub\Editor\2020.3.10f1\Editor\Unity.exe
+-adb2
+-batchMode
+-noUpm
+-name
+AssetImportWorker0
+-projectPath
+C:/Users/joshu/OneDrive/Documents/GitHub/VR-and-lower-back-pain/VR and lower back pain
+-logFile
+Logs/AssetImportWorker0.log
+-srvPort
+62044
+Successfully changed project path to: C:/Users/joshu/OneDrive/Documents/GitHub/VR-and-lower-back-pain/VR and lower back pain
+C:/Users/joshu/OneDrive/Documents/GitHub/VR-and-lower-back-pain/VR and lower back pain
+Using Asset Import Pipeline V2.
+Refreshing native plugins compatible for Editor in 203.72 ms, found 10 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Initialize engine version: 2020.3.10f1 (297d780c91bc)
+[Subsystems] Discovering subsystems at path C:/Program Files/Unity/Hub/Editor/2020.3.10f1/Editor/Data/Resources/UnitySubsystems
+[Subsystems] Discovering subsystems at path C:/Users/joshu/OneDrive/Documents/GitHub/VR-and-lower-back-pain/VR and lower back pain/Assets
+GfxDevice: creating device client; threaded=0
+Direct3D:
+    Version:  Direct3D 11.0 [level 11.1]
+    Renderer: Intel(R) HD Graphics 620 (ID=0x5916)
+    Vendor:   
+    VRAM:     4054 MB
+    Driver:   25.20.100.6518
+Initialize mono
+Mono path[0] = 'C:/Program Files/Unity/Hub/Editor/2020.3.10f1/Editor/Data/Managed'
+Mono path[1] = 'C:/Program Files/Unity/Hub/Editor/2020.3.10f1/Editor/Data/MonoBleedingEdge/lib/mono/unityjit'
+Mono config path = 'C:/Program Files/Unity/Hub/Editor/2020.3.10f1/Editor/Data/MonoBleedingEdge/etc'
+Using monoOptions --debugger-agent=transport=dt_socket,embedding=1,server=y,suspend=n,address=127.0.0.1:56864
+Begin MonoManager ReloadAssembly
+Registering precompiled unity dll's ...
+Register platform support module: C:/Program Files/Unity/Hub/Editor/2020.3.10f1/Editor/Data/PlaybackEngines/WindowsStandaloneSupport/UnityEditor.WindowsStandalone.Extensions.dll
+Registered in 0.005858 seconds.
+Native extension for WindowsStandalone target not found
+Refreshing native plugins compatible for Editor in 63.16 ms, found 10 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Mono: successfully reloaded assembly
+- Completed reload, in  7.125 seconds
+Platform modules already initialized, skipping
+Registering precompiled user dll's ...
+Registered in 0.042711 seconds.
+Begin MonoManager ReloadAssembly
+Native extension for WindowsStandalone target not found
+Refreshing native plugins compatible for Editor in 58.36 ms, found 10 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Mono: successfully reloaded assembly
+- Completed reload, in  2.846 seconds
+Platform modules already initialized, skipping
+========================================================================
+Worker process is ready to serve import requests
+Launched and connected shader compiler UnityShaderCompiler.exe after 0.08 seconds
+Refreshing native plugins compatible for Editor in 0.83 ms, found 10 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Unloading 2730 Unused Serialized files (Serialized files now loaded: 0)
+System memory in use before: 125.1 MB.
+System memory in use after: 125.1 MB.
+
+Unloading 40 unused Assets to reduce memory usage. Loaded Objects now: 3168.
+Total: 3.900400 ms (FindLiveObjects: 0.564100 ms CreateObjectMapping: 0.297900 ms MarkObjects: 2.937400 ms  DeleteObjects: 0.100000 ms)
+
+========================================================================
+Received Import Request.
+  path: Assets/_App
+  artifactKey: Guid(11e9a537561751b4c845998e6b2bb15f) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/_App using Guid(11e9a537561751b4c845998e6b2bb15f) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '9ab02206b4e0d6e7c0f9d94798fe63f5') in 0.023107 seconds
+  Import took 0.029830 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000219 seconds.
+  path: Assets/_App/Models
+  artifactKey: Guid(407c6b75d68b46b4bbe5a6b61ffa2a9e) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/_App/Models using Guid(407c6b75d68b46b4bbe5a6b61ffa2a9e) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '012a01a38192002bac410b285bc164c1') in 0.010098 seconds
+  Import took 0.016300 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 7.824133 seconds.
+  path: Assets/_App/Models/Robot Kyle
+  artifactKey: Guid(25154e861688756469156c96688249c6) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/_App/Models/Robot Kyle using Guid(25154e861688756469156c96688249c6) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'ced6212adadd325e3268467c25c90c1b') in 0.046651 seconds
+  Import took 0.060455 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 225.548728 seconds.
+  path: Assets/_App/Models/mh2Unity
+  artifactKey: Guid(8e03bef56ac2ea24098e94b82f444a27) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/_App/Models/mh2Unity using Guid(8e03bef56ac2ea24098e94b82f444a27) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'f66ff1e91e09e7e13cd6e1ad95111e20') in 0.041748 seconds
+  Import took 0.057492 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.075645 seconds.
+  path: Assets/_App/Models/mh2Unity/fh1.fbx
+  artifactKey: Guid(31fc270e2b360af479559368a36d4f7f) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/_App/Models/mh2Unity/fh1.fbx using Guid(31fc270e2b360af479559368a36d4f7f) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '5c3d2e6feae9cd21ad42c6cefa8d8003') in 1.797350 seconds
+  Import took 1.809165 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000291 seconds.
+  path: Assets/_App/Models/mh2Unity/mh1.fbx
+  artifactKey: Guid(95bbdf39b57227e4eaf2598918c21951) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/_App/Models/mh2Unity/mh1.fbx using Guid(95bbdf39b57227e4eaf2598918c21951) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '3c1c8d8709d0c2877985a962f25b136e') in 0.232788 seconds
+  Import took 0.243648 seconds .
+
