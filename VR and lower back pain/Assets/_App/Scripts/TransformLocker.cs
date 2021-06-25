@@ -4,6 +4,7 @@ using UnityEngine;
 
 public class TransformLocker : MonoBehaviour
 {
+    [SerializeField] bool lockTransform;
     [SerializeField] GameObject lockedObject;
 
     Vector3 lockedPos;
@@ -11,15 +12,18 @@ public class TransformLocker : MonoBehaviour
    
     void Start()
     {
-        // Retriev starting transformation
+        // Retriev starting position & rotation
         lockedPos = lockedObject.transform.position;   
         lockedRot = lockedObject.transform.rotation;   
     }
 
     void Update()
     {
-        // Set the position & rotation
-        lockedObject.transform.position = lockedPos;
-        lockedObject.transform.rotation = lockedRot;
+        if (lockTransform)
+        {
+            // Set the position & rotation
+            lockedObject.transform.position = lockedPos;
+            lockedObject.transform.rotation = lockedRot;
+        }
     }
 }
