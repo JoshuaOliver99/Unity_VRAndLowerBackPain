@@ -14,13 +14,13 @@ public class CalibrateSize : MonoBehaviour
     /// </summary>
     private void Update()
     {
-        if (Input.GetButtonDown(KeyCode.Q.ToString()))
+        if (Input.GetButtonDown(KeyCode.Z.ToString()))
             GrowHeight();
-        if (Input.GetButtonDown(KeyCode.A.ToString()))
+        if (Input.GetButtonDown(KeyCode.X.ToString()))
             ShrinkHeight();
-        if (Input.GetButtonDown(KeyCode.W.ToString()))
+        if (Input.GetButtonDown(KeyCode.C.ToString()))
             GrowArms();
-        if (Input.GetButtonDown(KeyCode.S.ToString()))
+        if (Input.GetButtonDown(KeyCode.V.ToString()))
             ShrinkArms();
     }
     // ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^ deactivate ^^^^^^^^^^^^^^^^^^
