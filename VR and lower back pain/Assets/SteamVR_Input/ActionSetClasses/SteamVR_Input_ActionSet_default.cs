@@ -105,6 +105,38 @@ namespace Valve.VR
             }
         }
         
+        public virtual SteamVR_Action_Boolean GrowArms
+        {
+            get
+            {
+                return SteamVR_Actions.default_GrowArms;
+            }
+        }
+        
+        public virtual SteamVR_Action_Boolean ShrinkArms
+        {
+            get
+            {
+                return SteamVR_Actions.default_ShrinkArms;
+            }
+        }
+        
+        public virtual SteamVR_Action_Boolean GrowHeight
+        {
+            get
+            {
+                return SteamVR_Actions.default_GrowHeight;
+            }
+        }
+        
+        public virtual SteamVR_Action_Boolean ShrinkHeight
+        {
+            get
+            {
+                return SteamVR_Actions.default_ShrinkHeight;
+            }
+        }
+        
         public virtual SteamVR_Action_Vibration Haptic
         {
             get

@@ -1,48 +1,53 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using Valve.VR;
 
 public class CalibrateSize : MonoBehaviour
 {
     public Transform UpperArmBoneLeft, LowerArmBoneLeft;
     public Transform UpperArmBoneRight, LowerArmBoneRight;
     public float scalePct = 0.05f;
-    float scaleHeight, scaleArms;
+    [SerializeField] float scaleHeight, scaleArms;
 
-    /// <summary>
-    ///  DEBUG: Remove on build, for testing without using controller button presses
-    /// </summary>
+    [Header("Steam VR")]
+    public SteamVR_Input_Sources leftHand;
+    public SteamVR_Input_Sources rightHand;
+
     private void Update()
     {
-        if (Input.GetButtonDown(KeyCode.Z.ToString()))
-            GrowHeight();
-        if (Input.GetButtonDown(KeyCode.X.ToString()))
-            ShrinkHeight();
-        if (Input.GetButtonDown(KeyCode.C.ToString()))
+        if (SteamVR_Input.GetStateDown("GrowArms", leftHand))
             GrowArms();
-        if (Input.GetButtonDown(KeyCode.V.ToString()))
+        if (SteamVR_Input.GetStateDown("ShrinkArms", leftHand))
             ShrinkArms();
+        if (SteamVR_Input.GetStateDown("GrowHeight", rightHand))
+            GrowHeight();
+        if (SteamVR_Input.GetStateDown("ShrinkHeight", rightHand))
+            ShrinkHeight();
     }
-    // ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^ deactivate ^^^^^^^^^^^^^^^^^^
 
     public void GrowHeight()
     {
+        Debug.Log("Grow Height");
         scaleHeight = this.transform.localScale.y + scalePct;
         this.gameObject.transform.localScale = new Vector3(scaleHeight, scaleHeight, scaleHeight);
     }
     public void ShrinkHeight()
     {
+        Debug.Log("Shrink Height");
         scaleHeight = this.transform.localScale.y - scalePct;
         this.gameObject.transform.localScale = new Vector3(scaleHeight, scaleHeight, scaleHeight);
     }
     public void GrowArms()
     {
+        Debug.Log("Grow Arms");
         scaleArms = this.transform.localScale.y + scalePct;
         LowerArmBoneLeft.localScale = UpperArmBoneLeft.localScale = LowerArmBoneRight.localScale = UpperArmBoneRight.localScale = 
             new Vector3(scaleArms, scaleArms, scaleArms);
     }
     public void ShrinkArms()
     {
+        Debug.Log("Shrink Arms");
         scaleArms = this.transform.localScale.y - scalePct;
         LowerArmBoneLeft.localScale = UpperArmBoneLeft.localScale = LowerArmBoneRight.localScale = UpperArmBoneRight.localScale =
             new Vector3(scaleArms, scaleArms, scaleArms);
