@@ -4,7 +4,9 @@ using UnityEngine;
 using System.IO;
 using Newtonsoft.Json;
 
-
+/// <summary>
+/// Pressing L logs positions and rotation of objectsToLog and writes to file: Assets/Recordings/log.txt
+/// </summary>
 public class Logger : MonoBehaviour
 {
     public GameObject[] objectsToLog;
