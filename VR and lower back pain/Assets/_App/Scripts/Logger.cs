@@ -34,7 +34,7 @@ public class Logger : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if (Input.GetButtonDown(KeyCode.L.ToString()))
+        if (Input.GetKeyDown(KeyCode.L))
             WriteLog();
     }
 
