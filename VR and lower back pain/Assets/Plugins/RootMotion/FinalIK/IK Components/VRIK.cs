@@ -17,6 +17,8 @@ namespace RootMotion.FinalIK {
 		[System.Serializable]
 		public class References {
             public Transform root;			// 0
+
+            [LargeHeader("Spine")]
 			public Transform pelvis;		// 1
 			public Transform spine;         // 2
 
@@ -27,18 +29,21 @@ namespace RootMotion.FinalIK {
             public Transform neck; 			// 4 Optional
 			public Transform head;          // 5
 
+            [LargeHeader("Left Arm")]
             [Tooltip("Optional")]
             public Transform leftShoulder;	// 6 Optional
 			public Transform leftUpperArm;	// 7
 			public Transform leftForearm;	// 8
 			public Transform leftHand;      // 9
 
+            [LargeHeader("Right Arm")]
             [Tooltip("Optional")]
             public Transform rightShoulder;	// 10 Optional
 			public Transform rightUpperArm;	// 11
 			public Transform rightForearm;	// 12
 			public Transform rightHand;     // 13
 
+            [LargeHeader("Left Leg")]
             [Tooltip("VRIK also supports legless characters.If you do not wish to use legs, leave all leg references empty.")]
             public Transform leftThigh;     // 14 Optional
 
@@ -51,6 +56,7 @@ namespace RootMotion.FinalIK {
             [Tooltip("Optional")]
 			public Transform leftToes;      // 17 Optional
 
+            [LargeHeader("Right Leg")]
             [Tooltip("VRIK also supports legless characters.If you do not wish to use legs, leave all leg references empty.")]
             public Transform rightThigh;    // 18 Optional
 

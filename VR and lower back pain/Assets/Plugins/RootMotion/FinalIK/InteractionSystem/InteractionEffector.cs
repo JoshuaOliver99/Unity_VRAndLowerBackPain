@@ -209,9 +209,11 @@ namespace RootMotion.FinalIK {
 			if (interactionTarget != null && !interactionTarget.rotateOnce) interactionTarget.RotateTo(effector.bone);
 
 			if (isPaused) {
-				effector.position = target.TransformPoint(pausePositionRelative);
-				effector.rotation = target.rotation * pauseRotationRelative;
-
+                if (!pickedUp)
+                {
+                    effector.position = target.TransformPoint(pausePositionRelative);
+                    effector.rotation = target.rotation * pauseRotationRelative;
+                }
 				// Apply the current interaction state to the solver
 				interactionObject.Apply(interactionSystem.ik.solver, effectorType, interactionTarget, timer, weight);
 
@@ -238,11 +240,11 @@ namespace RootMotion.FinalIK {
 			// Apply the current interaction state to the solver
 			interactionObject.Apply(interactionSystem.ik.solver, effectorType, interactionTarget, timer, weight);
 
-			if (pickUp) PickUp(root);
-			if (pause) Pause();
+            if (pickUp) PickUp(root);
+            if (pause) Pause();
 
-			// Hand poser weight
-			float poserWeight = interactionObject.GetValue (InteractionObject.WeightCurve.Type.PoserWeight, interactionTarget, timer);
+            // Hand poser weight
+            float poserWeight = interactionObject.GetValue (InteractionObject.WeightCurve.Type.PoserWeight, interactionTarget, timer);
 
 			if (poser != null) {
 				poser.weight = Mathf.Lerp (poser.weight, poserWeight, weight);
@@ -355,7 +357,7 @@ namespace RootMotion.FinalIK {
 			target = null;
 			defaults = false;
 			resetTimer = 1f;
-			if (poser != null && !pickedUp) poser.weight = 0f;
+			//if (poser != null && !pickedUp) poser.weight = 0f;
 			pickedUp = false;
 			started = false;
 

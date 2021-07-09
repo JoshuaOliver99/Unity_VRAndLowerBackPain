@@ -17,17 +17,13 @@ namespace RootMotion.FinalIK {
 		[System.Serializable]
 		public class Spine: BodyPart {
 
+            [LargeHeader("Head")]
+
 			[Tooltip("The head target. This should not be the camera Transform itself, but a child GameObject parented to it so you could adjust it's position/rotation  to match the orientation of the head bone. The best practice for setup would be to move the camera to the avatar's eyes, duplicate the avatar's head bone and parent it to the camera. Then assign the duplicate to this slot.")]
             /// <summary>
             /// The head target. This should not be the camera Transform itself, but a child GameObject parented to it so you could adjust it's position/rotation to match the orientation of the head bone. The best practice for setup would be to move the camera to the avatar's eyes, duplicate the avatar's head bone and parent it to the camera. Then assign the duplicate to this slot.
             /// </summary>
             public Transform headTarget;
-
-			[Tooltip("The pelvis target (optional), useful for seated rigs or if you had an additional tracker on the backpack or belt are. The best practice for setup would be to duplicate the avatar's pelvis bone and parenting it to the pelvis tracker. Then assign the duplicate to this slot.")]
-            /// <summary>
-            /// The pelvis target (optional), useful for seated rigs or if you had an additional tracker on the backpack or belt are. The best practice for setup would be to duplicate the avatar's pelvis bone and parenting it to the pelvis tracker. Then assign the duplicate to this slot.
-            /// </summary>
-            public Transform pelvisTarget;
 
 			[Tooltip("Positional weight of the head target. Note that if you have nulled the headTarget, the head will still be pulled to the last position of the headTarget until you set this value to 0.")]
             /// <summary>
@@ -41,7 +37,27 @@ namespace RootMotion.FinalIK {
             /// </summary>
             [Range(0f, 1f)] public float rotationWeight = 1f;
 
-			[Tooltip("Positional weight of the pelvis target. Note that if you have nulled the pelvisTarget, the pelvis will still be pulled to the last position of the pelvisTarget until you set this value to 0.")]
+            [Tooltip("Clamps head rotation. Value of 0.5 allows 90 degrees of rotation for the head relative to the headTarget. Value of 0 allows 180 degrees and value of 1 means head rotation will be locked to the target.")]
+            /// <summary>
+            /// Clamps head rotation. Value of 0.5 allows 90 degrees of rotation for the head relative to the headTarget. Value of 0 allows 180 degrees and value of 1 means head rotation will be locked to the target.
+            /// </summary>
+            [Range(0f, 1f)] public float headClampWeight = 0.6f;
+
+            [Tooltip("Minimum height of the head from the root of the character.")]
+            /// <summary>
+            /// Minimum height of the head from the root of the character.
+            /// </summary>
+            public float minHeadHeight = 0.8f;
+
+            [LargeHeader("Pelvis")]
+
+            [Tooltip("The pelvis target (optional), useful for seated rigs or if you had an additional tracker on the backpack or belt are. The best practice for setup would be to duplicate the avatar's pelvis bone and parenting it to the pelvis tracker. Then assign the duplicate to this slot.")]
+            /// <summary>
+            /// The pelvis target (optional), useful for seated rigs or if you had an additional tracker on the backpack or belt are. The best practice for setup would be to duplicate the avatar's pelvis bone and parenting it to the pelvis tracker. Then assign the duplicate to this slot.
+            /// </summary>
+            public Transform pelvisTarget;
+
+            [Tooltip("Positional weight of the pelvis target. Note that if you have nulled the pelvisTarget, the pelvis will still be pulled to the last position of the pelvisTarget until you set this value to 0.")]
             /// <summary>
             /// Positional weight of the pelvis target. Note that if you have nulled the pelvisTarget, the pelvis will still be pulled to the last position of the pelvisTarget until you set this value to 0.
             /// </summary>
@@ -53,23 +69,39 @@ namespace RootMotion.FinalIK {
             /// </summary>
             [Range(0f, 1f)] public float pelvisRotationWeight;
 
+            [Tooltip("How much will the pelvis maintain it's animated position?")]
+            /// <summary>
+            /// How much will the pelvis maintain it's animated position?
+            /// </summary>
+            [Range(0f, 1f)] public float maintainPelvisPosition = 0.2f;
+
+            [LargeHeader("Chest")]
+
 			[Tooltip("If 'Chest Goal Weight' is greater than 0, the chest will be turned towards this Transform.")]
 			/// <summary>
 			/// If chestGoalWeight is greater than 0, the chest will be turned towards this Transform.
 			/// </summary>
 			public Transform chestGoal;
 
-			[Tooltip("Weight of turning the chest towards the 'Chest Goal'.")]
-			/// <summary>
-			/// Weight of turning the chest towards the chestGoal.
-			/// </summary>
-			[Range(0f, 1f)] public float chestGoalWeight;
+            [Tooltip("Weight of turning the chest towards the 'Chest Goal'.")]
+            /// <summary>
+            /// Weight of turning the chest towards the chestGoal.
+            /// </summary>
+            [Range(0f, 1f)] public float chestGoalWeight;
 
-			[Tooltip("Minimum height of the head from the root of the character.")]
-			/// <summary>
-			/// Minimum height of the head from the root of the character.
-			/// </summary>
-			public float minHeadHeight = 0.8f;
+            [Tooltip("Clamps chest rotation. Value of 0.5 allows 90 degrees of rotation for the chest relative to the head. Value of 0 allows 180 degrees and value of 1 means the chest will be locked relative to the head.")]
+            /// <summary>
+            /// Clamps chest rotation. Value of 0.5 allows 90 degrees of rotation for the chest relative to the head. Value of 0 allows 180 degrees and value of 1 means the chest will be locked relative to the head.
+            /// </summary>
+            [Range(0f, 1f)] public float chestClampWeight = 0.5f;
+
+            [Tooltip("The amount of rotation applied to the chest based on hand positions.")]
+            /// <summary>
+            /// The amount of rotation applied to the chest based on hand positions.
+            /// </summary>
+            [Range(0f, 1f)] public float rotateChestByHands = 1f;
+
+            [LargeHeader("Spine")]
 
 			[Tooltip("Determines how much the body will follow the position of the head.")]
 			/// <summary>
@@ -90,35 +122,13 @@ namespace RootMotion.FinalIK {
 			[FormerlySerializedAs("chestRotationWeight")]
 			[Range(0f, 1f)] public float neckStiffness = 0.2f;
 
-			[Tooltip("The amount of rotation applied to the chest based on hand positions.")]
-			/// <summary>
-			/// The amount of rotation applied to the chest based on hand positions.
-			/// </summary>
-			[Range(0f, 1f)] public float rotateChestByHands = 1f;
-
-			[Tooltip("Clamps chest rotation. Value of 0.5 allows 90 degrees of rotation for the chest relative to the head. Value of 0 allows 180 degrees and value of 1 means the chest will be locked relative to the head.")]
-            /// <summary>
-            /// Clamps chest rotation. Value of 0.5 allows 90 degrees of rotation for the chest relative to the head. Value of 0 allows 180 degrees and value of 1 means the chest will be locked relative to the head.
-            /// </summary>
-            [Range(0f, 1f)] public float chestClampWeight = 0.5f;
-
-			[Tooltip("Clamps head rotation. Value of 0.5 allows 90 degrees of rotation for the head relative to the headTarget. Value of 0 allows 180 degrees and value of 1 means head rotation will be locked to the target.")]
-            /// <summary>
-            /// Clamps head rotation. Value of 0.5 allows 90 degrees of rotation for the head relative to the headTarget. Value of 0 allows 180 degrees and value of 1 means head rotation will be locked to the target.
-            /// </summary>
-            [Range(0f, 1f)] public float headClampWeight = 0.6f;
-
 			[Tooltip("Moves the body horizontally along -character.forward axis by that value when the player is crouching.")]
 			/// <summary>
 			/// Moves the body horizontally along -character.forward axis by that value when the player is crouching.
 			/// </summary>
 			public float moveBodyBackWhenCrouching = 0.5f;
 
-			[Tooltip("How much will the pelvis maintain it's animated position?")]
-			/// <summary>
-			/// How much will the pelvis maintain it's animated position?
-			/// </summary>
-			[Range(0f, 1f)] public float maintainPelvisPosition = 0.2f;
+            [LargeHeader("Root Rotation")]
 
 			[Tooltip("Will automatically rotate the root of the character if the head target has turned past this angle.")]
 			/// <summary>
@@ -584,7 +594,7 @@ namespace RootMotion.FinalIK {
 				// Cache leg current mag
 				if (useCurrentLegMag) {
 					foreach (Leg leg in legs) {
-						leg.currentMag = Vector3.Distance(leg.thigh.solverPosition, leg.lastBone.solverPosition);
+						leg.currentMag = Mathf.Max(Vector3.Distance(leg.thigh.solverPosition, leg.lastBone.solverPosition), leg.currentMag);
 					}
 				}
 

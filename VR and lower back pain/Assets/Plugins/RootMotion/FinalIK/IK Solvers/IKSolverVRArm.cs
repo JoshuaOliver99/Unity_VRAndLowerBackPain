@@ -26,17 +26,13 @@ namespace RootMotion.FinalIK
                 FromTo
             }
 
+            [LargeHeader("Hand")]
+
             [Tooltip("The hand target. This should not be the hand controller itself, but a child GameObject parented to it so you could adjust it's position/rotation to match the orientation of the hand bone. The best practice for setup would be to move the hand controller to the avatar's hand as it it was held by the avatar, duplicate the avatar's hand bone and parent it to the hand controller. Then assign the duplicate to this slot.")]
             /// <summary>
             /// The hand target. This should not be the hand controller itself, but a child GameObject parented to it so you could adjust it's position/rotation to match the orientation of the hand bone. The best practice for setup would be to move the hand controller to the avatar's hand as it it was held by the avatar, duplicate the avatar's hand bone and parent it to the hand controller. Then assign the duplicate to this slot.
             /// </summary>
             public Transform target;
-
-            [Tooltip("The elbow will be bent towards this Transform if 'Bend Goal Weight' > 0.")]
-            /// <summary>
-            /// The elbow will be bent towards this Transform if 'Bend Goal Weight' > 0.
-            /// </summary>
-            public Transform bendGoal;
 
             [Tooltip("Positional weight of the hand target. Note that if you have nulled the target, the hand will still be pulled to the last position of the target until you set this value to 0.")]
             /// <summary>
@@ -49,6 +45,8 @@ namespace RootMotion.FinalIK
             /// Rotational weight of the hand target. Note that if you have nulled the target, the hand will still be rotated to the last rotation of the target until you set this value to 0.
             /// </summary>
             [Range(0f, 1f)] public float rotationWeight = 1f;
+
+            [LargeHeader("Shoulder")]
 
             [Tooltip("Different techniques for shoulder bone rotation.")]
             /// <summary>
@@ -67,6 +65,25 @@ namespace RootMotion.FinalIK
             /// The weight of twisting the shoulders backwards when arms are lifted up.
             /// </summary>
             [Range(0f, 1f)] public float shoulderTwistWeight = 1f;
+
+            [Tooltip("Tweak this value to adjust shoulder rotation around the yaw (up) axis.")]
+            /// <summary>
+            /// Tweak this value to adjust shoulder rotation around the yaw (up) axis.
+            /// </summary>
+            public float shoulderYawOffset = 45f;
+
+            [Tooltip("Tweak this value to adjust shoulder rotation around the pitch (forward) axis.")]
+            /// <summary>
+            /// Tweak this value to adjust shoulder rotation around the pitch (forward) axis.
+            /// </summary>
+            public float shoulderPitchOffset = -30f;
+
+            [LargeHeader("Bending")]
+            [Tooltip("The elbow will be bent towards this Transform if 'Bend Goal Weight' > 0.")]
+            /// <summary>
+            /// The elbow will be bent towards this Transform if 'Bend Goal Weight' > 0.
+            /// </summary>
+            public Transform bendGoal;
 
             [Tooltip("If greater than 0, will bend the elbow towards the 'Bend Goal' Transform.")]
             /// <summary>
@@ -91,6 +108,8 @@ namespace RootMotion.FinalIK
             /// Local axis of the hand bone that points from the palm towards the thumb. Used for defining hand bone orientation If you have copied VRIK component from another avatar that has different bone orientations, right-click on VRIK header and select 'Guess Hand Orientations' from the context menu..
             /// </summary>
             public Vector3 palmToThumbAxis = Vector3.zero;
+
+            [LargeHeader("Stretching")]
 
             [Tooltip("Use this to make the arm shorter/longer. Works by displacement of hand and forearm localPosition.")]
             /// <summary>
@@ -161,9 +180,6 @@ namespace RootMotion.FinalIK
             private Vector3 chestUp;
             private Quaternion forearmRelToUpperArm = Quaternion.identity;
             private Vector3 upperArmBendAxis;
-
-            private const float yawOffsetAngle = 45f;
-            private const float pitchOffsetAngle = -30f;
 
             protected override void OnRead(Vector3[] positions, Quaternion[] rotations, bool hasChest, bool hasNeck, bool hasShoulders, bool hasToes, bool hasLegs, int rootIndex, int index)
             {
@@ -278,7 +294,7 @@ namespace RootMotion.FinalIK
                 forearm.solverPosition += elbowAdd;
                 hand.solverPosition += elbowAdd + handAdd;
             }
-
+            
             public void Solve(bool isLeft)
             {
                 chestRotation = Quaternion.LookRotation(rootRotation * chestForwardAxis, rootRotation * chestUpAxis);
@@ -299,7 +315,7 @@ namespace RootMotion.FinalIK
                             sDir = sDir.normalized;
 
                             // Shoulder Yaw
-                            float yOA = isLeft ? yawOffsetAngle : -yawOffsetAngle;
+                            float yOA = isLeft ? shoulderYawOffset : -shoulderYawOffset;
                             Quaternion yawOffset = Quaternion.AngleAxis((isLeft ? -90f : 90f) + yOA, chestUp);
                             Quaternion workingSpace = yawOffset * chestRotation;
 
@@ -335,7 +351,7 @@ namespace RootMotion.FinalIK
                             // Shoulder Pitch
                             Quaternion pitchOffset = Quaternion.AngleAxis(isLeft ? -90f : 90f, chestUp);
                             workingSpace = pitchOffset * chestRotation;
-                            workingSpace = Quaternion.AngleAxis(isLeft ? pitchOffsetAngle : -pitchOffsetAngle, chestForward) * workingSpace;
+                            workingSpace = Quaternion.AngleAxis(isLeft ? shoulderPitchOffset : -shoulderPitchOffset, chestForward) * workingSpace;
 
                             //Debug.DrawRay(Vector3.up * 2f, workingSpace * Vector3.forward);
                             //Debug.DrawRay(Vector3.up * 2f, workingSpace * Vector3.up);
@@ -347,8 +363,8 @@ namespace RootMotion.FinalIK
 
                             float pitch = Mathf.Atan2(sDirWorking.y, sDirWorking.z) * Mathf.Rad2Deg;
 
-                            pitch -= pitchOffsetAngle;
-                            pitch = DamperValue(pitch, -45f - pitchOffsetAngle, 45f - pitchOffsetAngle);
+                            pitch -= shoulderPitchOffset;
+                            pitch = DamperValue(pitch, -45f - shoulderPitchOffset, 45f - shoulderPitchOffset);
 
                             Quaternion pitchRotation = Quaternion.AngleAxis(-pitch, workingSpace * Vector3.right);
 

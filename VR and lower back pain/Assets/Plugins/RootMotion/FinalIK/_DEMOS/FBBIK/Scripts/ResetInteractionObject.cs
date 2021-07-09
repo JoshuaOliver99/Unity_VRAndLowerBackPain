@@ -27,6 +27,7 @@ namespace RootMotion.Demos {
 
 		// Called by the Interaction Object
 		void OnPickUp(Transform t) {
+            if (!enabled) return;
 			StopAllCoroutines();
 			StartCoroutine(ResetObject(Time.time + resetDelay));
 		}

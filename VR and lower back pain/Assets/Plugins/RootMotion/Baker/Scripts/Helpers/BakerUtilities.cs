@@ -18,7 +18,7 @@ namespace RootMotion
         public static Keyframe[] GetReducedKeyframes(AnimationCurve curve, float maxError)
         {
             Keyframe[] keys = curve.keys;
-
+            
             int i = 1;
             while (i < keys.Length - 1 && keys.Length > 2)
             {

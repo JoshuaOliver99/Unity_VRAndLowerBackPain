@@ -33,6 +33,8 @@ namespace RootMotion.FinalIK
         private Vector3 axisRelativeToParentDefault, axisRelativeToChildDefault;
         private Quaternion[] childRotations;
         private bool inititated;
+        private Quaternion defaultLocalRotation = Quaternion.identity;
+        private Quaternion[] defaultChildLocalRotations;
 
         public TwistSolver()
         {
@@ -45,6 +47,8 @@ namespace RootMotion.FinalIK
         /// </summary>
         public void Initiate()
         {
+            if (inititated) return;
+
             if (transform == null)
             {
                 Debug.LogError("TwistRelaxer solver has unassigned Transform. TwistRelaxer.cs was restructured for FIK v2.0 to support multiple relaxers on the same body part and TwistRelaxer components need to be set up again, sorry for the inconvenience!", transform);
@@ -91,8 +95,28 @@ namespace RootMotion.FinalIK
 
             childRotations = new Quaternion[children.Length];
 
+            defaultLocalRotation = transform.localRotation;
+            defaultChildLocalRotations = new Quaternion[children.Length];
+            for (int i = 0; i < children.Length; i++)
+            {
+                defaultChildLocalRotations[i] = children[i].localRotation;
+            }
+
             //if (ik != null) ik.GetIKSolver().OnPostUpdate += OnPostUpdate;
             inititated = true;
+        }
+
+        /// <summary>
+        /// Rotates the bone back to default localRotation.
+        /// </summary>
+        public void FixTransforms()
+        {
+            transform.localRotation = defaultLocalRotation;
+
+            for (int i = 0; i < children.Length; i++)
+            {
+                children[i].localRotation = defaultChildLocalRotations[i];
+            }
         }
 
         /// <summary>

@@ -80,7 +80,7 @@ namespace RootMotion.Demos {
 
         private void Aiming()
         {
-            if (headAim == null && aimWeight <= 0f) return;
+            if (headAim == null || aimWeight <= 0f) return;
 
             // Remember the rotation of the camera because we need to reset it later so the IK would not interfere with the rotating of the camera
             Quaternion camRotation = cam.transform.rotation;

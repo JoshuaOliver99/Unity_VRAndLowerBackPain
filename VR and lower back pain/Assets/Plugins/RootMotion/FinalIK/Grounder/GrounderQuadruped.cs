@@ -104,7 +104,17 @@ namespace RootMotion.FinalIK {
 		#endregion Main Interface
 
 		public override void ResetPosition() {
-			solver.Reset();
+            for (int i = 0; i < legs.Length; i++)
+            {
+                legs[i].GetIKSolver().IKPosition = feet[i].transform.position;
+                if (legs[i] is LimbIK)
+                {
+                    var leg = legs[i] as LimbIK;
+                    leg.solver.IKRotation = solver.legs[i].transform.rotation;
+                }
+            }
+
+            solver.Reset();
 			forelegSolver.Reset();
 		}
 		
@@ -413,7 +423,9 @@ namespace RootMotion.FinalIK {
 			solvedPelvisLocalPosition = pelvis.localPosition;
 			solvedPelvisLocalRotation = pelvis.localRotation;
 			if (head != null) solvedHeadLocalRotation = head.localRotation;
-		}
+
+            if (OnPostIK != null) OnPostIK();
+        }
 		
 		// Cleaning up the delegates
 		void OnDestroy() {

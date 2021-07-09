@@ -2290,9 +2290,13 @@ LookAtConstraint:
   m_Roll: 0
   m_WorldUpObject: {fileID: 0}
   m_UseUpObject: 0
-  m_IsContraintActive: 0
+  m_IsContraintActive: 1
   m_IsLocked: 0
-  m_Sources: []
+  m_Sources:
+  - sourceTransform: {fileID: 691026550}
+    weight: 1
+  - sourceTransform: {fileID: 1337764736}
+    weight: 1
 --- !u!114 &541135337
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2373,7 +2377,7 @@ RectTransform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 541135335}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalRotation: {x: 0.23483276, y: -0.50530106, z: 0.14513463, w: 0.8175943}
   m_LocalPosition: {x: 0, y: 0, z: -1.25}
   m_LocalScale: {x: 0.02, y: 0.02, z: 1}
   m_Children:
@@ -3433,6 +3437,11 @@ Transform:
 Transform:
   m_CorrespondingSourceObject: {fileID: 5639563195007307007, guid: 320b1c2af77554f99a1658df4a6d3d5c, type: 3}
   m_PrefabInstance: {fileID: 435171315}
+  m_PrefabAsset: {fileID: 0}
+--- !u!4 &691026550 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 4000013889601590, guid: 4d293c8e162f3874b982baadd71153d2, type: 3}
+  m_PrefabInstance: {fileID: 1389851784}
   m_PrefabAsset: {fileID: 0}
 --- !u!1 &702696591
 GameObject:
@@ -6219,33 +6228,35 @@ MonoBehaviour:
     spine:
       bones: []
       headTarget: {fileID: 656000127}
-      pelvisTarget: {fileID: 1124215371}
       positionWeight: 1
       rotationWeight: 1
+      headClampWeight: 0.6
+      minHeadHeight: 0.8
+      pelvisTarget: {fileID: 1124215371}
       pelvisPositionWeight: 0.8
       pelvisRotationWeight: 0
+      maintainPelvisPosition: 0.2
       chestGoal: {fileID: 0}
       chestGoalWeight: 0
-      minHeadHeight: 0.8
+      chestClampWeight: 0.5
+      rotateChestByHands: 0
       bodyPosStiffness: 0.55
       bodyRotStiffness: 0.1
       neckStiffness: 0.2
-      rotateChestByHands: 0
-      chestClampWeight: 0.5
-      headClampWeight: 0.6
       moveBodyBackWhenCrouching: 0.5
-      maintainPelvisPosition: 0.2
       maxRootAngle: 25
       rootHeadingOffset: 0
     leftArm:
       bones: []
       target: {fileID: 307754376}
-      bendGoal: {fileID: 0}
       positionWeight: 1
       rotationWeight: 1
       shoulderRotationMode: 0
       shoulderRotationWeight: 1
       shoulderTwistWeight: 1
+      shoulderYawOffset: 45
+      shoulderPitchOffset: -30
+      bendGoal: {fileID: 0}
       bendGoalWeight: 0
       swivelOffset: 0
       wristToPalmAxis: {x: 0, y: 1, z: 0}
@@ -6260,12 +6271,14 @@ MonoBehaviour:
     rightArm:
       bones: []
       target: {fileID: 447596249}
-      bendGoal: {fileID: 0}
       positionWeight: 1
       rotationWeight: 1
       shoulderRotationMode: 0
       shoulderRotationWeight: 1
       shoulderTwistWeight: 1
+      shoulderYawOffset: 45
+      shoulderPitchOffset: -30
+      bendGoal: {fileID: 0}
       bendGoalWeight: 0
       swivelOffset: 0
       wristToPalmAxis: {x: 0, y: 1, z: 0}
@@ -6280,9 +6293,9 @@ MonoBehaviour:
     leftLeg:
       bones: []
       target: {fileID: 0}
-      bendGoal: {fileID: 0}
       positionWeight: 0
       rotationWeight: 0
+      bendGoal: {fileID: 0}
       bendGoalWeight: 0
       swivelOffset: 0
       bendToTargetWeight: 0.5
@@ -6297,9 +6310,9 @@ MonoBehaviour:
     rightLeg:
       bones: []
       target: {fileID: 0}
-      bendGoal: {fileID: 0}
       positionWeight: 0
       rotationWeight: 0
+      bendGoal: {fileID: 0}
       bendGoalWeight: 0
       swivelOffset: 0
       bendToTargetWeight: 0.5
@@ -10883,33 +10896,35 @@ MonoBehaviour:
     spine:
       bones: []
       headTarget: {fileID: 185365681}
-      pelvisTarget: {fileID: 1055212437}
       positionWeight: 1
       rotationWeight: 1
+      headClampWeight: 0.6
+      minHeadHeight: 0.8
+      pelvisTarget: {fileID: 1055212437}
       pelvisPositionWeight: 0.8
       pelvisRotationWeight: 0
+      maintainPelvisPosition: 0.2
       chestGoal: {fileID: 0}
       chestGoalWeight: 0
-      minHeadHeight: 0.8
+      chestClampWeight: 0.5
+      rotateChestByHands: 0
       bodyPosStiffness: 0.55
       bodyRotStiffness: 0.1
       neckStiffness: 0.2
-      rotateChestByHands: 0
-      chestClampWeight: 0.5
-      headClampWeight: 0.6
       moveBodyBackWhenCrouching: 0.5
-      maintainPelvisPosition: 0.2
       maxRootAngle: 25
       rootHeadingOffset: 0
     leftArm:
       bones: []
       target: {fileID: 469817887}
-      bendGoal: {fileID: 0}
       positionWeight: 1
       rotationWeight: 1
       shoulderRotationMode: 0
       shoulderRotationWeight: 1
       shoulderTwistWeight: 1
+      shoulderYawOffset: 45
+      shoulderPitchOffset: -30
+      bendGoal: {fileID: 0}
       bendGoalWeight: 0
       swivelOffset: 0
       wristToPalmAxis: {x: 0, y: 1, z: 0}
@@ -10924,12 +10939,14 @@ MonoBehaviour:
     rightArm:
       bones: []
       target: {fileID: 1163969028}
-      bendGoal: {fileID: 0}
       positionWeight: 1
       rotationWeight: 1
       shoulderRotationMode: 0
       shoulderRotationWeight: 1
       shoulderTwistWeight: 1
+      shoulderYawOffset: 45
+      shoulderPitchOffset: -30
+      bendGoal: {fileID: 0}
       bendGoalWeight: 0
       swivelOffset: 0
       wristToPalmAxis: {x: 0, y: 1, z: 0}
@@ -10944,9 +10961,9 @@ MonoBehaviour:
     leftLeg:
       bones: []
       target: {fileID: 0}
-      bendGoal: {fileID: 0}
       positionWeight: 0
       rotationWeight: 0
+      bendGoal: {fileID: 0}
       bendGoalWeight: 0
       swivelOffset: 0
       bendToTargetWeight: 0.5
@@ -10961,9 +10978,9 @@ MonoBehaviour:
     rightLeg:
       bones: []
       target: {fileID: 0}
-      bendGoal: {fileID: 0}
       positionWeight: 0
       rotationWeight: 0
+      bendGoal: {fileID: 0}
       bendGoalWeight: 0
       swivelOffset: 0
       bendToTargetWeight: 0.5
@@ -11116,10 +11133,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   objectsToLog:
-  - {fileID: 656000126}
-  - {fileID: 1124215370}
-  - {fileID: 307754375}
-  - {fileID: 447596248}
+  - {fileID: 70502772}
+  - {fileID: 1386215272}
+  - {fileID: 673790326}
+  - {fileID: 1450138811}
 --- !u!114 &1887986451
 MonoBehaviour:
   m_ObjectHideFlags: 0
