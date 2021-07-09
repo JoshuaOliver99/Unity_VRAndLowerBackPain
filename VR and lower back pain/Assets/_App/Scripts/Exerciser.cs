@@ -13,28 +13,17 @@ public class Exerciser : MonoBehaviour
     [SerializeField] bool manipulating;
 
     [Header("Data")]
-    [SerializeField] int exercise = 1; // Movement direction (forward, lateral)
-    [SerializeField] int repetition = 1;
-    [SerializeField] int stage = 1; // Stage of repition
+    public int exercise = 1; // Movement direction (forward, lateral)
+    public int repetition = 1;
+    public int stage = 1; // Stage of repition
 
-    [SerializeField] Vector3 headPos;
-    [SerializeField] Vector3 AlteredheadPos;
-
-
-
-    
-    void Start()
-    {
-        headPos = raaTracker.transformHead.position;
-        AlteredheadPos = raaTracker.transformHead.position;
-    }
 
     void Update()
     {
         if (manipulating)
             manipulateData();
 
-        if (Input.GetKeyDown(KeyCode.T))
+        if (Input.GetKeyDown(KeyCode.L))
             increaseStage();
     }
 
@@ -56,7 +45,6 @@ public class Exerciser : MonoBehaviour
             }
         }
 
-
         // If (in manipulated range)...
         if (repetition >= manipulatedRep)
             manipulating = true;
@@ -69,8 +57,7 @@ public class Exerciser : MonoBehaviour
         // Manipulate Transform data here...
 
 
-        // NOTE: Testing
-        AlteredheadPos *= 10;
+        
     }
 
 }

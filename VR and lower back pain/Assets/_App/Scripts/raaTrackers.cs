@@ -2,6 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using Valve.VR;
+using RootMotion.FinalIK; // Final IK
 
 public class raaTrackers : MonoBehaviour
 {
@@ -14,13 +15,15 @@ public class raaTrackers : MonoBehaviour
     public SteamVR_TrackedObject trackerHead;
     public SteamVR_TrackedObject trackerHandLeft;
     public SteamVR_TrackedObject trackerHandRight;
-    // Start is called before the first frame update
+
     void Start()
     {
+        // TESTS: for potentially setting FinalIK elements through this script automatically
+        //VRIK avatarVRIK;
+        ///avatarVRIK.solver.spine.headTarget = ...
         
     }
-
-    // Update is called once per frame
+    
     void Update()
     {
         if (trackerHip != null)
