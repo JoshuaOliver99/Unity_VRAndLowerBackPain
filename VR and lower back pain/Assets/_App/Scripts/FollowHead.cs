@@ -13,11 +13,17 @@ public class FollowHead : MonoBehaviour
     private float hypot;
     private float direction, h, x, y, z;
 
+    private float initAnglarOffset;
+
     void Start()
     {
         // NOTE: Maybe not needed
-        // Set ghost positon to head positon
+        // Allign manipulated start position to head
         transform.position = point1.position;
+
+        Vector3 delta = point1.position - point0.position;
+        hypot = Mathf.Sqrt((delta.y * delta.y) + (delta.x * delta.x) + (delta.z * delta.z));
+        initAnglarOffset = Mathf.Acos(delta.y / hypot);
     }
 
     void Update()
@@ -31,7 +37,7 @@ public class FollowHead : MonoBehaviour
         hypot = Mathf.Sqrt((delta.y * delta.y) + (delta.x * delta.x) + (delta.z * delta.z));
 
         direction = Mathf.Atan2(delta.x, delta.z);
-        radiansOffY = Mathf.Acos(delta.y / hypot) * offset;
+        radiansOffY = Mathf.Acos(delta.y / hypot) * offset - (initAnglarOffset * percentOffset / 100);
         degreesOffY = (radiansOffY * 180) / Mathf.PI;
 
         y = Mathf.Cos(radiansOffY) * hypot;

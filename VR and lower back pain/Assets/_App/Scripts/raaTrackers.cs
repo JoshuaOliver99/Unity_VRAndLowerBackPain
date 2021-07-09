@@ -2,45 +2,45 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using Valve.VR;
-using RootMotion.FinalIK; // Final IK
-
 public class raaTrackers : MonoBehaviour
 {
-    public Transform transformHip;
-    public Transform transformHead;
-    public Transform transformHandLeft;
-    public Transform transformHandRight;
+    [Header("VR Objects")]
+    public Transform TransformHip;
+    public Transform TransformHead;
+    public Transform TransformHandLeft;
+    public Transform TransformHandRight;
 
-    public SteamVR_TrackedObject trackerHip;
-    public SteamVR_TrackedObject trackerHead;
-    public SteamVR_TrackedObject trackerHandLeft;
-    public SteamVR_TrackedObject trackerHandRight;
+    public SteamVR_TrackedObject TrackerHip;
+    public SteamVR_TrackedObject TrackerHead;
+    public SteamVR_TrackedObject TrackerHandLeft;
+    public SteamVR_TrackedObject TrackerHandRight;
 
-    void Start()
-    {
-        // TESTS: for potentially setting FinalIK elements through this script automatically
-        //VRIK avatarVRIK;
-        ///avatarVRIK.solver.spine.headTarget = ...
-        
-    }
-    
+    [Header("VR Offsets. (desired positons)")]
+    public Transform OffsetTransformHip;
+    public Transform OffsetTransformHead;
+    public Transform OffsetTransformHandLeft;
+    public Transform OffsetTransformHandRight;
+
+    [Header("Manipulated Positons")]
+    public Transform ManipulatedHead;
+
     void Update()
     {
-        if (trackerHip != null)
+        if (TrackerHip != null)
         {
-            transformHip = trackerHip.transform;
+            TransformHip = TrackerHip.transform;
         }
-        if (trackerHead != null)
+        if (TrackerHead != null)
         {
-            transformHead = trackerHead.transform;
+            TransformHead = TrackerHead.transform;
         }
-        if (trackerHandLeft != null)
+        if (TrackerHandLeft != null)
         {
-            transformHandLeft = trackerHandLeft.transform;
+            TransformHandLeft = TrackerHandLeft.transform;
         }
-        if (trackerHandRight != null)
+        if (TrackerHandRight != null)
         {
-            transformHandRight = trackerHandRight.transform;
+            TransformHandRight = TrackerHandRight.transform;
         }
     }
 }
