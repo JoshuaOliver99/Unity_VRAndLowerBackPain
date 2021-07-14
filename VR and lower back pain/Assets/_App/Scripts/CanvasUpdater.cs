@@ -1,14 +1,14 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-using UnityEngine.UI;
+using TMPro;
 public class CanvasUpdater : MonoBehaviour
 {
     [Header("References")]
     [SerializeField] Exerciser exerciser;
-    [SerializeField] Text exerciseText;
-    [SerializeField] Text repetitionText;
-    [SerializeField] Text stageText;
+    [SerializeField] TMP_Text exerciseText;
+    [SerializeField] TMP_Text repetitionText;
+    [SerializeField] TMP_Text stageText;
 
     void Update()
     {
