@@ -19,13 +19,13 @@ public class raaTrackers : MonoBehaviour
     public SteamVR_TrackedObject TrackerHandLeft;       // NOTE: Just use transform instead? These are the gameobject as above
     public SteamVR_TrackedObject TrackerHandRight;      // NOTE: Just use transform instead? These are the gameobject as above
 
-    [Header("VR Offsets. (desired positons)")]
+    [Header("VR Offsets (desired positons)")]
     public Transform OffsetTransformHip;
     public Transform OffsetTransformHead;
     public Transform OffsetTransformHandLeft;
     public Transform OffsetTransformHandRight;
 
-    [Header("Manipulated Positons")]
+    [Header("Manipulated Positon")]
     public Transform ManipulatedHead;
 
     void Update()

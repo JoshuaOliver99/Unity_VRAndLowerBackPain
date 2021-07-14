@@ -21,7 +21,7 @@ public class CanvasUpdater : MonoBehaviour
             stageText.text = "continue leaning & nofity when in pain";
 
         // Repetition
-        repetitionText.text = "Repetion #" + exerciser.repetition.ToString();
+        repetitionText.text = "Repetition #" + exerciser.repetition.ToString();
 
         // Exercise
         if (exerciser.exercise == 1)

@@ -12,7 +12,7 @@ public class Exerciser : MonoBehaviour
 {
     [Header("References")]
     [SerializeField] raaTrackers raaTracker;
-    [SerializeField] VRIK vrik;
+    [SerializeField] VRIK vrik; // NOTE: Make array to hold each models VRIK component
     [SerializeField] FollowHead followHead;
     //[SerializeField] VRIK vrikMale;
     //[SerializeField] VRIK vrikFemale;
