@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using Valve.VR;
 using System.IO;
 using Newtonsoft.Json;
 
@@ -9,12 +10,16 @@ using Newtonsoft.Json;
 /// </summary>
 public class Logger : MonoBehaviour
 {
+    [Header("Logger Settings")]
     public GameObject[] objectsToLog;
+
+    [Header("Steam VR")]
+    [SerializeField] SteamVR_Input_Sources leftHand;
+    [SerializeField] SteamVR_Input_Sources rightHand;
 
     private Dictionary<string, Dictionary<string, float>> dict;
     private readonly string pathFile = "Assets/Recordings/log.txt";
 
-    // Start is called before the first frame update
     void Start()
     {
         dict = new Dictionary<string, Dictionary<string, float>>();
@@ -33,10 +38,9 @@ public class Logger : MonoBehaviour
         }
     }
 
-    // Update is called once per frame
     void Update()
     {
-        if (Input.GetKeyDown(KeyCode.L))
+        if (Input.GetKeyDown(KeyCode.L) || SteamVR_Input.GetStateDown("PressTrackpad", leftHand))
             WriteLog();
     }
 

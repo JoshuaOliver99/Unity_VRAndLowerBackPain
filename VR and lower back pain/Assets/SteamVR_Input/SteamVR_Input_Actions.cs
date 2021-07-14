@@ -47,6 +47,8 @@ namespace Valve.VR
         
         private static SteamVR_Action_Boolean p_default_ShrinkHeight;
         
+        private static SteamVR_Action_Boolean p_default_PressTrackpad;
+        
         private static SteamVR_Action_Vibration p_default_Haptic;
         
         private static SteamVR_Action_Vector2 p_platformer_Move;
@@ -272,6 +274,14 @@ namespace Valve.VR
             get
             {
                 return SteamVR_Actions.p_default_ShrinkHeight.GetCopy<SteamVR_Action_Boolean>();
+            }
+        }
+        
+        public static SteamVR_Action_Boolean default_PressTrackpad
+        {
+            get
+            {
+                return SteamVR_Actions.p_default_PressTrackpad.GetCopy<SteamVR_Action_Boolean>();
             }
         }
         
@@ -725,6 +735,7 @@ namespace Valve.VR
                     SteamVR_Actions.default_ShrinkArms,
                     SteamVR_Actions.default_GrowHeight,
                     SteamVR_Actions.default_ShrinkHeight,
+                    SteamVR_Actions.default_PressTrackpad,
                     SteamVR_Actions.default_Haptic,
                     SteamVR_Actions.platformer_Move,
                     SteamVR_Actions.platformer_Jump,
@@ -795,6 +806,7 @@ namespace Valve.VR
                     SteamVR_Actions.default_ShrinkArms,
                     SteamVR_Actions.default_GrowHeight,
                     SteamVR_Actions.default_ShrinkHeight,
+                    SteamVR_Actions.default_PressTrackpad,
                     SteamVR_Actions.platformer_Move,
                     SteamVR_Actions.platformer_Jump,
                     SteamVR_Actions.buggy_Steering,
@@ -868,6 +880,7 @@ namespace Valve.VR
                     SteamVR_Actions.default_ShrinkArms,
                     SteamVR_Actions.default_GrowHeight,
                     SteamVR_Actions.default_ShrinkHeight,
+                    SteamVR_Actions.default_PressTrackpad,
                     SteamVR_Actions.platformer_Jump,
                     SteamVR_Actions.buggy_Brake,
                     SteamVR_Actions.buggy_Reset,
@@ -939,6 +952,7 @@ namespace Valve.VR
                     SteamVR_Actions.default_ShrinkArms,
                     SteamVR_Actions.default_GrowHeight,
                     SteamVR_Actions.default_ShrinkHeight,
+                    SteamVR_Actions.default_PressTrackpad,
                     SteamVR_Actions.platformer_Move,
                     SteamVR_Actions.platformer_Jump,
                     SteamVR_Actions.buggy_Steering,
@@ -1007,6 +1021,7 @@ namespace Valve.VR
             SteamVR_Actions.p_default_ShrinkArms = ((SteamVR_Action_Boolean)(SteamVR_Action.Create<SteamVR_Action_Boolean>("/actions/default/in/ShrinkArms")));
             SteamVR_Actions.p_default_GrowHeight = ((SteamVR_Action_Boolean)(SteamVR_Action.Create<SteamVR_Action_Boolean>("/actions/default/in/GrowHeight")));
             SteamVR_Actions.p_default_ShrinkHeight = ((SteamVR_Action_Boolean)(SteamVR_Action.Create<SteamVR_Action_Boolean>("/actions/default/in/ShrinkHeight")));
+            SteamVR_Actions.p_default_PressTrackpad = ((SteamVR_Action_Boolean)(SteamVR_Action.Create<SteamVR_Action_Boolean>("/actions/default/in/PressTrackpad")));
             SteamVR_Actions.p_default_Haptic = ((SteamVR_Action_Vibration)(SteamVR_Action.Create<SteamVR_Action_Vibration>("/actions/default/out/Haptic")));
             SteamVR_Actions.p_platformer_Move = ((SteamVR_Action_Vector2)(SteamVR_Action.Create<SteamVR_Action_Vector2>("/actions/platformer/in/Move")));
             SteamVR_Actions.p_platformer_Jump = ((SteamVR_Action_Boolean)(SteamVR_Action.Create<SteamVR_Action_Boolean>("/actions/platformer/in/Jump")));

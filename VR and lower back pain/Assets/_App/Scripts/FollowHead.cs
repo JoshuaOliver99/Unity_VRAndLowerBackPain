@@ -4,8 +4,8 @@ using UnityEngine;
 
 public class FollowHead : MonoBehaviour
 {
-    [SerializeField] [Tooltip("Hips/Waist")] private Transform point0;
-    [SerializeField] [Tooltip("Head")] private Transform point1;
+    [SerializeField] [Tooltip("Hips/Waist offset")] private Transform point0;
+    [SerializeField] [Tooltip("Head offset")] private Transform point1;
     [SerializeField] private float percentOffset = 20f;
 
     private float offset;
@@ -17,9 +17,7 @@ public class FollowHead : MonoBehaviour
 
     void Start()
     {
-        // NOTE: Maybe not needed
-        // Allign manipulated start position to head
-        transform.position = point1.position;
+        alignToPoint1();
 
         Vector3 delta = point1.position - point0.position;
         hypot = Mathf.Sqrt((delta.y * delta.y) + (delta.x * delta.x) + (delta.z * delta.z));
@@ -47,5 +45,12 @@ public class FollowHead : MonoBehaviour
         z = Mathf.Cos(direction) * h;
 
         transform.position = point0.position + new Vector3(x, y, z);
+    }
+
+    void alignToPoint1()
+    {
+        // Alligned manipulated head (transform) with head offset (point1)
+        transform.position = point1.position; // Allign manipulated position to head offset
+        transform.localRotation = point1.parent.localRotation; // Allign manipulated rotation to HMD rotation
     }
 }

@@ -23,10 +23,7 @@ namespace RootMotion.Demos
         void LateUpdate()
         {
             if (Input.GetKeyDown(KeyCode.C))
-            {
-                // Calibrate the character, store data of the calibration
-                data = VRIKCalibrator.Calibrate(ik, settings, headTracker, bodyTracker, leftHandTracker, rightHandTracker, leftFootTracker, rightFootTracker);
-            }
+                Calibrate();
 
             /*
              * calling Calibrate with settings will return a VRIKCalibrator.CalibrationData, which can be used to calibrate that same character again exactly the same in another scene (just pass data instead of settings), 
@@ -57,5 +54,12 @@ namespace RootMotion.Demos
                 VRIKCalibrator.RecalibrateScale(ik, data, settings);
             }
         }
+
+        public void Calibrate()
+        {
+            // Calibrate the character, store data of the calibration
+            data = VRIKCalibrator.Calibrate(ik, settings, headTracker, bodyTracker, leftHandTracker, rightHandTracker, leftFootTracker, rightFootTracker);
+        }
     }
+   
 }

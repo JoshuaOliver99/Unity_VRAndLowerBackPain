@@ -2,6 +2,10 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using Valve.VR;
+
+/// <summary>
+/// Reference to each VR transformation
+/// </summary>
 public class raaTrackers : MonoBehaviour
 {
     [Header("VR Objects")]
@@ -10,10 +14,10 @@ public class raaTrackers : MonoBehaviour
     public Transform TransformHandLeft;
     public Transform TransformHandRight;
 
-    public SteamVR_TrackedObject TrackerHip;
-    public SteamVR_TrackedObject TrackerHead;
-    public SteamVR_TrackedObject TrackerHandLeft;
-    public SteamVR_TrackedObject TrackerHandRight;
+    public SteamVR_TrackedObject TrackerHip;            // NOTE: Just use transform instead? These are the gameobject as above
+    public SteamVR_TrackedObject TrackerHead;           // NOTE: Just use transform instead? These are the gameobject as above
+    public SteamVR_TrackedObject TrackerHandLeft;       // NOTE: Just use transform instead? These are the gameobject as above
+    public SteamVR_TrackedObject TrackerHandRight;      // NOTE: Just use transform instead? These are the gameobject as above
 
     [Header("VR Offsets. (desired positons)")]
     public Transform OffsetTransformHip;
