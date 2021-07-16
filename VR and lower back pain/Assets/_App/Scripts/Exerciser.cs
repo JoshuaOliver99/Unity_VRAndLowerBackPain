@@ -1,8 +1,6 @@
-using System.Collections;
-using System.Collections.Generic;
+using RootMotion.FinalIK;
 using UnityEngine;
 using Valve.VR;
-using RootMotion.FinalIK;
 
 /// <summary>
 /// Cycles through each stage of the exercises. Exercise 1-3, for a set number of repetitons of 3 stages each
@@ -11,24 +9,19 @@ using RootMotion.FinalIK;
 public class Exerciser : MonoBehaviour
 {
     [Header("References")]
-    [SerializeField] References references;
+    References references;
     [SerializeField] VRIK vrik; // NOTE: Make array to hold each models VRIK component
     [SerializeField] FollowHead followHead;
-    //[SerializeField] VRIK vrikMale;
-    //[SerializeField] VRIK vrikFemale;
-
-    [Header("Steam VR")]
-    [SerializeField] SteamVR_Input_Sources leftHand;
-    [SerializeField] SteamVR_Input_Sources rightHand;
-
+    
     [Header("Settings")]
     [SerializeField] int numRepetitions = 10;
     [SerializeField] int manipulatedRep = 5;
 
     [Header("Data - DEBUG")]
-    public int exercise = 1; // Movement direction (forward, lateral left, lateral right)
-    public int repetition = 1;
-    public int stage = 1; // Stage of repition (1 Moving to upright, 2 Moving to discomfort, 3 Moving to pain)
+    public int Exercise = 1; // Movement direction (forward, lateral left, lateral right)
+    public int Repetition = 1;
+    public int Stage = 0; // Stage of repition (1 Moving to upright, 2 Moving to discomfort, 3 Moving to pain)
+    public bool Manipulating;
 
 
     void Start()
@@ -39,29 +32,29 @@ public class Exerciser : MonoBehaviour
 
     void Update()
     {
-        if (Input.GetKeyDown(KeyCode.L) || SteamVR_Input.GetStateDown("PressTrackpad", leftHand))
-            increaseStage();
-
         manipulator();
+
+        if (Input.GetKeyDown(KeyCode.L) || SteamVR_Input.GetStateDown("PressTrackpad", references.leftHand))
+            increaseStage();
 
         followHeadEnabler();
     }
 
     void increaseStage()
     {
-        stage++; // Increase stage
+        Stage++; // Increase stage
 
         // If (max stage)...
-        if (stage > 3) 
+        if (Stage > 3) 
         {
-            stage = 1; // Reset stage
-            repetition++; // Increase repetition
+            Stage = 1; // Reset stage
+            Repetition++; // Increase repetition
 
             // If (max repetition)...
-            if (repetition > numRepetitions) 
+            if (Repetition > numRepetitions) 
             {
-                repetition = 1; // Reset repetiton
-                exercise++; // Increase exercise
+                Repetition = 1; // Reset repetiton
+                Exercise++; // Increase exercise
             }
         }
     }
@@ -69,16 +62,16 @@ public class Exerciser : MonoBehaviour
     void manipulator()
     {
         // If (in manipulated range     && in manipulated stage (standing upright)     && headTarget is not already manipulated position)...
-        if (repetition >= manipulatedRep 
-            && stage > 1
-            && vrik.solver.spine.headTarget != references.ManipulatedHead)
+        //OLD:  if (Repetition >= manipulatedRep    && Stage > 1    && vrik.solver.spine.headTarget != references.ManipulatedHead)
+        if (Repetition >= manipulatedRep && vrik.solver.spine.headTarget != references.ManipulatedHead)
         {
+            Manipulating = true;
             vrik.solver.spine.headTarget = references.ManipulatedHead;
         }
         // If (out manipulated range    && headTarget is not already accurate positon)...
-        else if (repetition < manipulatedRep 
-            && vrik.solver.spine.headTarget != references.OffsetTransformHead)
+        else if (Repetition < manipulatedRep    && vrik.solver.spine.headTarget != references.OffsetTransformHead)
         {
+            Manipulating = false;
             vrik.solver.spine.headTarget = references.OffsetTransformHead;
         }
     }
@@ -89,7 +82,7 @@ public class Exerciser : MonoBehaviour
     /// </summary>
     void followHeadEnabler()
     {
-        if (followHead.enabled == false && stage > 1)
+        if (followHead.enabled == false && Stage > 1)
             followHead.enabled = true;
     }
 }

@@ -9,7 +9,7 @@ using Valve.VR;
 public class VRIKOverwriter : MonoBehaviour
 {
     [Header("References")]
-    [SerializeField] References references;
+    References references;
     [SerializeField] [Tooltip("The VRIKCalibrationController of each avatar")] VRIKCalibrationController[] VRIKCalibrationControllers;
     [SerializeField] [Tooltip("The VRIKCalibrationController of each avatar")] VRIK[] VRIKs;
 

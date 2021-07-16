@@ -13,22 +13,22 @@ public class CanvasUpdater : MonoBehaviour
     void Update()
     {
         // Stage
-        if (exerciser.stage == 1)
+        if (exerciser.Stage == 1)
             stageText.text = "Stand upright & notify";
-        else if (exerciser.stage == 2)
+        else if (exerciser.Stage == 2)
             stageText.text = "begin leaning. notify when in discomfort";
-        else if (exerciser.stage == 1)
+        else if (exerciser.Stage == 1)
             stageText.text = "continue leaning & nofity when in pain";
 
         // Repetition
-        repetitionText.text = "Repetition #" + exerciser.repetition.ToString();
+        repetitionText.text = "Repetition #" + exerciser.Repetition.ToString();
 
         // Exercise
-        if (exerciser.exercise == 1)
+        if (exerciser.Exercise == 1)
             exerciseText.text = "Exercise: Forward lean";
-        else if (exerciser.exercise == 2)
+        else if (exerciser.Exercise == 2)
             exerciseText.text = "Exercise: Left lean";
-        else if (exerciser.exercise == 3)
+        else if (exerciser.Exercise == 3)
             exerciseText.text = "Exercise: Right lean";
         else
         {

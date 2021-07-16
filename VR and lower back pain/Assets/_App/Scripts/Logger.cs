@@ -6,22 +6,27 @@ using System.IO;
 using Newtonsoft.Json;
 
 /// <summary>
-/// Pressing L logs positions and rotation of objectsToLog and writes to file: Assets/Recordings/log.txt
+/// L or Left Trackpad logs positions and rotations of objectsToLog and writes to log file on desktop
 /// </summary>
 public class Logger : MonoBehaviour
 {
     References references;
+    Exerciser exerciser;
 
     [Header("Logger Settings")]
     public GameObject[] objectsToLog;
 
     private Dictionary<string, Dictionary<string, float>> dict;
-    private readonly string pathFile = "Assets/Recordings/log.txt";
+
+    //private readonly string pathFile = "Assets/Recordings/log.txt";
+    private readonly string pathFile = System.Environment.GetFolderPath(System.Environment.SpecialFolder.Desktop) + "/log.txt";
 
     void Start()
     {
         if (!(references = GetComponent<References>()))
-            Debug.LogError("References not retrieved");
+            Debug.LogError("References.cs not retrieved");
+        if (!(exerciser = GetComponent<Exerciser>()))
+            Debug.LogError("Exerciser.cs not retrieved");
 
 
         dict = new Dictionary<string, Dictionary<string, float>>();
@@ -43,7 +48,24 @@ public class Logger : MonoBehaviour
     void Update()
     {
         if (Input.GetKeyDown(KeyCode.L) || SteamVR_Input.GetStateDown("PressTrackpad", references.leftHand))
+        {
+            WriteExerciseStage();
             WriteLog();
+        }
+
+
+    }
+
+    public void WriteExerciseStage()
+    {
+        if (exerciser.Stage == 1)
+        {
+            string txt = "Exercise: " + exerciser.Exercise + ", Repetiton: " + exerciser.Repetition;
+            if (exerciser.Manipulating)
+                txt += " **!** Manipulated **!**";
+
+            Write2File(txt);
+        }
     }
 
     public void WriteLog()
@@ -65,6 +87,7 @@ public class Logger : MonoBehaviour
  
         Write2File(json);
     }
+
     public void Write2File(string txt = "")
     {
         if (!File.Exists(pathFile))
