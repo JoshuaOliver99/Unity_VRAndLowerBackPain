@@ -10,18 +10,20 @@ using Newtonsoft.Json;
 /// </summary>
 public class Logger : MonoBehaviour
 {
+    References references;
+
     [Header("Logger Settings")]
     public GameObject[] objectsToLog;
-
-    [Header("Steam VR")]
-    [SerializeField] SteamVR_Input_Sources leftHand;
-    [SerializeField] SteamVR_Input_Sources rightHand;
 
     private Dictionary<string, Dictionary<string, float>> dict;
     private readonly string pathFile = "Assets/Recordings/log.txt";
 
     void Start()
     {
+        if (!(references = GetComponent<References>()))
+            Debug.LogError("References not retrieved");
+
+
         dict = new Dictionary<string, Dictionary<string, float>>();
 
         foreach (GameObject obj in objectsToLog)
@@ -40,7 +42,7 @@ public class Logger : MonoBehaviour
 
     void Update()
     {
-        if (Input.GetKeyDown(KeyCode.L) || SteamVR_Input.GetStateDown("PressTrackpad", leftHand))
+        if (Input.GetKeyDown(KeyCode.L) || SteamVR_Input.GetStateDown("PressTrackpad", references.leftHand))
             WriteLog();
     }
 

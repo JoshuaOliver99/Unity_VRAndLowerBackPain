@@ -11,7 +11,7 @@ using RootMotion.FinalIK;
 public class Exerciser : MonoBehaviour
 {
     [Header("References")]
-    [SerializeField] raaTrackers raaTracker;
+    [SerializeField] References references;
     [SerializeField] VRIK vrik; // NOTE: Make array to hold each models VRIK component
     [SerializeField] FollowHead followHead;
     //[SerializeField] VRIK vrikMale;
@@ -33,9 +33,8 @@ public class Exerciser : MonoBehaviour
 
     void Start()
     {
-        raaTracker = GetComponent<raaTrackers>();
-        if (raaTracker == null)
-            Debug.LogError("Exerciser: raaTracker not assigned. Exerciser needs to be on same GameObject.");
+        if (!(references = GetComponent<References>()))
+            Debug.LogError("References not retrieved");
     }
 
     void Update()
@@ -72,15 +71,15 @@ public class Exerciser : MonoBehaviour
         // If (in manipulated range     && in manipulated stage (standing upright)     && headTarget is not already manipulated position)...
         if (repetition >= manipulatedRep 
             && stage > 1
-            && vrik.solver.spine.headTarget != raaTracker.ManipulatedHead)
+            && vrik.solver.spine.headTarget != references.ManipulatedHead)
         {
-            vrik.solver.spine.headTarget = raaTracker.ManipulatedHead;
+            vrik.solver.spine.headTarget = references.ManipulatedHead;
         }
         // If (out manipulated range    && headTarget is not already accurate positon)...
         else if (repetition < manipulatedRep 
-            && vrik.solver.spine.headTarget != raaTracker.OffsetTransformHead)
+            && vrik.solver.spine.headTarget != references.OffsetTransformHead)
         {
-            vrik.solver.spine.headTarget = raaTracker.OffsetTransformHead;
+            vrik.solver.spine.headTarget = references.OffsetTransformHead;
         }
     }
 

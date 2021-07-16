@@ -30,7 +30,7 @@ public class VRRig : MonoBehaviour
     [Header("Settings")]
     [SerializeField] float turnSmoothness;
 
-    [SerializeField] raaTrackers RaaTrackers; // Reference to detected Trackers
+    [SerializeField] References RaaTrackers; // Reference to detected Trackers
 
     [Header("Constraint settings")]
     [SerializeField] VRMap head;

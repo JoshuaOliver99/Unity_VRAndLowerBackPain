@@ -1,9 +1,7 @@
-using System.Collections;
-using System.Collections.Generic;
-using UnityEngine;
-using Valve.VR;
 using RootMotion.Demos;
 using RootMotion.FinalIK;
+using UnityEngine;
+using Valve.VR;
 
 /// <summary>
 /// Calibrates VRIKCalibrationController for each avatar using VR input
@@ -11,22 +9,20 @@ using RootMotion.FinalIK;
 public class VRIKOverwriter : MonoBehaviour
 {
     [Header("References")]
-    [SerializeField] raaTrackers raaTrackers;
+    [SerializeField] References references;
     [SerializeField] [Tooltip("The VRIKCalibrationController of each avatar")] VRIKCalibrationController[] VRIKCalibrationControllers;
     [SerializeField] [Tooltip("The VRIKCalibrationController of each avatar")] VRIK[] VRIKs;
 
-    [Header("Steam VR")]
-    [SerializeField] SteamVR_Input_Sources leftHand;
-    [SerializeField] SteamVR_Input_Sources rightHand;
-
-
-    [SerializeField] Transform headStartingOffset;
-    [SerializeField] Transform hipStartingOffset;
-    [SerializeField] Transform leftHandStartingOffset;
-    [SerializeField] Transform rightHandStartingOffset;
+     Transform headStartingOffset;
+     Transform hipStartingOffset;
+     Transform leftHandStartingOffset;
+     Transform rightHandStartingOffset;
 
     void Start()
     {
+        if (!(references = GetComponent<References>()))
+            Debug.LogError("References not retrieved");
+
         //headStartingOffset =        raaTrackers.OffsetTransformHead;
         //hipStartingOffset =         raaTrackers.OffsetTransformHip;
         //leftHandStartingOffset =    raaTrackers.OffsetTransformHandLeft;
@@ -46,18 +42,15 @@ public class VRIKOverwriter : MonoBehaviour
 
     void Update()
     {
-        if (Input.GetKeyDown(KeyCode.C) || SteamVR_Input.GetStateDown("GrabPinch", leftHand))
+        if (Input.GetKeyDown(KeyCode.C) || SteamVR_Input.GetStateDown("GrabPinch", references.leftHand))
         {
             foreach (VRIKCalibrationController o in VRIKCalibrationControllers)
-            {
                 o.Calibrate();
-            }
             
             foreach (VRIK o in VRIKs)
             {
-                // Plant feet
+                // Fix feet (plant, set locomotion weight)
                 o.solver.plantFeet = true;
-                // Locomotion weight max
                 o.solver.locomotion.weight = 1f;
             }
 
