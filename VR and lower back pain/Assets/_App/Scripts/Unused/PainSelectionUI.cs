@@ -8,9 +8,14 @@ using UnityEngine;
 public class PainSelectionUI : MonoBehaviour
 {
 
-    public void Pain(string pain)
+    public void Pain(string area)
     {
-        Debug.Log(pain + " " + Time.time.ToString());
+        // DEBUG
+        Debug.Log(area + " " + Time.time.ToString());
+        
+
+        // Open a pain intensity select window for 'area'
+
     }
 
 }
