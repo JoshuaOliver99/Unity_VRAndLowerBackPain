@@ -5,7 +5,7 @@
       "app_key": "application.generated.unity.vrandlowerbackpain.exe",
       "launch_type": "url",
       "url": "steam://launch/",
-      "action_manifest_path": "C:\\unityProjects\\VR and lower back pain\\Assets\\StreamingAssets\\SteamVR\\actions.json",
+      "action_manifest_path": "C:\\Users\\xreality\\Documents\\GitHub\\VR-and-lower-back-pain\\VR and lower back pain\\Assets\\StreamingAssets\\SteamVR\\actions.json",
       "strings": {
         "en_us": {
           "name": "VR and lower back pain [Testing]"

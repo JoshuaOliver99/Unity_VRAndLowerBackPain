@@ -6,43 +6,27 @@ using UnityEngine.EventSystems;
 using UnityEngine.UI;
 using Valve.VR.Extras;
 
-public class SceneHandler : MonoBehaviour
+public class LaserPointerHandler : MonoBehaviour
 {
     public SteamVR_LaserPointer laserPointer;
 
-    // NOTE:
-    // Inefficient possibly but quick testing workaround
-    [SerializeField] List<GameObject> buttons;
-    [SerializeField] List<string> names = new List<string>();
+    [SerializeField] [Tooltip("Tag of GameObject to be interacted with by SteamVR_LaserPointer")] string[] tags;
 
     void Awake()
     {
         laserPointer.PointerIn += PointerInside;
         laserPointer.PointerOut += PointerOutside;
         laserPointer.PointerClick += PointerClick;
-
-        foreach (GameObject g in buttons)
-            names.Add(g.name);
     }
 
     public void PointerClick(object sender, PointerEventArgs e)
     {
-        // NOTE: TEST (maybe use tags e.g. 'button')
-        foreach (string name in names)
-            if (e.target.name == name)
-                e.target.GetComponent<Button>().onClick.Invoke();
-
-        // NOTE: IDEA:
-        // Maybe just call onClick() in for the gameobject
-
-        //if (e.target.name == "Cube")
-        //{
-        //    Debug.Log("Cube was clicked");
-        //}
-        //else if (e.target.name == "Button")
-        //{
-        //    Debug.Log("Button was clicked");
-        //}
+        foreach (string tag in tags)
+            if (e.target.CompareTag(tag))
+            {
+                if (e.target.GetComponent<Button>())
+                    e.target.GetComponent<Button>().onClick.Invoke();
+            }
     }
 
     public void PointerInside(object sender, PointerEventArgs e)

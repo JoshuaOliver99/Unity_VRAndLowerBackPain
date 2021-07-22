@@ -33,7 +33,7 @@ public class Logger : MonoBehaviour
 
         foreach (GameObject obj in objectsToLog)
         {
-            Debug.Log("obj name: " + obj.name);
+            //Debug.Log("obj name: " + obj.name);
             dict.Add(obj.name, new Dictionary<string, float>() {
                 { "px", 0f },
                 { "py", 0f },

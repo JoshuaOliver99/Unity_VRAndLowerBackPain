@@ -17,11 +17,11 @@ public class Exerciser : MonoBehaviour
     [SerializeField] int numRepetitions = 10;
     [SerializeField] int manipulatedRep = 5;
 
-    [Header("Data - DEBUG")]
-    public int Exercise = 1; // Movement direction (forward, lateral left, lateral right)
-    public int Repetition = 1;
-    public int Stage = 0; // Stage of repition (1 Moving to upright, 2 Moving to discomfort, 3 Moving to pain)
-    public bool Manipulating;
+    [Header("Data")]
+    [HideInInspector] public int Exercise = 1; // Movement direction (forward, lateral left, lateral right)
+    [HideInInspector] public int Repetition = 1;
+    [HideInInspector] public int Stage = 0; // Stage of repition (1 Moving to upright, 2 Moving to discomfort, 3 Moving to pain)
+    [HideInInspector] public bool Manipulating;
 
 
     void Start()
@@ -56,6 +56,10 @@ public class Exerciser : MonoBehaviour
                 Repetition = 1; // Reset repetiton
                 Exercise++; // Increase exercise
             }
+
+            // Disable the exerciser when 4 exercises completed
+            if (Exercise > 4)
+                gameObject.GetComponent<Exerciser>().enabled = false;
         }
     }
 
