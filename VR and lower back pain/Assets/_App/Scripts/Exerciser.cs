@@ -12,16 +12,17 @@ public class Exerciser : MonoBehaviour
     References references;
     [SerializeField] VRIK vrik; // NOTE: Make array to hold each models VRIK component
     [SerializeField] FollowHead followHead;
+    [SerializeField] ExerciseUI exerciseUI;
     
     [Header("Settings")]
     [SerializeField] int numRepetitions = 10;
     [SerializeField] int manipulatedRep = 5;
 
-    [Header("Data")]
-    [HideInInspector] public int Exercise = 1; // Movement direction (forward, lateral left, lateral right)
-    [HideInInspector] public int Repetition = 1;
-    [HideInInspector] public int Stage = 0; // Stage of repition (1 Moving to upright, 2 Moving to discomfort, 3 Moving to pain)
-    [HideInInspector] public bool Manipulating;
+    [Header("Data (do not change)")]
+    public int Exercise = 1; // Movement direction (forward, lateral left, lateral right)
+    public int Repetition = 1;
+    public int Stage = 0; // Stage of repition (1 Moving to upright, 2 Moving to discomfort, 3 Moving to pain)
+    public bool Manipulating;
 
 
     void Start()
@@ -34,7 +35,7 @@ public class Exerciser : MonoBehaviour
     {
         manipulator();
 
-        if (Input.GetKeyDown(KeyCode.L) || SteamVR_Input.GetStateDown("PressTrackpad", references.leftHand))
+        if (Input.GetKeyDown(KeyCode.L) || SteamVR_Input.GetStateDown("GrabPinch", SteamVR_Input_Sources.LeftHand) || SteamVR_Input.GetStateDown("GrabPinch", SteamVR_Input_Sources.RightHand))
             increaseStage();
 
         followHeadEnabler();
@@ -59,8 +60,14 @@ public class Exerciser : MonoBehaviour
 
             // Disable the exerciser when 4 exercises completed
             if (Exercise > 4)
-                gameObject.GetComponent<Exerciser>().enabled = false;
+            {
+                FindObjectOfType<AppController>().IncreaseStage(1);
+                //gameObject.GetComponent<Exerciser>().enabled = false;
+            }
         }
+
+        exerciseUI.UpdateExerciseText();
+
     }
 
     void manipulator()

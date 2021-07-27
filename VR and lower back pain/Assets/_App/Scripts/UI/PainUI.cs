@@ -8,18 +8,13 @@ public class PainUI : MonoBehaviour
     [Header("References")]
     [SerializeField] Logger logger;
 
-    [Header("UI References")]
-    [SerializeField] GameObject areaButtonConfirm;
-    [SerializeField] GameObject intensityMarker;
-
     [Header("Intensity Panel References")]
     [SerializeField] GameObject areaPanel;
 
-
     [Header("Intensity Panel References")]
     [SerializeField] GameObject intensityPanel;
-    [SerializeField] TMP_Text IntensitySelectedArea;
-    [SerializeField] TMP_Text IntensitySelectedIntensity;
+    [SerializeField] TMP_Text SelectedAreaText;
+    [SerializeField] TMP_Text SelectedIntensityText;
 
     [Header("Data - (debug serialization)")]
     [SerializeField] string selectedArea;
@@ -34,71 +29,56 @@ public class PainUI : MonoBehaviour
         selectedIntensity = 0;
     }
 
+
     // ----- Area select -----
     public void Btn_SelectArea(string area)
     {
         selectedArea = area;
-
-        if (areaButtonConfirm.activeSelf == false)
-            areaButtonConfirm.SetActive(true);
-
-        areaPanel.transform.Find("Selected").GetComponent<TMP_Text>().text = selectedArea;
-        // NOTE: TO DO
-        //if (areaMarker.activeSelf == false)
-        //    areaMarker.SetActive(true);
-
-        // Also move the areaMarker to the position of the pressed button
-    }
-
-    public void Btn_AreaConfirm()
-    {
         areaPanel.SetActive(false);
-
-        intensityMarker.SetActive(false);
         intensityPanel.SetActive(true);
-        intensityPanel.transform.Find("Title").GetComponent<TMP_Text>().text = selectedArea;
-    }
-
-    public void Btn_AreaFinished()
-    {
-        // NOTE: TO DO
-        gameObject.SetActive(false); // Demo action
+        updateAreaText();
     }
 
 
-    // ----- Intensity Select -----
+
+    // ------ Intensity select -----
     public void Btn_SelectIntensity(int intensity)
     {
         selectedIntensity = intensity;
-
-        if (intensityMarker.activeSelf == false)
-            intensityMarker.SetActive(true);   
-
-        // NOTE: TO DO
-        // Also move the intensityMarker to the position of the pressed button
+        updateIntensityText();
     }
 
-    // NOTE:
-    // BUG: This is called twice when pressing?
-    public void Btn_IntensityConfirm()
+    public void Btn_Retry()
     {
-        // Reset to area select panel...
         intensityPanel.SetActive(false);
         areaPanel.SetActive(true);
-        areaButtonConfirm.SetActive(false);
-        selectedArea = "Make a selection or press 'Finished'";
-
-        logger.Write2File(selectedArea + " pain = " + selectedIntensity);
     }
 
-    public void Btn_IntensityCancel()
+    public void Btn_Next() // The Confirm button
     {
-        // Reset to area select panel...
         intensityPanel.SetActive(false);
         areaPanel.SetActive(true);
-        areaButtonConfirm.SetActive(false);
-        selectedArea = "Make a selection or press 'Finished'";
 
+        LogPainAndIntensity();
+    }
+
+    void updateAreaText()
+    {
+        SelectedAreaText.text = "Select Intensity for: \n" + selectedArea;
+    }
+    void updateIntensityText()
+    {
+        SelectedIntensityText.text = "Intensity: " + selectedIntensity;
+
+    }
+
+    public void resetText()
+    {
+        selectedArea = "";
+        selectedIntensity = 0;
+
+        SelectedAreaText.text = "Select Intensity for: \n" + selectedArea;
+        SelectedIntensityText.text = "Intensity: " + selectedIntensity;
     }
 
     // ----- Logging -----

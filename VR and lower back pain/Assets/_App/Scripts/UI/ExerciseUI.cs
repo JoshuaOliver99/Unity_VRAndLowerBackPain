@@ -8,49 +8,35 @@ public class ExerciseUI : MonoBehaviour
     [SerializeField] Exerciser exerciser;
     [SerializeField] TMP_Text exerciseText;
 
-    void Update()
+    private void Start()
     {
-        // ----- TEXT TO DISPLAY -----
-        /*
-        line 1:
-        lateral flexion left
-        lateral flexion right
-        sagittal flexion
-        sagittal extension
+        UpdateExerciseText();
+    }
 
-        line 2
-        repetition X
+    public void UpdateExerciseText()
+    {
+        exerciseText.text = "";
 
-        line 3
-        Stand upright
-        notify discomfort
-        notify pain
-         */
+        if (exerciser.Exercise == 1)
+            exerciseText.text = "Lean Left";
+        else if (exerciser.Exercise == 2)
+            exerciseText.text = "Lean Right";
+        else if (exerciser.Exercise == 3)
+            exerciseText.text = "Lean Back";
+        else if (exerciser.Exercise == 4)
+            exerciseText.text = "Lean Forward";
+        exerciseText.text += "\n";
 
 
-        //// Stage
-        //if (exerciser.Stage == 1)
-        //    stageText.text = "Stand upright & notify";
-        //else if (exerciser.Stage == 2)
-        //    stageText.text = "begin leaning. notify when in discomfort";
-        //else if (exerciser.Stage == 1)
-        //    stageText.text = "continue leaning & nofity when in pain";
-        //
-        //// Repetition
-        //repetitionText.text = "Repetition #" + exerciser.Repetition.ToString();
-        //
-        //// Exercise
-        //if (exerciser.Exercise == 1)
-        //    exerciseText.text = "Exercise: Forward lean";
-        //else if (exerciser.Exercise == 2)
-        //    exerciseText.text = "Exercise: Left lean";
-        //else if (exerciser.Exercise == 3)
-        //    exerciseText.text = "Exercise: Right lean";
-        //else
-        //{
-        //    exerciseText.text = "Activity over" +  '\n' + " Thank you for your participation";
-        //    repetitionText.text = "";
-        //    stageText.text = "";
-        //}
+        exerciseText.text += "Repetition: " + exerciser.Repetition;
+        exerciseText.text += "\n";
+
+        if (exerciser.Stage == 1)
+            exerciseText.text += "Stand upright & notify";
+        else if (exerciser.Stage == 2)
+            exerciseText.text += "begin leaning. notify when in discomfort";
+        else if (exerciser.Stage == 3)
+            exerciseText.text += "continue leaning & nofity when in pain";
+
     }
 }

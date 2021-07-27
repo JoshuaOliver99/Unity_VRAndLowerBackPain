@@ -9,14 +9,15 @@ using Valve.VR;
 public class VRIKOverwriter : MonoBehaviour
 {
     [Header("References")]
-    References references;
+    [SerializeField] AppController appController;
     [SerializeField] [Tooltip("The VRIKCalibrationController of each avatar")] VRIKCalibrationController[] VRIKCalibrationControllers;
-    [SerializeField] [Tooltip("The VRIKCalibrationController of each avatar")] VRIK[] VRIKs;
+    [SerializeField] [Tooltip("The VRIK of each avatar")] VRIK[] VRIKs;
+    References references;
 
-     Transform headStartingOffset;
-     Transform hipStartingOffset;
-     Transform leftHandStartingOffset;
-     Transform rightHandStartingOffset;
+     //Transform headStartingOffset;
+     //Transform hipStartingOffset;
+     //Transform leftHandStartingOffset;
+     //Transform rightHandStartingOffset;
 
     void Start()
     {
@@ -42,7 +43,7 @@ public class VRIKOverwriter : MonoBehaviour
 
     void Update()
     {
-        if (Input.GetKeyDown(KeyCode.C) || SteamVR_Input.GetStateDown("GrabPinch", references.leftHand))
+        if (Input.GetKeyDown(KeyCode.C) || SteamVR_Input.GetStateDown("GrabPinch", SteamVR_Input_Sources.LeftHand) || SteamVR_Input.GetStateDown("GrabPinch", SteamVR_Input_Sources.RightHand))
         {
             foreach (VRIKCalibrationController o in VRIKCalibrationControllers)
                 o.Calibrate();
@@ -53,6 +54,13 @@ public class VRIKOverwriter : MonoBehaviour
                 o.solver.plantFeet = true;
                 o.solver.locomotion.weight = 1f;
             }
+
+            // Move onto next stage
+            appController.IncreaseStage(1);
+
+            // Disable this script
+            gameObject.GetComponent<VRIKOverwriter>().enabled = false;
+
 
             // TEST:
             // Apply starting offsets
