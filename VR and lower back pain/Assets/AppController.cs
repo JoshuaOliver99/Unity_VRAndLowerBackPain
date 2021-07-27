@@ -11,21 +11,33 @@ public class AppController : MonoBehaviour
     [SerializeField] int stageDisplaying = 0;
     [SerializeField] GameObject[] introduction;
     [SerializeField] GameObject[] familiarization;
-    [SerializeField] GameObject[] painChart1;
+    [SerializeField] GameObject[] calibration;
+    [SerializeField] GameObject[] calibration2;
+    [SerializeField] GameObject[] prePainLog;
+    [SerializeField] GameObject[] prePainLog2;
+    [SerializeField] GameObject[] preExercise;
     [SerializeField] GameObject[] Exercise;
-    [SerializeField] GameObject[] painChart2;
+    [SerializeField] GameObject[] Exercise2;
+    [SerializeField] GameObject[] postPainLog;
+    [SerializeField] GameObject[] postPainLog2;
     [SerializeField] GameObject[] debrief;
 
-    GameObject[][] stages = new GameObject[6][];
+    GameObject[][] stages = new GameObject[11][];
 
     void Start()
     {
         stages[0] = introduction;
         stages[1] = familiarization;
-        stages[2] = painChart1;
-        stages[3] = Exercise;
-        stages[4] = painChart2;
-        stages[5] = debrief;
+        stages[2] = calibration;
+        stages[3] = calibration2;
+        stages[4] = prePainLog;
+        stages[5] = prePainLog2;
+        stages[6] = preExercise;
+        stages[7] = Exercise;
+        stages[8] = Exercise2;
+        stages[9] = postPainLog;
+        stages[10] = postPainLog2;
+        stages[11] = debrief;
 
         // Set all non current stages to inactive
         for (int i = 0; i < stages.Length; i++)
@@ -42,8 +54,11 @@ public class AppController : MonoBehaviour
 
     void Update()
     {
-        if (stageDisplaying != stage && stage > 0)
-            updateDisplaying();
+        //if (stageDisplaying != stage && stage > 0)
+        //    updateDisplaying();
+
+        if (Input.GetKeyDown(KeyCode.Space))
+            IncreaseStage(1);
     }
 
     void updateDisplaying()
@@ -53,9 +68,24 @@ public class AppController : MonoBehaviour
         // Set the previous stage inactive
         for (int i = 0; i < stages[stage-1].Length; i++)
             stages[stage-1][i].SetActive(false);
+        // NOTE: TESTING: Not tested (trying to disable all other stages)
+        //for (int i = 0; i < stages[stage-1].Length; i++)
+        //    stages[i][0].SetActive(false);
 
         // Set this stage active
         for (int i = 0; i < stages[stage].Length; i++)
             stages[stage][i].SetActive(true);
+    }
+
+    /// <summary>
+    /// Increases the stage number of the application
+    /// </summary>
+    /// <param name="amount"> 1 for the next stage.</param>
+    public void IncreaseStage(int amount)
+    {
+        stage =+ amount;
+
+        if (stageDisplaying != stage && stage > 0)
+            updateDisplaying();
     }
 }
