@@ -22,7 +22,7 @@ public class AppController : MonoBehaviour
     [SerializeField] GameObject[] postPainLog2;
     [SerializeField] GameObject[] debrief;
 
-    GameObject[][] stages = new GameObject[11][];
+    GameObject[][] stages = new GameObject[12][];
 
     void Start()
     {
@@ -44,19 +44,17 @@ public class AppController : MonoBehaviour
         {
             for (int j = 0; j < stages[i].Length; j++)
             {
-                if (i != 0) // (not first stage)...
-                    stages[i][j].SetActive(false);
+                stages[i][j].SetActive(false);
             }
         }
 
-        
+        // Set all of first stage to active;
+        for (int i = 0; i < stages[0].Length; i++)
+            stages[0][i].SetActive(true);
     }
 
     void Update()
     {
-        //if (stageDisplaying != stage && stage > 0)
-        //    updateDisplaying();
-
         if (Input.GetKeyDown(KeyCode.Space))
             IncreaseStage(1);
     }
@@ -68,12 +66,9 @@ public class AppController : MonoBehaviour
         // Set the previous stage inactive
         for (int i = 0; i < stages[stage-1].Length; i++)
             stages[stage-1][i].SetActive(false);
-        // NOTE: TESTING: Not tested (trying to disable all other stages)
-        //for (int i = 0; i < stages[stage-1].Length; i++)
-        //    stages[i][0].SetActive(false);
 
         // Set this stage active
-        for (int i = 0; i < stages[stage].Length; i++)
+        for (int i = 0; i < stages[stage-1].Length; i++)
             stages[stage][i].SetActive(true);
     }
 
@@ -83,7 +78,7 @@ public class AppController : MonoBehaviour
     /// <param name="amount"> 1 for the next stage.</param>
     public void IncreaseStage(int amount)
     {
-        stage =+ amount;
+        stage += amount;
 
         if (stageDisplaying != stage && stage > 0)
             updateDisplaying();

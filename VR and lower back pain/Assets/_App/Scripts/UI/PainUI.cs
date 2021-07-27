@@ -9,13 +9,17 @@ public class PainUI : MonoBehaviour
     [SerializeField] Logger logger;
 
     [Header("UI References")]
-    [SerializeField] GameObject intensityPanel;
+    [SerializeField] GameObject areaButtonConfirm;
+    [SerializeField] GameObject intensityMarker;
+
+    [Header("Intensity Panel References")]
     [SerializeField] GameObject areaPanel;
 
-    [SerializeField] GameObject areaButtonConfirm;
 
-    [SerializeField] GameObject intensityMarker;
-    //[SerializeField] GameObject areaMarker;
+    [Header("Intensity Panel References")]
+    [SerializeField] GameObject intensityPanel;
+    [SerializeField] TMP_Text IntensitySelectedArea;
+    [SerializeField] TMP_Text IntensitySelectedIntensity;
 
     [Header("Data - (debug serialization)")]
     [SerializeField] string selectedArea;
