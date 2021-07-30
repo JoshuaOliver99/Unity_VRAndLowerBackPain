@@ -19,6 +19,9 @@ public class PainUI : MonoBehaviour
     [Header("Data - (debug serialization)")]
     [SerializeField] string selectedArea;
     [SerializeField] int selectedIntensity;
+    [Tooltip("For checking one or more pains selected.")] public int numPains;
+    [Tooltip("For checking a selected intensity.")] public bool intensitySelected;
+
 
 
     void OnEnable()
@@ -36,9 +39,8 @@ public class PainUI : MonoBehaviour
         selectedArea = area;
         areaPanel.SetActive(false);
         intensityPanel.SetActive(true);
-        updateAreaText();
+        updateAreaText(); 
     }
-
 
 
     // ------ Intensity select -----
@@ -46,20 +48,21 @@ public class PainUI : MonoBehaviour
     {
         selectedIntensity = intensity;
         updateIntensityText();
+        intensitySelected = true;
     }
 
     public void Btn_Retry()
     {
         intensityPanel.SetActive(false);
         areaPanel.SetActive(true);
+        reset();
     }
 
     public void Btn_Next() // The Confirm button
     {
-        intensityPanel.SetActive(false);
-        areaPanel.SetActive(true);
-
         LogPainAndIntensity();
+        reset();
+        numPains++;
     }
 
     void updateAreaText()
@@ -72,13 +75,27 @@ public class PainUI : MonoBehaviour
 
     }
 
-    public void resetText()
+    public void reset()
     {
+        intensityPanel.SetActive(false);
+        areaPanel.SetActive(true);
+
         selectedArea = "";
         selectedIntensity = 0;
+        intensitySelected = false;
 
         SelectedAreaText.text = "Select Intensity for: \n" + selectedArea;
-        SelectedIntensityText.text = "Intensity: " + selectedIntensity;
+        SelectedIntensityText.text = "";
+    }
+
+    public void resetNumPain()
+    {
+        numPains = 0;
+    }
+
+    public void Btn_finish()
+    {
+        reset();
     }
 
     // ----- Logging -----

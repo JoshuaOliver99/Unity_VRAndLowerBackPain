@@ -10,22 +10,23 @@ using Newtonsoft.Json;
 /// </summary>
 public class Logger : MonoBehaviour
 {
-    References references;
-    Exerciser exerciser;
+    [Header("References")]
+    [SerializeField] References references;
+    [SerializeField] Exerciser exerciser;
 
     [Header("Logger Settings")]
     public GameObject[] objectsToLog;
 
     private Dictionary<string, Dictionary<string, float>> dict;
 
-    //private readonly string pathFile = "Assets/Recordings/log.txt";
+    //private readonly string pathFile = "Assets/Recordings/log.txt"; // OLD can be removed
     private readonly string pathFile = System.Environment.GetFolderPath(System.Environment.SpecialFolder.Desktop) + "/log.txt";
 
     void Start()
     {
-        if (!(references = GetComponent<References>()))
+        if (references == null)
             Debug.LogError("References.cs not retrieved");
-        if (!(exerciser = GetComponent<Exerciser>()))
+        if (exerciser == null)
             Debug.LogError("Exerciser.cs not retrieved");
 
 
@@ -47,7 +48,7 @@ public class Logger : MonoBehaviour
 
     void Update()
     {
-        if (Input.GetKeyDown(KeyCode.L) || SteamVR_Input.GetStateDown("PressTrackpad", references.leftHand))
+        if (Input.GetKeyDown(KeyCode.L) || SteamVR_Input.GetStateDown("GrabPinch", SteamVR_Input_Sources.LeftHand) || SteamVR_Input.GetStateDown("GrabPinch", SteamVR_Input_Sources.RightHand))
         {
             WriteExerciseStage();
             WriteLog();

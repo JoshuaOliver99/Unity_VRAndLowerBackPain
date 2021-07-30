@@ -28,6 +28,12 @@ public class References : MonoBehaviour
     [Header("Manipulated Positon")]
     [Tooltip("Child of the VR head object.")] public Transform ManipulatedHead;
 
+    [Header("scripts")]
+    public AppController AppController;
+    public FollowHead ManipulatedFollowHead;
+    public Exerciser Exerciser;
+    public PainUI painUI;
+
     [Header("References")]
     public SteamVR_Input_Sources leftHand;
     public SteamVR_Input_Sources rightHand;

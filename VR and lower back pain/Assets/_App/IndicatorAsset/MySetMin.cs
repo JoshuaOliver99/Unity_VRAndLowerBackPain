@@ -5,21 +5,20 @@ using UnityEngine.UI;
 
 public class MySetMin : MonoBehaviour
 {
+    References references;
+
     public float minSlider = 0.5f;
     public Slider thisSlider;
-    /*
-    Slider test;
-    public float thisvalue = 0f;
-    // Start is called before the first frame update
+
     void Start()
     {
-        test = GetComponent<Slider>();
-        //bottom = rectTransform.childCount;
-        
-        thisvalue = test.value;
+        if (references == null)
+            references = GameObject.FindGameObjectWithTag("GameController").GetComponent<References>();
+        if (references == null)
+            Debug.Log("References.cs not found");
     }
-    */
-    // Update is called once per frame
+
+
     void Update()
     {
         thisSlider.minValue = minSlider;

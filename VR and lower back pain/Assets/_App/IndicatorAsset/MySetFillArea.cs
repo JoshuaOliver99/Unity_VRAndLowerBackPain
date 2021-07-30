@@ -5,19 +5,30 @@ using UnityEngine.UI;
 
 public class MySetFillArea : MonoBehaviour
 {
+    References references;
+
+
     public float setLevelSlider;
     RectTransform rectTransform;
     public float value;
-    // Start is called before the first frame update
+
+
     void Start()
     {
+        if (references == null)
+            references = GameObject.FindGameObjectWithTag("GameController").GetComponent<References>();
+        if (references == null)
+            Debug.Log("References.cs not found");
+
+
         rectTransform = GetComponent<RectTransform>();
 
         //top = rectTransform.offsetMax;
         //bottom = rectTransform.offsetMin;
     }
 
-    // Update is called once per frame
+
+
     void Update()
     {
         value = setLevelSlider;

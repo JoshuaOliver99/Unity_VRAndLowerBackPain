@@ -9,8 +9,8 @@ using Valve.VR;
 public class Exerciser : MonoBehaviour
 {
     [Header("References")]
-    References references;
-    [SerializeField] VRIK vrik; // NOTE: Make array to hold each models VRIK component
+    [SerializeField] References references;
+    [SerializeField] VRIK vrik; // NOTE: Maybe make array to hold each models VRIK component
     [SerializeField] FollowHead followHead;
     [SerializeField] ExerciseUI exerciseUI;
     
@@ -19,7 +19,7 @@ public class Exerciser : MonoBehaviour
     [SerializeField] int manipulatedRep = 5;
 
     [Header("Data (do not change)")]
-    public int Exercise = 1; // Movement direction (forward, lateral left, lateral right)
+    public int Exercise = 1; // Movement direction (left, right, forward, back)
     public int Repetition = 1;
     public int Stage = 0; // Stage of repition (1 Moving to upright, 2 Moving to discomfort, 3 Moving to pain)
     public bool Manipulating;
@@ -27,7 +27,7 @@ public class Exerciser : MonoBehaviour
 
     void Start()
     {
-        if (!(references = GetComponent<References>()))
+        if (references == null)
             Debug.LogError("References not retrieved");
     }
 
@@ -65,9 +65,14 @@ public class Exerciser : MonoBehaviour
                 //gameObject.GetComponent<Exerciser>().enabled = false;
             }
         }
+        
+        // -------------- TESTING -  Degree offset for setting indicator bar
+        GetDegreeOffset();
+        Debug.Log("degree offset " + references.ManipulatedFollowHead.getDegree());
+        // ---------------------------
 
+        
         exerciseUI.UpdateExerciseText();
-
     }
 
     void manipulator()
@@ -95,5 +100,20 @@ public class Exerciser : MonoBehaviour
     {
         if (followHead.enabled == false && Stage > 1)
             followHead.enabled = true;
+    }
+
+
+    /// <summary>
+    /// For repetiton 1 set the minimum and maximum
+    /// </summary>
+    void GetDegreeOffset()
+    {
+        if (Repetition == 1)
+        {
+            Debug.Log("degree offset " + references.ManipulatedFollowHead.getDegree());
+
+        }
+
+        //references.manipulatedHead.getDegree();
     }
 }

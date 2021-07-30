@@ -12,7 +12,9 @@ public class VRIKOverwriter : MonoBehaviour
     [SerializeField] AppController appController;
     [SerializeField] [Tooltip("The VRIKCalibrationController of each avatar")] VRIKCalibrationController[] VRIKCalibrationControllers;
     [SerializeField] [Tooltip("The VRIK of each avatar")] VRIK[] VRIKs;
-    References references;
+
+    [SerializeField] Transform leftFoot;
+    [SerializeField] Transform rightFoot;
 
      //Transform headStartingOffset;
      //Transform hipStartingOffset;
@@ -21,9 +23,6 @@ public class VRIKOverwriter : MonoBehaviour
 
     void Start()
     {
-        if (!(references = GetComponent<References>()))
-            Debug.LogError("References not retrieved");
-
         //headStartingOffset =        raaTrackers.OffsetTransformHead;
         //hipStartingOffset =         raaTrackers.OffsetTransformHip;
         //leftHandStartingOffset =    raaTrackers.OffsetTransformHandLeft;
@@ -53,7 +52,15 @@ public class VRIKOverwriter : MonoBehaviour
                 // Fix feet (plant, set locomotion weight)
                 o.solver.plantFeet = true;
                 o.solver.locomotion.weight = 1f;
+
+                o.solver.leftLeg.target = leftFoot;
+                o.solver.leftLeg.positionWeight = 1;
+                o.solver.rightLeg.target = rightFoot;
+                o.solver.rightLeg.positionWeight = 1;
             }
+
+
+
 
             // Move onto next stage
             appController.IncreaseStage(1);
