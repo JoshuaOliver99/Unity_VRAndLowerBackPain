@@ -49,13 +49,16 @@ public class FollowHead : MonoBehaviour
 
     void alignToPoint1()
     {
-        // Alligned manipulated head (transform) with head offset (point1)
+        // Alligned manipulated head (transform) with head offset (point1)...
         transform.position = point1.position; // Allign manipulated position to head offset
         transform.localRotation = point1.parent.localRotation; // Allign manipulated rotation to HMD rotation
     }
 
     public float getDegree()
     {
-        return (degreesOffY / 90);
+        if (gameObject.GetComponent<FollowHead>().isActiveAndEnabled)
+            return (degreesOffY / 90);
+        else
+            return 9999f; // TEST... (deffo over the max slider value)
     }
 }

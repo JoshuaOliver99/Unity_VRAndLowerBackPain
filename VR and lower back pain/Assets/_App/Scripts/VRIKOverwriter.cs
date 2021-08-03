@@ -10,34 +10,19 @@ public class VRIKOverwriter : MonoBehaviour
 {
     [Header("References")]
     [SerializeField] AppController appController;
-    [SerializeField] [Tooltip("The VRIKCalibrationController of each avatar")] VRIKCalibrationController[] VRIKCalibrationControllers;
-    [SerializeField] [Tooltip("The VRIK of each avatar")] VRIK[] VRIKs;
+    [SerializeField, Tooltip("The VRIKCalibrationController of each avatar")] VRIKCalibrationController[] VRIKCalibrationControllers;
+    [SerializeField, Tooltip("The VRIK of each avatar")] VRIK[] VRIKs;
 
     [SerializeField] Transform leftFoot;
     [SerializeField] Transform rightFoot;
 
-     //Transform headStartingOffset;
-     //Transform hipStartingOffset;
-     //Transform leftHandStartingOffset;
-     //Transform rightHandStartingOffset;
+    [SerializeField, Tooltip("These should be disabled first")] GameObject[] objectsToEnable; // (player models)
 
     void Start()
     {
-        //headStartingOffset =        raaTrackers.OffsetTransformHead;
-        //hipStartingOffset =         raaTrackers.OffsetTransformHip;
-        //leftHandStartingOffset =    raaTrackers.OffsetTransformHandLeft;
-        //rightHandStartingOffset =   raaTrackers.OffsetTransformHandRight;
-        //
-        //headStartingOffset.localPosition =      raaTrackers.OffsetTransformHead.localPosition       ;
-        //hipStartingOffset.localPosition =       raaTrackers.OffsetTransformHip.localPosition        ;
-        //leftHandStartingOffset.localPosition =  raaTrackers.OffsetTransformHandLeft.localPosition   ;
-        //rightHandStartingOffset.localPosition = raaTrackers.OffsetTransformHandRight.localPosition  ;
-        //
-        //headStartingOffset.localRotation =      raaTrackers.OffsetTransformHead.localRotation       ;
-        //hipStartingOffset.localRotation =       raaTrackers.OffsetTransformHip.localRotation        ;
-        //leftHandStartingOffset.localRotation =  raaTrackers.OffsetTransformHandLeft.localRotation   ;
-        //rightHandStartingOffset.localRotation = raaTrackers.OffsetTransformHandRight.localRotation  ;
-
+        // Disable objects which shouldnt be active yet
+        //foreach (GameObject g in objectsToEnable)
+        //    g.SetActive(false);
     }
 
     void Update()
@@ -59,32 +44,15 @@ public class VRIKOverwriter : MonoBehaviour
                 o.solver.rightLeg.positionWeight = 1;
             }
 
-
-
+            // Enable all required objects...
+            foreach (GameObject g in objectsToEnable)
+                g.SetActive(true);
 
             // Move onto next stage
             appController.IncreaseStage(1);
 
             // Disable this script
             gameObject.GetComponent<VRIKOverwriter>().enabled = false;
-
-
-            // TEST:
-            // Apply starting offsets
-            //raaTrackers.OffsetTransformHead = headStartingOffset                            ;
-            //raaTrackers.OffsetTransformHip = hipStartingOffset                              ;
-            //raaTrackers.OffsetTransformHandLeft = leftHandStartingOffset                    ;
-            //raaTrackers.OffsetTransformHandRight = rightHandStartingOffset                  ;
-            //
-            //raaTrackers.OffsetTransformHead.localPosition    = headStartingOffset.localPosition                            ;
-            //raaTrackers.OffsetTransformHip.localPosition         = hipStartingOffset.localPosition                              ;
-            //raaTrackers.OffsetTransformHandLeft.localPosition    = leftHandStartingOffset.localPosition                    ;
-            //raaTrackers.OffsetTransformHandRight.localPosition  = rightHandStartingOffset.localPosition                  ;
-            //
-            //raaTrackers.OffsetTransformHead.localRotation       = headStartingOffset      .localRotation                      ;
-            //raaTrackers.OffsetTransformHip.localRotation        = hipStartingOffset       .localRotation                       ;
-            //raaTrackers.OffsetTransformHandLeft.localRotation   = leftHandStartingOffset  .localRotation                  ;
-            //raaTrackers.OffsetTransformHandRight.localRotation  = rightHandStartingOffset .localRotation                 ;
         }
 
     }

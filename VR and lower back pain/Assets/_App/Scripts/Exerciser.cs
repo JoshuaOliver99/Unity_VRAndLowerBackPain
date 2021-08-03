@@ -38,6 +38,9 @@ public class Exerciser : MonoBehaviour
         if (Input.GetKeyDown(KeyCode.L) || SteamVR_Input.GetStateDown("GrabPinch", SteamVR_Input_Sources.LeftHand) || SteamVR_Input.GetStateDown("GrabPinch", SteamVR_Input_Sources.RightHand))
             increaseStage();
 
+        exerciseUI.UpdateExerciseText();
+
+
         followHeadEnabler();
     }
 
@@ -62,17 +65,16 @@ public class Exerciser : MonoBehaviour
             if (Exercise > 4)
             {
                 FindObjectOfType<AppController>().IncreaseStage(1);
-                //gameObject.GetComponent<Exerciser>().enabled = false;
+                gameObject.GetComponent<Exerciser>().enabled = false;
             }
         }
         
         // -------------- TESTING -  Degree offset for setting indicator bar
-        GetDegreeOffset();
-        Debug.Log("degree offset " + references.ManipulatedFollowHead.getDegree());
+        //GetDegreeOffset();
+        //Debug.Log("degree offset " + references.ManipulatedFollowHead.getDegree());
         // ---------------------------
 
         
-        exerciseUI.UpdateExerciseText();
     }
 
     void manipulator()
@@ -106,14 +108,14 @@ public class Exerciser : MonoBehaviour
     /// <summary>
     /// For repetiton 1 set the minimum and maximum
     /// </summary>
-    void GetDegreeOffset()
-    {
-        if (Repetition == 1)
-        {
-            Debug.Log("degree offset " + references.ManipulatedFollowHead.getDegree());
+    //void GetDegreeOffset()
+    //{
+    //    if (Repetition == 1)
+    //    {
+    //        Debug.Log("degree offset " + references.ManipulatedFollowHead.getDegree());
+    //
+    //    }
+    //
+    //}
 
-        }
-
-        //references.manipulatedHead.getDegree();
-    }
 }
