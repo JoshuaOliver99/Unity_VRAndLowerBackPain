@@ -4,18 +4,22 @@ using UnityEngine;
 using UnityEngine.UI;
 
 public class MyInputSlider : MonoBehaviour
-{
+{   
+    [Header("References")]
     References references;
     Slider slider;
 
-    [SerializeField, Tooltip("Stage this slider fills for")] int ActiveStage;
+    [Header("Data")]
+    [SerializeField, Tooltip("Stage this slider fills")] int ActiveStage;
 
-    // TESTING ...
-    //public float testInput = 0.0f;
-    //public int testStage = 1;
-
+    [Header("Debug Data...")]
     [SerializeField] float sliderMax = 10f; // (Initialised high max)    
     [SerializeField] bool atSliderMax = false;
+
+    [Header("Testing...")]
+    [SerializeField] bool testing = false;
+    [SerializeField] float testInput = 0.0f;
+    [SerializeField] int testStage = 1;
 
     void Start()
     {
@@ -25,66 +29,85 @@ public class MyInputSlider : MonoBehaviour
             Debug.Log("References.cs not found");
 
         slider = gameObject.GetComponent<Slider>();
+
+        // Decide if testing:
+        if (references.DebugInput.DebugSliders)
+            testing = true;
     }
 
     void Update()
     {
         // DEBUG...
-        Debug.Log("Stage " + references.Exerciser.Stage);
+       Debug.Log("Stage " + references.Exerciser.Stage);
+        // 1 - pre exercise
+        // pressing sets standing upright position (zeroing slider)
+        // NO SLIDER SHOULD MOVE DURING THIS STAGE
+
+        // 2 - moving to discomfort
+        // pressing sets discomfort position
+
+        // 3 - moving to pain
+        // pressing sets pain positon
 
 
+        if (testing)
+            testRunner();
+        else
+            runner();
+    }
 
+    void runner()
+    {
         // ---------- ACTUAL VERSION ----------
         // (in active stage)...
-        if (references.Exerciser.Stage == ActiveStage)
+        if (references.Exerciser.Stage <= ActiveStage)
         {
-            Debug.Log(gameObject.name + " in active stage");
             sliderMax = references.ManipulatedFollowHead.getDegree(); // Allow max to change
         }
-        
-
 
         // If (input less than or equal to max)...
         if (references.ManipulatedFollowHead.getDegree() <= sliderMax)
         {
-            Debug.Log(gameObject.name + " slider can respond");
-
             // Allow the slider to respond to input...
-            //atSliderMax = false; //                                               <<<<<<<<<<<<<<<< TEST DISABLE
+            atSliderMax = false; 
             slider.value = references.ManipulatedFollowHead.getDegree();
         }
         // ELse if (input greater than max) && (atSliderMax not set)...
         else if (!atSliderMax)
         {
-            Debug.Log(gameObject.name + " slider input greater than max value");
-
             // Ensure slider is at its max value...
             atSliderMax = true;
             slider.value = sliderMax;
         }
+    }
 
+    void testRunner()
+    {
+        // Get global test input:
+        testInput = references.DebugInput.HeadAngle;
+        testStage = references.DebugInput.ActiveStage;
 
 
         // ---------- TESTING VERSION ----------
-        //// (in active stage)...
-        //if (testStage == ActiveStage)
-        //    sliderMax = testInput;
-        //
-        //
-        //// If (input less than max)...
-        //if (testInput <= sliderMax)
-        //{
-        //    // Allow the slider to respond to input...
-        //    atSliderMax = false;
-        //    slider.value = testInput;
-        //}
-        //// ELse if (input greater than max) && (atSliderMax not set)...
-        //else if (!atSliderMax)
-        //{
-        //    // Ensure slider is at its max value...
-        //    atSliderMax = true;
-        //    slider.value = sliderMax;
-        //}
-
+        // (in active stage)...
+        if (testStage <= ActiveStage)
+            sliderMax = testInput;
+        
+        
+        // If (input less than max)...
+        if (testInput <= sliderMax)
+        {
+            // Allow the slider to respond to input...
+            atSliderMax = false;
+            slider.value = testInput;
+        }
+        // ELse if (input greater than max) && (atSliderMax not set)...
+        else if (!atSliderMax)
+        {
+            // Ensure slider is at its max value...
+            atSliderMax = true;
+            slider.value = sliderMax;
+        }
     }
+
 }

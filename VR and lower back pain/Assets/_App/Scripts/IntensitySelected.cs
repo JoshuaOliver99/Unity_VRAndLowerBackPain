@@ -24,7 +24,7 @@ public class IntensitySelected : MonoBehaviour
 
     void Update()
     {
-        if (references.painUI.intensitySelected)
+        if (references.PainUI.intensitySelected)
             nextButton.SetActive(true);
         else
             nextButton.SetActive(false);

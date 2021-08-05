@@ -24,7 +24,7 @@ public class PainAreaSelected : MonoBehaviour
 
     void Update()
     {
-        if (references.painUI.numPains > 0)
+        if (references.PainUI.numPains > 0)
             finishButton.SetActive(true);
         else
             finishButton.SetActive(false);

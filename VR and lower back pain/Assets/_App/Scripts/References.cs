@@ -14,11 +14,6 @@ public class References : MonoBehaviour
     public Transform TransformHandLeft;
     public Transform TransformHandRight;
 
-    //public SteamVR_TrackedObject TrackerHip;            // NOTE: Just use transform instead? These are the gameobjects above
-    //public SteamVR_TrackedObject TrackerHead;           // NOTE: Just use transform instead? These are the gameobjects above
-    //public SteamVR_TrackedObject TrackerHandLeft;       // NOTE: Just use transform instead? These are the gameobjects above
-    //public SteamVR_TrackedObject TrackerHandRight;      // NOTE: Just use transform instead? These are the gameobjects above
-
     [Header("VR Offsets (desired positons)")]
     public Transform OffsetTransformHead;
     public Transform OffsetTransformHip;
@@ -29,10 +24,15 @@ public class References : MonoBehaviour
     [Tooltip("Child of the VR head object.")] public Transform ManipulatedHead;
 
     [Header("scripts")]
+    public DebugConsole DebugInput;
     public AppController AppController;
+    
+    public FollowHead ActualFollowHead;
     public FollowHead ManipulatedFollowHead;
+
     public Exerciser Exerciser;
-    public PainUI painUI;
+    public PainUI PainUI;
+    public IndicatorTableUI IndicatorTableUI;
 
     [Header("References")]
     public SteamVR_Input_Sources leftHand;
@@ -42,22 +42,28 @@ public class References : MonoBehaviour
     {
         if (Input.GetKeyDown(KeyCode.Escape))
             Application.Quit();
-
-        //if (TrackerHip != null)
-        //{
-        //    TransformHip = TrackerHip.transform;
-        //}
-        //if (TrackerHead != null)
-        //{
-        //    TransformHead = TrackerHead.transform;
-        //}
-        //if (TrackerHandLeft != null)
-        //{
-        //    TransformHandLeft = TrackerHandLeft.transform;
-        //}
-        //if (TrackerHandRight != null)
-        //{
-        //    TransformHandRight = TrackerHandRight.transform;
-        //}
     }
+
 }
+
+
+
+
+
+// By Rob...
+//if (TrackerHip != null)
+//{
+//    TransformHip = TrackerHip.transform;
+//}
+//if (TrackerHead != null)
+//{
+//    TransformHead = TrackerHead.transform;
+//}
+//if (TrackerHandLeft != null)
+//{
+//    TransformHandLeft = TrackerHandLeft.transform;
+//}
+//if (TrackerHandRight != null)
+//{
+//    TransformHandRight = TrackerHandRight.transform;
+//}

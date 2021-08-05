@@ -5,6 +5,7 @@ using Valve.VR;
 
 /// <summary>
 /// Allows the plalyer to quit using the trackpad as a button
+/// NOTE: Make a function of app controller for neatness
 /// </summary>
 public class Quitter : MonoBehaviour
 {

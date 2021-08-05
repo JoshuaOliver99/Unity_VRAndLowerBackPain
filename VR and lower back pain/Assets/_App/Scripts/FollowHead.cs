@@ -6,7 +6,7 @@ public class FollowHead : MonoBehaviour
 {
     [SerializeField] [Tooltip("Hips/Waist offset")] private Transform point0;
     [SerializeField] [Tooltip("Head offset")] private Transform point1;
-    [SerializeField] private float percentOffset = 20f;
+    [SerializeField] float percentOffset = 20f;
 
     private float offset;
     private float radiansOffY, degreesOffY;
@@ -47,7 +47,7 @@ public class FollowHead : MonoBehaviour
         transform.position = point0.position + new Vector3(x, y, z);
     }
 
-    void alignToPoint1()
+    public void alignToPoint1()
     {
         // Alligned manipulated head (transform) with head offset (point1)...
         transform.position = point1.position; // Allign manipulated position to head offset
@@ -59,6 +59,6 @@ public class FollowHead : MonoBehaviour
         if (gameObject.GetComponent<FollowHead>().isActiveAndEnabled)
             return (degreesOffY / 90);
         else
-            return 9999f; // TEST... (deffo over the max slider value)
+            return 999f; // TEST... (a value deffo over the max slider value)
     }
 }

@@ -21,7 +21,7 @@ public class Exerciser : MonoBehaviour
     [Header("Data (do not change)")]
     public int Exercise = 1; // Movement direction (left, right, forward, back)
     public int Repetition = 1;
-    public int Stage = 0; // Stage of repition (1 Moving to upright, 2 Moving to discomfort, 3 Moving to pain)
+    public int Stage = 1; // Stage of repition (1 Moving to upright, 2 Moving to discomfort, 3 Moving to pain)
     public bool Manipulating;
 
 
@@ -34,12 +34,27 @@ public class Exerciser : MonoBehaviour
     void Update()
     {
         manipulator();
-
-        if (Input.GetKeyDown(KeyCode.L) || SteamVR_Input.GetStateDown("GrabPinch", SteamVR_Input_Sources.LeftHand) || SteamVR_Input.GetStateDown("GrabPinch", SteamVR_Input_Sources.RightHand))
-            increaseStage();
-
         exerciseUI.UpdateExerciseText();
 
+        if (Input.GetKeyDown(KeyCode.L) || SteamVR_Input.GetStateDown("GrabPinch", SteamVR_Input_Sources.LeftHand) || SteamVR_Input.GetStateDown("GrabPinch", SteamVR_Input_Sources.RightHand))
+        {
+            // TEST:
+            // Resetting follow head scripts
+            if (Stage == 1)
+                zeroHeadDegree();
+            // FAILED ^^^^ Does NOT zero the head positon
+
+
+
+            // TEST:
+            // FOR: IndicatorTableUI, Trying to set degree of movment Text
+            if (Stage == 2) // (2 going to 3)
+                references.IndicatorTableUI.SetDiscomfortText(getHeadAngle());
+            if (Stage == 3) // (3 going to 1)
+                references.IndicatorTableUI.SetPainText(getHeadAngle());
+
+            increaseStage();
+        }
 
         followHeadEnabler();
     }
@@ -69,12 +84,6 @@ public class Exerciser : MonoBehaviour
             }
         }
         
-        // -------------- TESTING -  Degree offset for setting indicator bar
-        //GetDegreeOffset();
-        //Debug.Log("degree offset " + references.ManipulatedFollowHead.getDegree());
-        // ---------------------------
-
-        
     }
 
     void manipulator()
@@ -96,26 +105,32 @@ public class Exerciser : MonoBehaviour
 
     /// <summary>
     /// Enables the FollowHead.cs script providing it is not enabled and the stage has been progressed once
-    /// FollowHead.cs on start alligns the manipulated head into the correct position
+    /// FollowHead.cs on Start() alligns the manipulated head into the correct position
     /// </summary>
     void followHeadEnabler()
     {
         if (followHead.enabled == false && Stage > 1)
             followHead.enabled = true;
     }
+    // NOTE:
+    // ^^^^^ DOES THIS EVEN WORK?
 
 
-    /// <summary>
-    /// For repetiton 1 set the minimum and maximum
-    /// </summary>
-    //void GetDegreeOffset()
-    //{
-    //    if (Repetition == 1)
-    //    {
-    //        Debug.Log("degree offset " + references.ManipulatedFollowHead.getDegree());
-    //
-    //    }
-    //
-    //}
+    void zeroHeadDegree()
+    {
+        // Reset/Zero the standing position
+        // Maybe...
+        references.ActualFollowHead.alignToPoint1();
+        references.ManipulatedFollowHead.alignToPoint1();
+    }
 
+
+
+    float getHeadAngle()
+    {
+        if (Manipulating)
+            return references.ManipulatedFollowHead.getDegree();
+        else
+            return references.ActualFollowHead.getDegree();
+    }
 }

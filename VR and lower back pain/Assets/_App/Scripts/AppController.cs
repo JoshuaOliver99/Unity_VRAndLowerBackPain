@@ -7,8 +7,11 @@ using UnityEngine;
 /// </summary>
 public class AppController : MonoBehaviour
 {
+    [Header("Debug Data...")]
     [SerializeField] int stage = 0;
     [SerializeField] int stageDisplaying = 0;
+
+    [Header("Components of each stage")]
     [SerializeField] GameObject[] controls;
     [SerializeField] GameObject[] introduction;
     [SerializeField] GameObject[] familiarization;
@@ -27,19 +30,6 @@ public class AppController : MonoBehaviour
 
     void Start()
     {
-        //stages[0] = introduction;
-        //stages[1] = familiarization;
-        //stages[2] = calibration;
-        //stages[3] = calibration2;
-        //stages[4] = prePainLog;
-        //stages[5] = prePainLog2;
-        //stages[6] = preExercise;
-        //stages[7] = Exercise;
-        //stages[8] = Exercise2;
-        //stages[9] = postPainLog;
-        //stages[10] = postPainLog2;
-        //stages[11] = debrief;
-
         stages[0] = controls;
         stages[1] = introduction;
         stages[2] = familiarization;
@@ -59,15 +49,14 @@ public class AppController : MonoBehaviour
             for (int j = 0; j < stages[i].Length; j++)
                 stages[i][j].SetActive(false);
 
-        // OLD can be removed
-        // Set all of first stage to active;
+        // Set all of the first stage to active;
         for (int i = 0; i < stages[0].Length; i++)
             stages[0][i].SetActive(true);
     }
 
     void Update()
     {
-        // Developer means to increse stage
+        // Manual way to increse stage
         if (Input.GetKeyDown(KeyCode.Space))
             IncreaseStage(1);
     }
@@ -88,7 +77,7 @@ public class AppController : MonoBehaviour
     /// <summary>
     /// Increases the stage number of the application
     /// </summary>
-    /// <param name="amount"> 1 for the next stage.</param>
+    /// <param name="amount"> input 1 for the next stage.</param>
     public void IncreaseStage(int amount)
     {
         stage += amount;
