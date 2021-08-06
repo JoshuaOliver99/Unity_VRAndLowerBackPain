@@ -13,12 +13,14 @@ public class IndicatorTableUI : MonoBehaviour
 
     public void SetDiscomfortText(float input)
     {
-        discomfortText.text = input.ToString("F2");
+        input *= 100;
+        discomfortText.text = input.ToString("F2") + "°";
     }
 
     public void SetPainText(float input)
     {
-        painText.text = input.ToString("F2");
+        input *= 100;
+        painText.text = input.ToString("F2") + "°";
     }
 
 }

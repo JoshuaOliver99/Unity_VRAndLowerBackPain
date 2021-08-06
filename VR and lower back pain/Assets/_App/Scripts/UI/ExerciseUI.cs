@@ -18,13 +18,13 @@ public class ExerciseUI : MonoBehaviour
         exerciseText.text = "";
 
         if (exerciser.Exercise == 1)
-            exerciseText.text = "Lean Left";
+            exerciseText.text = "1. Lean Left";
         else if (exerciser.Exercise == 2)
-            exerciseText.text = "Lean Right";
+            exerciseText.text = "2. Lean Right";
         else if (exerciser.Exercise == 3)
-            exerciseText.text = "Lean Back";
+            exerciseText.text = "3. Lean Back";
         else if (exerciser.Exercise == 4)
-            exerciseText.text = "Lean Forward";
+            exerciseText.text = "4. Lean Forward";
         exerciseText.text += "\n";
 
 
@@ -32,11 +32,11 @@ public class ExerciseUI : MonoBehaviour
         exerciseText.text += "\n";
 
         if (exerciser.Stage == 1)
-            exerciseText.text += "Stand upright & notify";
+            exerciseText.text += "1. STAND UPRIGHT - SQUEEZE TRIGGER";
         else if (exerciser.Stage == 2)
-            exerciseText.text += "begin leaning. notify when in discomfort";
+            exerciseText.text += "2. IN DISCOMFORT - SQUEEZE TRIGGER";
         else if (exerciser.Stage == 3)
-            exerciseText.text += "continue leaning & nofity when in pain";
+            exerciseText.text += "3. IN PAIN - SQUEEZE TRIGGER";
 
     }
 }

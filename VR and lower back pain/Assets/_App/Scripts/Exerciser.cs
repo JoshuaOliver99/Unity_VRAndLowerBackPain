@@ -38,18 +38,14 @@ public class Exerciser : MonoBehaviour
 
         if (Input.GetKeyDown(KeyCode.L) || SteamVR_Input.GetStateDown("GrabPinch", SteamVR_Input_Sources.LeftHand) || SteamVR_Input.GetStateDown("GrabPinch", SteamVR_Input_Sources.RightHand))
         {
+            // RESET STANDING ANGLE TO 0:
             // TEST:
             // Reset the standing head position
-
-
             //if (Stage == 1)
             //    zeroHeadDegree();
-            // FAILED ^^^^ Does NOT zero the head positon
 
 
-
-            // TEST:
-            // FOR: IndicatorTableUI, Trying to set degree of movment Text
+            // INDICATOR TABLE UI:
             if (Stage == 2) // (2 going to 3)
                 references.IndicatorTableUI.SetDiscomfortText(getHeadAngle());
             if (Stage == 3) // (3 going to 1)
@@ -57,9 +53,6 @@ public class Exerciser : MonoBehaviour
 
             increaseStage(); // Increase the stage...
             exerciseUI.UpdateExerciseText(); // Update UI...
-
-            // TEST:
-            // (was at the start of update)
             manipulator();
         }
 
@@ -118,9 +111,7 @@ public class Exerciser : MonoBehaviour
         references.ManipulatedFollowHead.alignToPoint1();
     }
 
-
-
-    float getHeadAngle()
+    public float getHeadAngle()
     {
         if (Manipulating)
             return references.ManipulatedFollowHead.getDegree();

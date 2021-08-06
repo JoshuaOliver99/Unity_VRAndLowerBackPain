@@ -11,7 +11,7 @@ public class TimedStage : MonoBehaviour
     References references;
 
     float timer = 0;
-    float maxTime = 1.5f;
+    [SerializeField] float maxTime = 1.5f;
 
     private void Start()
     {
