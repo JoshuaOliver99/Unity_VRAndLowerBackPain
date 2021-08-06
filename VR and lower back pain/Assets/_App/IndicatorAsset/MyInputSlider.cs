@@ -37,7 +37,7 @@ public class MyInputSlider : MonoBehaviour
 
     void Update()
     {
-        // DEBUG...
+        // NOTES V1
         // 1 - pre exercise
         // pressing sets standing upright position (zeroing slider)
         // NO SLIDER SHOULD MOVE DURING THIS STAGE
@@ -47,6 +47,16 @@ public class MyInputSlider : MonoBehaviour
 
         // 3 - moving to pain
         // pressing sets pain positon
+
+
+
+        // NOTES v2
+        // nothing happens for 1
+
+        // in 2 green bar is set, the marker on green is orange (to indicate where pain begins)
+
+        // in 3 orange bar is set, the marker on orange is red (indicating the start of pain)
+        // in 3 the remainder of the bar is coloured red
 
 
 
@@ -71,6 +81,7 @@ public class MyInputSlider : MonoBehaviour
     void runner()
     {
         // ---------- ACTUAL VERSION ----------
+
         // (in active stage)...
         if (references.Exerciser.Stage <= ActiveStage)
         {
@@ -95,30 +106,36 @@ public class MyInputSlider : MonoBehaviour
 
     void testRunner()
     {
-        // Get global test input:
-        testInput = references.DebugInput.HeadAngle;
-        testStage = references.DebugInput.ActiveStage;
-
-
         // ---------- TESTING VERSION ----------
-        // (in active stage)...
-        if (testStage <= ActiveStage)
-            sliderMax = testInput;
-        
-        
-        // If (input less than max)...
-        if (testInput <= sliderMax)
+
+        if (true)//(testStage > 1)
         {
-            // Allow the slider to respond to input...
-            atSliderMax = false;
-            slider.value = testInput;
-        }
-        // ELse if (input greater than max) && (atSliderMax not set)...
-        else if (!atSliderMax)
-        {
-            // Ensure slider is at its max value...
-            atSliderMax = true;
-            slider.value = sliderMax;
+            // Get global test input:
+            testInput = references.DebugInput.HeadAngle;
+            testStage = references.DebugInput.ActiveStage;
+
+
+            // (in active stage)...
+            if (testStage <= ActiveStage)
+                sliderMax = testInput;
+
+
+            // If (input less than max)...
+            if (testInput <= sliderMax)
+            {
+                // Allow the slider to respond to input...
+                atSliderMax = false;
+                slider.value = testInput;
+            }
+            // ELse if (input greater than max) && (atSliderMax not set)...
+            else if (!atSliderMax)
+            {
+                // Ensure slider is at its max value...
+                atSliderMax = true;
+                slider.value = sliderMax;
+            }
+            
+
         }
     }
 
