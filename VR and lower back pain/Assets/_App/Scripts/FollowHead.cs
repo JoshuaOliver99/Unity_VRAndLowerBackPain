@@ -49,9 +49,9 @@ public class FollowHead : MonoBehaviour
 
     public void alignToPoint1()
     {
-        // Alligned manipulated head (transform) with head offset (point1)...
-        transform.position = point1.position; // Allign manipulated position to head offset
-        transform.localRotation = point1.parent.localRotation; // Allign manipulated rotation to HMD rotation
+        // Alligned manipulated head (transform) with head offset (point1):
+        transform.position = point1.position; // Allign manipulated position to head offset...
+        transform.localRotation = point1.parent.localRotation; // Allign manipulated rotation to HMD rotation...
     }
 
     public float getDegree()

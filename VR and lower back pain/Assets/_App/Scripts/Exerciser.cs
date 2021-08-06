@@ -25,23 +25,25 @@ public class Exerciser : MonoBehaviour
     public bool Manipulating;
 
 
-    void Start()
+    void OnEnable()
     {
         if (references == null)
             Debug.LogError("References not retrieved");
+
+        exerciseUI.UpdateExerciseText();
     }
 
     void Update()
     {
-        manipulator();
-        exerciseUI.UpdateExerciseText();
 
         if (Input.GetKeyDown(KeyCode.L) || SteamVR_Input.GetStateDown("GrabPinch", SteamVR_Input_Sources.LeftHand) || SteamVR_Input.GetStateDown("GrabPinch", SteamVR_Input_Sources.RightHand))
         {
             // TEST:
-            // Resetting follow head scripts
-            if (Stage == 1)
-                zeroHeadDegree();
+            // Reset the standing head position
+
+
+            //if (Stage == 1)
+            //    zeroHeadDegree();
             // FAILED ^^^^ Does NOT zero the head positon
 
 
@@ -53,10 +55,14 @@ public class Exerciser : MonoBehaviour
             if (Stage == 3) // (3 going to 1)
                 references.IndicatorTableUI.SetPainText(getHeadAngle());
 
-            increaseStage();
+            increaseStage(); // Increase the stage...
+            exerciseUI.UpdateExerciseText(); // Update UI...
+
+            // TEST:
+            // (was at the start of update)
+            manipulator();
         }
 
-        followHeadEnabler();
     }
 
     void increaseStage()
@@ -76,11 +82,10 @@ public class Exerciser : MonoBehaviour
                 Exercise++; // Increase exercise
             }
 
-            // Disable the exerciser when 4 exercises completed
             if (Exercise > 4)
             {
-                FindObjectOfType<AppController>().IncreaseStage(1);
-                gameObject.GetComponent<Exerciser>().enabled = false;
+                FindObjectOfType<AppController>().IncreaseStage(1); // Move onto next stage of app...
+                gameObject.GetComponent<Exerciser>().enabled = false; // Disable the exerciser...
             }
         }
         
@@ -89,7 +94,6 @@ public class Exerciser : MonoBehaviour
     void manipulator()
     {
         // If (in manipulated range     && in manipulated stage (standing upright)     && headTarget is not already manipulated position)...
-        //OLD:  if (Repetition >= manipulatedRep    && Stage > 1    && vrik.solver.spine.headTarget != references.ManipulatedHead)
         if (Repetition >= manipulatedRep && vrik.solver.spine.headTarget != references.ManipulatedHead)
         {
             Manipulating = true;
@@ -103,23 +107,13 @@ public class Exerciser : MonoBehaviour
         }
     }
 
-    /// <summary>
-    /// Enables the FollowHead.cs script providing it is not enabled and the stage has been progressed once
-    /// FollowHead.cs on Start() alligns the manipulated head into the correct position
-    /// </summary>
-    void followHeadEnabler()
-    {
-        if (followHead.enabled == false && Stage > 1)
-            followHead.enabled = true;
-    }
-    // NOTE:
-    // ^^^^^ DOES THIS EVEN WORK?
-
-
     void zeroHeadDegree()
     {
+        // NOTE:
+        // Does not work!
+
         // Reset/Zero the standing position
-        // Maybe...
+        // (Maybe...?)
         references.ActualFollowHead.alignToPoint1();
         references.ManipulatedFollowHead.alignToPoint1();
     }

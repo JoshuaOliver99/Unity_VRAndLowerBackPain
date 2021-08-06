@@ -38,7 +38,6 @@ public class MyInputSlider : MonoBehaviour
     void Update()
     {
         // DEBUG...
-       Debug.Log("Stage " + references.Exerciser.Stage);
         // 1 - pre exercise
         // pressing sets standing upright position (zeroing slider)
         // NO SLIDER SHOULD MOVE DURING THIS STAGE
@@ -48,6 +47,19 @@ public class MyInputSlider : MonoBehaviour
 
         // 3 - moving to pain
         // pressing sets pain positon
+
+
+
+        // TEST:
+        if (references.Exerciser.Stage > 1)
+        {
+            // Maybe run all in this? doesnt need to update on 1?
+
+            // stage 1 sets the 0 positon?
+
+            // stage 2 is indicated discomfort
+            // stage 3 indicate pain
+        }
 
 
         if (testing)

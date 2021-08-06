@@ -13,18 +13,12 @@ public class IndicatorTableUI : MonoBehaviour
 
     public void SetDiscomfortText(float input)
     {
-        discomfortText.text = ReturnToHundreths(input).ToString();
+        discomfortText.text = input.ToString("F2");
     }
 
     public void SetPainText(float input)
     {
-        painText.text = ReturnToHundreths(input).ToString();
+        painText.text = input.ToString("F2");
     }
 
-    float ReturnToHundreths(float input)
-    {
-        // Return input rounded to two decimal places
-        Debug.LogWarning("ReturnToHundreths() NOT IMPLEMENTED");
-        return input;
-    }
 }
